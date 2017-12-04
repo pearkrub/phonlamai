@@ -1,0 +1,157 @@
+        
+<!-- start topBar -->
+<div class="topBar">
+    <div class="container">
+
+        <ul class="topBarNav pull-right">
+            <?php $user = $this->Session->read('Auth');
+            if(!empty($user)){
+            ?>
+            <!--<li><a href="javascript:void(0);"> <?php echo $user['Customer']['first_name'].' '.$user['Customer']['last_name']; ?></a></li>-->
+            <li class="linkdown">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-user mr-5"></i>
+                    <span class="hidden-xs">
+                        <?php echo $user['Customer']['first_name'].' '.$user['Customer']['last_name']; ?>
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </span>
+                </a> 
+                <ul class="w-150">
+                    <li><a href="checkout.html">ข้อมูลส่วนตัว</a></li>
+                    <li><a href="wishlist.html">รายการสินค้าโปรด (5)</a></li>
+                    <li><a href="cart.html">รายการสั่งซื้อ</a></li>
+                    <li><a href="/logout">ออกจากระบบ</a></li>
+                </ul>
+            </li>
+            <?php }else{ ?>
+            <li><a href="javascript:void(0);" data-toggle="modal" data-target=".loginModal"> เข้าสู่ระบบ</a></li>
+            
+            
+            <li class="linkdown">
+                <a href="javascript:void(0);">
+                    <i></i>
+                    <span class="hidden-xs">
+                        สมัครสมาชิก 
+                        <i class="fa fa-angle-down ml-4"></i>
+                    </span>    
+                </a>
+                <ul class="cart w-200">
+
+                    <li>
+                        <div class="cart-footer">
+                            <a href="<?php echo Configure::read('App.Domain') ?>register">สมัครสมาชิกเพื่อซื้อสินค้า</a>
+                            <a href="<?php echo Configure::read('App.Domain'); ?>merchants/register">สมัครสมาชิกเพื่อขายสินค้า</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <?php }?>
+            <!--<li><a href="<?php echo Configure::read('App.Domain') ?>register"> สมัครสมาชิก</a></li>-->
+            
+            <li class="linkdown">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-shopping-basket mr-5"></i>
+                    <span class="hidden-xs">
+                        ตะกร้าสินค้า <sup class="text-primary">(0)</sup>
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </span>    
+                </a>
+                <ul class="cart w-250">
+
+                    <li>
+                        <div class="cart-footer">
+                            <a href="cart.html" class="pull-left"><i class="fa fa-cart-plus mr-5"></i>ดูสินค้าในตะกร้า</a>
+                            <a href="checkout.html" class="pull-right"><i class="fa fa-shopping-basket mr-5"></i>สั่งซื้อ</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- end container -->
+</div>
+<!-- end topBar -->
+
+<div class="middleBar">
+    <div class="container">
+        <div class="row display-table">
+            <div class="col-sm-3 vertical-align text-left hidden-xs">
+                <a href="javascript:void(0);">
+                    <img height="70" width="200" src="/img/logo5.png" alt="" />
+                </a>
+            </div><!-- end col -->
+            <div class="col-sm-7 vertical-align text-center">
+                <form>
+                    <div class="row grid-space-1">
+                        <div class="col-sm-6">
+                            <input type="text" name="keyword" class="form-control input-lg" placeholder="ค้นหา">
+                        </div><!-- end col -->
+                        <div class="col-sm-3">
+                            <select class="form-control input-lg" name="category">
+                                <option value="all">แสดงทุกร้านค้า</option>
+
+                            </select>
+                        </div><!-- end col -->
+                        <div class="col-sm-3">
+                            <input type="submit"  class="btn btn-default btn-block btn-lg" value="ค้นหา">
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </form>
+            </div><!-- end col -->
+            <div class="col-sm-2 vertical-align header-items hidden-xs">
+                <div class="header-item mr-5">
+                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Wishlist">
+                        <i class="fa fa-heart-o"></i>
+                        <sub></sub>
+                    </a>
+                </div>
+                <div class="header-item">
+                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Compare">
+                        <i class="fa fa-refresh"></i>
+                        <sub></sub>
+                    </a>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end  row -->
+    </div><!-- end container -->
+</div><!-- end middleBar -->
+
+<!-- start navbar -->
+<div class="navbar yamm navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-3" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="javascript:void(0);" class="navbar-brand visible-xs">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div id="navbar-collapse-3" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!-- Home -->
+                <li class="dropdown"><a href="/">หน้าแรก</a>
+                </li><!-- end li dropdown -->    
+                <!-- Features -->
+                <li class="dropdown left"><a href="#" data-toggle="dropdown" class="dropdown-toggle">ประเภทสินค้า<i class="fa fa-angle-down ml-5"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/products/index/1">สินค้าล่วงหน้า 1 เดือน</a></li>
+                        <li><a href="/products/index/2">สินค้าล่วงหน้า 2 เดือน</a></li>
+                        <li><a href="/products/index/3">สินค้าล่วงหน้า 3 เดือน</a></li>
+                    </ul><!-- end ul dropdown-menu -->
+                </li><!-- end li dropdown -->
+                <!-- Pages -->
+                <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">แจ้งชำระเงิน</a>
+                <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">เกี่ยวกับเรา</a>
+
+                </li><!-- end li dropdown -->
+                <!-- elements -->
+                <!--<li><a href="<?php echo Configure::read('Portal.Domain'); ?>register">สมัครขายสินค้ากับเรา</a></li>-->
+                <!-- Collections -->
+            </ul><!-- end navbar-nav -->
+        </div><!-- end navbar collapse -->
+    </div><!-- end container -->
+</div><!-- end navbar -->
+
+<!-- Swiper slider-->
