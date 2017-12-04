@@ -20,17 +20,4 @@ class MerchantsController extends AppController {
         $this->set('merchants', $merchants);
     }
 
-    public function approve() {
-        $this->autoRender = false;
-        $data = $this->request->data;
-        if (!empty($data['id'])) {
-            $data['status'] = 'Y';
-            if ($this->Merchant->save($data)) {
-                echo '1';
-            } else {
-                echo '0';
-            }
-        }
-    }
-
 }
