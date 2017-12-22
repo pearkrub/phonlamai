@@ -2,10 +2,13 @@
 
 class MerchantsController extends AppController {
 
-    public $user = array('Merchant');
+    public $uses = array('Merchant', 'Province');
 
     public function register(){
         $this->layout = 'register';
+        $provinces = $this->Province->find('list', array('fields' => array('id', 'province_name')));
+        $this->set('province_list', $provinces);
+        
         
     }
      

@@ -61,15 +61,18 @@
                         </div>
                         <label for="email" class="col-sm-2 control-label">จังหวัด <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                        <select class="form-control" name="" id="">
+                            <select class="form-control" name="province_id" id="province_id" required>
                                 <option value="">- - - เลือกจังหวัด - - -</option>
+                                <?php foreach($province_list as $key => $province){  ?>
+                                <option value="<?php echo $key ?>"><?php echo $province ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">อำเภอ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                        <select class="form-control" name="" id="">
+                            <select class="form-control" name="amphur_id" id="amphur_id">
                                 <option value="">- - - เลือกอำเภอ - - -</option>
                             </select>
                         </div>
@@ -112,3 +115,9 @@
         </div><!-- end row -->
     </div><!-- end col -->
 </div>
+
+<script>
+    $('#province_id').on('change',function(){
+        alert()
+    })
+</script>

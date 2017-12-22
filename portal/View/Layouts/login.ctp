@@ -32,7 +32,11 @@
 
  </head>
  
- <body class="app flex-row align-items-center">
+ <body style="
+    background-image: url(/img/maxresdefault.jpg);height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;" class="app flex-row align-items-center">
    <div class="container">
      <div class="row justify-content-center">
        <div class="col-md-8">
@@ -66,7 +70,7 @@
                <div>
                  <h2>ลงทะเบียน</h2>
                  <p>สามารถลงทะเบียนเพื่อฝากขายสินค้าเกษตกรผ่านระบบของเรา</p>
-                 <button type="button" class="btn btn-primary active mt-3">สมัครสมาชิก ฟรี!</button>
+                 <a target="_blank" href="<?php echo Configure::read('App.Domain') ?>merchants/register" class="btn btn-primary active mt-3">สมัครสมาชิก ฟรี!</a>
                </div>
              </div>
            </div>
