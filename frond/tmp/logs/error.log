@@ -1,26 +1,4 @@
-2017-12-19 11:29:34 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
-Exception Attributes: array (
-  'class' => 'Mysql',
-  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
-  'enabled' => true,
-)
-Request URL: /merchants/register
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Datasource/DboSource.php(269): Mysql->connect()
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3640): ConnectionManager::getDataSource('default')
-#3 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
-#4 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3667): Model->setSource('provinces')
-#5 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3038): Model->getDataSource()
-#6 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3010): Model->_readDataSource('all', Array)
-#7 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/Controller/MerchantsController.php(9): Model->find('all')
-#8 [internal function]: MerchantsController->register()
-#9 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(MerchantsController), Array)
-#10 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#11 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#12 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -31,29 +9,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/yf.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -64,111 +20,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/mango_pro.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:29:34 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Province.amphur_name' in 'field list'
-Request URL: /merchants/register
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Datasource/DboSource.php(470): PDOStatement->execute(Array)
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Datasource/DboSource.php(436): DboSource->_execute('SELECT `Provinc...', Array)
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Datasource/DboSource.php(673): DboSource->execute('SELECT `Provinc...', Array, Array)
-#3 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Datasource/DboSource.php(1184): DboSource->fetchAll('SELECT `Provinc...', false)
-#4 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3038): DboSource->read(Object(Province), Array)
-#5 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Model/Model.php(3010): Model->_readDataSource('list', Array)
-#6 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/Controller/MerchantsController.php(9): Model->find('list', Array)
-#7 [internal function]: MerchantsController->register()
-#8 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(MerchantsController), Array)
-#9 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#10 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#11 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#12 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/logo.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/mango_pro.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_01.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -179,18 +31,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/yf.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -201,18 +42,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -223,73 +53,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:30:57 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/logo.png
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_01.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -300,7 +64,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:33:42 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -311,84 +75,25 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:02 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
+  'class' => 'CssController',
+  'plugin' => NULL,
 )
-Request URL: /merchants/img/logo.png
+Request URL: /css/bootstrap.min.css.map
 Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:23:02 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
+  'class' => 'CssController',
+  'plugin' => NULL,
 )
-Request URL: /merchants/img/products/men_01.jpg
+Request URL: /css/default.css.map
 Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:06 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:35:23 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:23:02 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
@@ -397,25 +102,7 @@ Request URL: /js/maps/swiper.min.js.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:35:23 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /css/default.css.map
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:35:23 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /css/bootstrap.min.css.map
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -426,7 +113,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -437,29 +124,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -470,7 +135,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -481,7 +146,29 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:36:08 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -492,7 +179,51 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:36:08 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:23:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_03.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_01.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:23:56 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -501,7 +232,7 @@ Request URL: /css/bootstrap.min.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:36:08 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:23:56 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -510,7 +241,7 @@ Request URL: /css/default.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:36:09 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-12-23 14:23:56 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
@@ -519,7 +250,7 @@ Request URL: /js/maps/swiper.min.js.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -530,7 +261,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -541,29 +272,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -574,7 +283,18 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_06.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -585,7 +305,18 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:37:31 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:55 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -596,16 +327,51 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:37:32 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:24:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
+  'controller' => 'MerchantsController',
+  'action' => 'img',
 )
-Request URL: /css/bootstrap.min.css.map
+Request URL: /merchants/img/products/men_03.jpg
 Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:37:32 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:56 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_01.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:24:56 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -614,7 +380,16 @@ Request URL: /css/default.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:37:32 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-12-23 14:24:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:24:56 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
@@ -623,7 +398,7 @@ Request URL: /js/maps/swiper.min.js.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:39:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -634,7 +409,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:39:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -645,51 +420,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:39:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:39:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:39:01 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:39:02 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:39:02 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -700,7 +431,51 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:39:02 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:25:17 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_06.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:25:17 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -709,7 +484,7 @@ Request URL: /css/bootstrap.min.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:39:02 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:25:17 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -718,7 +493,7 @@ Request URL: /css/default.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:39:02 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-12-23 14:25:17 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
@@ -727,25 +502,7 @@ Request URL: /js/maps/swiper.min.js.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:42:08 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /css/default.css.map
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:42:08 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /css/bootstrap.min.css.map
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:51 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -756,7 +513,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:51 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -767,18 +524,18 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:51 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
 )
-Request URL: /merchants/img/products/men_05.jpg
+Request URL: /merchants/img/products/men_03.jpg
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:52 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -789,7 +546,18 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:52 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:27:52 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -800,7 +568,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:27:52 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -811,71 +579,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:42:16 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_01.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:42:16 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /css/default.css.map
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2017-12-19 11:42:16 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-12-23 14:27:52 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
   'class' => 'CssController',
   'plugin' => NULL,
@@ -884,7 +588,16 @@ Request URL: /css/bootstrap.min.css.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:42:17 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-12-23 14:27:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:27:52 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
@@ -893,7 +606,7 @@ Request URL: /js/maps/swiper.min.js.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -904,7 +617,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -915,7 +628,29 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -926,29 +661,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -959,40 +672,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -1003,7 +683,40 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-19 11:44:12 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_03.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:28:30 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -1014,7 +727,34 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:28:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:28:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:28:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/maps/swiper.min.js.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:40:20 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -1025,51 +765,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_03.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_02.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:40:20 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -1080,40 +776,7 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_06.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_05.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
-Exception Attributes: array (
-  'controller' => 'MerchantsController',
-  'action' => 'img',
-)
-Request URL: /merchants/img/products/men_04.jpg
-Stack Trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
-#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:40:20 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',
@@ -1124,7 +787,292 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
 #2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-12-21 13:50:10 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+2017-12-23 14:40:20 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:40:20 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:40:21 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:40:21 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_06.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:40:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:40:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:40:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/maps/swiper.min.js.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/logo.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_01.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_03.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_06.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:41:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:41:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/default.css.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:41:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/maps/swiper.min.js.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/logo.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_01.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_03.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_02.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:49 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_06.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:50 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_05.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:50 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_03.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:50 Error: [MissingActionException] Action MerchantsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'MerchantsController',
+  'action' => 'img',
+)
+Request URL: /merchants/img/products/men_04.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MerchantsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/phonlamai/frond/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-12-23 14:43:50 Error: [MissingActionException] Action MerchantsController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'MerchantsController',
   'action' => 'img',

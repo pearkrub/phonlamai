@@ -2,7 +2,7 @@
 
 class MerchantsController extends AppController {
 
-    public $uses = array('Merchant', 'Province');
+    public $uses = array('Merchant', 'Province', 'Amphure', 'District', 'Zipcode');
 
     public function register(){
         $this->layout = 'register';
@@ -32,6 +32,64 @@ class MerchantsController extends AppController {
             }
             $this->redirect(Configure::read('Portal.Domain').'login');
         }
+    }
+
+    public function getAmphur()
+    {
+        $this->layout = 'ajax';
+        $data = $this->request->data;
+        $amphur = array();
+        if(!empty($data['province_id'])){
+            $amphur = $this->Amphure->find('list', array(
+                'conditions' => array(
+                    'province_id' => $data['province_id']
+                ),
+                'fields' => array(
+                    'id','amphur_name'
+                )
+            ));
+        }
+        $this->set('amphures', $amphur);
+    }
+
+    public function getDistrict()
+    {
+        $this->layout = 'ajax';
+        $data = $this->request->data;
+        $district = array();
+        if(!empty($data['amphur_id'])){
+            $district = $this->District->find('list', array(
+                'conditions' => array(
+                    'amphur_id' => $data['amphur_id']
+                ),
+                'fields' => array(
+                    'id','district_name'
+                )
+            ));
+        }
+        $this->set('districts', $district);
+    }
+    public function getZipcode()
+    {
+        $this->autoRender = false;
+        $data = $this->request->data;
+        $zipcode = '';
+        if(!empty($data['district_id'])){
+            $district = $this->District->find('first',array(
+                'conditions' => array(
+                    'id' => $data['district_id']
+                )
+            ));
+            $Zipcode = $this->Zipcode->find('first',array(
+                'conditions' => array(
+                    'district_code' => $district['District']['district_code']
+                )
+            ));
+
+            $zipcode = $Zipcode['Zipcode']['zipcode'];
+        }
+
+        echo $zipcode;
     }
 
 }

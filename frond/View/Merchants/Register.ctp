@@ -71,14 +71,14 @@
                     </div><!-- end form-group -->
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">อำเภอ <span class="text-danger">*</span></label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 amphur_div">
                             <select class="form-control" name="amphur_id" id="amphur_id">
                                 <option value="">- - - เลือกอำเภอ - - -</option>
                             </select>
                         </div>
                         <label for="email" class="col-sm-2 control-label">ตำบล <span class="text-danger">*</span></label>
-                        <div class="col-sm-4">
-                            <select class="form-control" name="" id="">
+                        <div class="col-sm-4 district_div">
+                            <select class="form-control" name="district_id" id="district_id">
                                 <option value="">- - - เลือกตำบล - - -</option>
                             </select>
                         </div>
@@ -86,7 +86,7 @@
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="text" name="phone" class="form-control input-md" id="email" placeholder="xxxxx">
+                            <input required type="text" name="zipcode" class="form-control input-md" id="zipcode" placeholder="xxxxx">
                         </div>
                         <label for="password" class="col-sm-2 control-label">ไฟล์เอกสารแนบ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
@@ -115,9 +115,47 @@
         </div><!-- end row -->
     </div><!-- end col -->
 </div>
-
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 <script>
     $('#province_id').on('change',function(){
-        alert()
+        var province_id = $(this).val();
+        loadAmphure(province_id);
+        loadDistrict('');
+        loadZipcode()
     })
+
+    $('#amphur_id').on('change',function(){
+        var amphur_id = $(this).val();
+        loadDistrict(amphur_id)
+        loadZipcode()
+    })
+
+    function loadAmphure(province_id){
+        $.post('/merchants/getAmphur/',{province_id:province_id},function(data){
+            $('.amphur_div').html(data)
+                $('#amphur_id').on('change',function(){
+                var amphur_id = $(this).val();
+                loadDistrict(amphur_id)
+                loadZipcode();
+            })
+        });
+
+        
+    }
+
+    function loadDistrict(amphur_id){
+        $.post('/merchants/getDistrict/',{amphur_id:amphur_id},function(data){
+            $('.district_div').html(data)
+            $('#district_id').on('change',function(){
+                var district_id = $(this).val();
+                loadZipcode(district_id)
+            })
+        });
+    }
+
+    function loadZipcode(district_id){
+        $.post('/merchants/getZipcode/',{district_id:district_id},function(data){
+            $('#zipcode').val(data)
+        });
+    }
 </script>
