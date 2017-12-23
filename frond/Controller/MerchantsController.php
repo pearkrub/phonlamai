@@ -16,7 +16,8 @@ class MerchantsController extends AppController {
     public function save() { // เอาไว้บันทึกข้อมูลพ่อค้า
         $this->autoRender = FALSE;
         $data = $this->request->data;
-        pr($data);        die;
+        $data['password'] = md5($data['password']);
+        $data['username'] = $data['email'];
         if($this->Merchant->save($data)){
             if (!empty($_FILES['document']['name'])) {
                 $type = explode('.', $_FILES['document']['name']);

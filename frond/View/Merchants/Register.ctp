@@ -21,7 +21,7 @@
         
         <div class="row">
             <div class="col-sm-12 col-md-10 col-lg-12">
-                <form class="form-horizontal" action="<?php echo Configure::read('App.Domain') ?>register/save" method="post">
+                <form class="form-horizontal" action="<?php echo Configure::read('App.Domain') ?>merchants/save" enctype="multipart/form-data" method="post">
                     
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">ชื่อ</label>
@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">เลขที่บัตรประชาชน</label>
                         <div class="col-sm-4">
-                            <input type="text" name="last_name" class="form-control input-md" id="name" placeholder="x-xxxx-xxxxx-xx-x">
+                            <input type="text" name="id_cart" class="form-control input-md" id="name" placeholder="x-xxxx-xxxxx-xx-x">
                         </div>
                         <label for="email" class="col-sm-2 control-label">อีเมล <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
@@ -46,7 +46,7 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">ชื่อร้านค้า</label>
                         <div class="col-sm-4">
-                            <input type="text" name="first_name" class="form-control input-md" id="name" placeholder="Shop name">
+                            <input type="text" name="shop_name" class="form-control input-md" id="name" placeholder="Shop name">
                         </div>
                         <label for="email" class="col-sm-2 control-label">เบอร์โทร <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">ที่อยู่ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="text" name="phone" class="form-control input-md" id="email" placeholder="Address">
+                            <input required type="text" name="address" class="form-control input-md" id="email" placeholder="Address">
                         </div>
                         <label for="email" class="col-sm-2 control-label">จังหวัด <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
@@ -90,7 +90,7 @@
                         </div>
                         <label for="password" class="col-sm-2 control-label">ไฟล์เอกสารแนบ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="file" name="confirm_password" class="form-control input-md" id="password" placeholder="Confirm Password">
+                            <input required type="file" name="document" class="form-control input-md" id="password" placeholder="Confirm Password">
                         </div>
                     </div><!-- end form-group -->
                     <hr class="spacer-5"><hr class="spacer-20 no-border">
@@ -131,6 +131,11 @@
     })
 
     function loadAmphure(province_id){
+        var html_amphur = '<option value="">- - - กำลังโหลดอำเภอ... </option>';
+        var html_district = '<option value="">- - - เลือกอำเภอ - - -</option>';
+        $('#amphur_id').html(html_amphur);
+        $('#district_id').html(html_district);
+        $('#zipcode').val('')
         $.post('/merchants/getAmphur/',{province_id:province_id},function(data){
             $('.amphur_div').html(data)
                 $('#amphur_id').on('change',function(){
@@ -144,6 +149,9 @@
     }
 
     function loadDistrict(amphur_id){
+        var html_district = '<option value="">- - - กำลังโหลดอำเภอ - - -</option>';
+        $('#district_id').html(html_district);
+        $('#zipcode').val('')
         $.post('/merchants/getDistrict/',{amphur_id:amphur_id},function(data){
             $('.district_div').html(data)
             $('#district_id').on('change',function(){

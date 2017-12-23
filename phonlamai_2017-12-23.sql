@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.18)
 # Database: phonlamai
-# Generation Time: 2017-12-22 10:11:34 +0000
+# Generation Time: 2017-12-23 08:14:52 +0000
 # ************************************************************
 
 
@@ -1094,6 +1094,25 @@ CREATE TABLE `customers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `customers` WRITE;
+/*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+
+INSERT INTO `customers` (`id`, `username`, `password`, `status`, `first_name`, `last_name`, `phone`, `email`, `image`, `deleted`)
+VALUES
+	(1,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(2,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(3,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(4,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(5,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(6,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(7,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(8,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(9,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(10,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N'),
+	(11,NULL,'123456','Y','','123232312434','90452345','praiboolkrub@gmail.com',NULL,'N');
+
+/*!40000 ALTER TABLE `customers` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table districts
@@ -10073,7 +10092,9 @@ LOCK TABLES `merchants` WRITE;
 INSERT INTO `merchants` (`id`, `username`, `password`, `status`, `first_name`, `last_name`, `phone`, `email`, `image`, `deleted`, `created`, `modified`, `merchant_code`, `shop_name`, `document_file`)
 VALUES
 	(1,'praibool.piak@gmail.com','123456','N','praibool','namwongภภ','90452345','praiboolkrub@gmail.com',NULL,'N','2017-10-13 04:06:12','2017-10-13 11:39:09',NULL,NULL,NULL),
-	(2,'merchant','81dc9bdb52d04dc20036dbd8313ed055','Y','qwwe','qwer','0987465665','bikebest@gmail.com',NULL,'N','2017-10-13 09:32:16','2017-10-13 11:43:46',NULL,'ไพรบูลย์การค้า2','m002.jpg');
+	(2,'merchant','81dc9bdb52d04dc20036dbd8313ed055','Y','qwwe','qwer','0987465665','bikebest@gmail.com',NULL,'N','2017-10-13 09:32:16','2017-10-13 11:43:46',NULL,'ไพรบูลย์การค้า2','m002.jpg'),
+	(3,NULL,'112233','N','praibool','namwong','0865527293','pakinmankong@gmail.com',NULL,'N','2017-12-23 15:10:09','2017-12-23 15:10:09',NULL,'',NULL),
+	(4,NULL,NULL,'N',NULL,NULL,NULL,NULL,NULL,'N',NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `merchants` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -10297,15 +10318,22 @@ CREATE TABLE `users` (
   `email` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `deleted` char(1) DEFAULT 'N',
+  `id_cart` int(13) DEFAULT NULL,
+  `shop_name` varchar(500) DEFAULT NULL,
+  `address` text,
+  `province_id` int(11) DEFAULT NULL,
+  `amphur_id` int(11) DEFAULT NULL,
+  `district_id` int(11) DEFAULT NULL,
+  `zipcode` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`id`, `username`, `password`, `status`, `first_name`, `last_name`, `phone`, `email`, `image`, `deleted`)
+INSERT INTO `users` (`id`, `username`, `password`, `status`, `first_name`, `last_name`, `phone`, `email`, `image`, `deleted`, `id_cart`, `shop_name`, `address`, `province_id`, `amphur_id`, `district_id`, `zipcode`)
 VALUES
-	(1,'admin','81dc9bdb52d04dc20036dbd8313ed055','Y','Praibool','Namwong',NULL,NULL,NULL,'N');
+	(1,'admin','81dc9bdb52d04dc20036dbd8313ed055','Y','Praibool','Namwong',NULL,NULL,NULL,'N',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;

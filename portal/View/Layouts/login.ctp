@@ -19,7 +19,7 @@
    <meta name="keyword" content="Clever Bootstrap 4 Admin Template">
    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
  
-   <title>Clever Bootstrap 4 Admin Template</title>
+   <title>Phonlamai.com - ตลาดขายผลไม้ออนไลน์</title>
  
    <!-- Icons -->
    <link href="vendors/css/font-awesome.min.css" rel="stylesheet">
