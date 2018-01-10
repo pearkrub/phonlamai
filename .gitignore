@@ -1,2 +1,8 @@
-./frond/tmp
+/app/tmp/*
+/portal/tmp/*
+/frond/tmp/*
+/backend/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/vendors/*
 .idea/
