@@ -5,33 +5,35 @@
  * Copyright (c) 2017 creativeLabs Łukasz Holeczek
  * @license https://genesisui.com/license.html
  -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <!-- Mirrored from genesisui.com/demo/clever/1.8.10/bootstrap4-static/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2017 12:21:10 GMT -->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Clever - Bootstrap 4 Admin Template">
-  <meta name="author" content="Łukasz Holeczek">
-  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,jQuery,CSS,HTML,RWD,Dashboard,Vue,Vue.js,React,React.js">
-  <link rel="shortcut icon" href="/img/favicon.png">
-  <title>ซื้อขายผลไม้ล่วงหน้า-ออนไลน์</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Clever - Bootstrap 4 Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword"
+          content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,jQuery,CSS,HTML,RWD,Dashboard,Vue,Vue.js,React,React.js">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <title>ซื้อขายผลไม้ล่วงหน้า-ออนไลน์</title>
 
-  <!-- Icons -->
-  <link href="/vendors/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/vendors/css/simple-line-icons.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="/vendors/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/css/simple-line-icons.min.css" rel="stylesheet">
 
-  <!-- Main styles for this application -->
-  <link href="/css/style.css" rel="stylesheet">
+    <!-- Main styles for this application -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/js/sweetalert.css" rel="stylesheet">
 
-  <!-- Styles required by this views -->
-  <link href="/vendors/css/daterangepicker.min.css" rel="stylesheet">
-  <link href="/vendors/css/gauge.min.css" rel="stylesheet">
-  <link href="/vendors/css/toastr.min.css" rel="stylesheet">
-  <link href="/vendors/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-  
+    <!-- Styles required by this views -->
+    <link href="/vendors/css/daterangepicker.min.css" rel="stylesheet">
+    <link href="/vendors/css/gauge.min.css" rel="stylesheet">
+    <link href="/vendors/css/toastr.min.css" rel="stylesheet">
+    <link href="/vendors/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -64,69 +66,70 @@
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
 <?php echo $this->element('common/header') ?>
-  <div class="app-body">
+<div class="app-body">
     <?php echo $this->element('common/sidebar') ?>
     <!-- Main content -->
     <main class="main">
 
-      <!-- Breadcrumb -->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
-        <!-- Breadcrumb Menu-->
-        <li class="breadcrumb-menu d-md-down-none">
-          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-            <a class="btn" href="#"><i class="icon-speech"></i></a>
-            <a class="btn" href="index-2.html"><i class="icon-graph"></i> &nbsp;Dashboard</a>
-            <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
-          </div>
-        </li>
-      </ol>
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+            <!-- Breadcrumb Menu-->
+            <li class="breadcrumb-menu d-md-down-none">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <a class="btn" href="#"><i class="icon-speech"></i></a>
+                    <a class="btn" href="index-2.html"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                    <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+                </div>
+            </li>
+        </ol>
 
-      <div class="container-fluid">
+        <div class="container-fluid">
 
-        <div class="animated fadeIn">
-          <?php echo $this->Session->flash(); ?>
+            <div class="animated fadeIn">
+                <?php echo $this->Session->flash(); ?>
 
-			    <?php echo $this->fetch('content'); ?>
+                <?php echo $this->fetch('content'); ?>
+            </div>
+
         </div>
-
-      </div>
-      <!-- /.conainer-fluid -->
+        <!-- /.conainer-fluid -->
     </main>
 
-  </div>
-  <footer class="app-footer">
+</div>
+<footer class="app-footer">
     <span><a href="https://genesisui.com/">Clever</a> © 2017 creativeLabs.</span>
     <span class="ml-auto">Powered by <a href="https://genesisui.com/">GenesisUI</a></span>
-  </footer>
+</footer>
 
-  <!-- Bootstrap and necessary plugins -->
-  <script src="/vendors/js/jquery.min.js"></script>
-  <script src="/vendors/js/popper.min.js"></script>
-  <script src="/vendors/js/bootstrap.min.js"></script>
-  <script src="/vendors/js/pace.min.js"></script>
+<!-- Bootstrap and necessary plugins -->
+<script src="/vendors/js/jquery.min.js"></script>
+<script src="/vendors/js/popper.min.js"></script>
+<script src="/vendors/js/bootstrap.min.js"></script>
+<script src="/vendors/js/pace.min.js"></script>
 
-  <!-- Plugins and scripts required by all views -->
-  <script src="/vendors/js/Chart.min.js"></script>
+<!-- Plugins and scripts required by all views -->
+<script src="/vendors/js/Chart.min.js"></script>
 
-  <!-- Clever main scripts -->
+<!-- Clever main scripts -->
 
-  <script src="/js/app.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/sweetalert.min.js"></script>
+<!-- Plugins and scripts required by this views -->
+<script src="/vendors/js/toastr.min.js"></script>
+<script src="/vendors/js/gauge.min.js"></script>
+<script src="/vendors/js/moment.min.js"></script>
+<script src="/vendors/js/daterangepicker.min.js"></script>
+<script src="/vendors/js/jquery.dataTables.min.js"></script>
+<script src="/vendors/js/dataTables.bootstrap4.min.js"></script>
 
-  <!-- Plugins and scripts required by this views -->
-  <script src="/vendors/js/toastr.min.js"></script>
-  <script src="/vendors/js/gauge.min.js"></script>
-  <script src="/vendors/js/moment.min.js"></script>
-  <script src="/vendors/js/daterangepicker.min.js"></script>
-  <script src="/vendors/js/jquery.dataTables.min.js"></script>
-  <script src="/vendors/js/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Custom scripts required by this view -->
-  <script src="/js/views/tables.js"></script>
-  <!-- Custom scripts required by this view -->
-  <!-- <script src="/js/views/main.js"></script> -->
+<!-- Custom scripts required by this view -->
+<script src="/js/views/tables.js"></script>
+<!-- Custom scripts required by this view -->
+<!-- <script src="/js/views/main.js"></script> -->
 
 </body>
 
