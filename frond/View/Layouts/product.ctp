@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="/css/swiper.css" />
+    <link href="/js/sweetalert.css" rel="stylesheet">
     
     <!-- this is default skin you can replace that with: dark.css, yellow.css, red.css ect -->
     <link id="pagestyle" rel="stylesheet" type="text/css" href="/css/default.css" />
@@ -65,28 +66,28 @@
         <script type="text/javascript" src="/js/wow.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <script type="text/javascript" src="/js/gmaps.js"></script>
-       
-        
+        <script type="text/javascript" src="/js/custom.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
         
         <!-- Initialize Swiper slide -->
         <script>
-            var swiperH = new Swiper('.swiper-coverflow', {
-                pagination: '.swiper-pagination',
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                paginationClickable: true,
-                effect: 'coverflow',
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                loop: true,
-                coverflow: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows : true
-                }
-            });
+            // var swiperH = new Swiper('.swiper-coverflow', {
+            //     pagination: '.swiper-pagination',
+            //     nextButton: '.swiper-button-next',
+            //     prevButton: '.swiper-button-prev',
+            //     paginationClickable: true,
+            //     effect: 'coverflow',
+            //     centeredSlides: true,
+            //     slidesPerView: 'auto',
+            //     loop: true,
+            //     coverflow: {
+            //         rotate: 50,
+            //         stretch: 0,
+            //         depth: 100,
+            //         modifier: 1,
+            //         slideShadows : true
+            //     }
+            // });
         </script>
         
     </body>

@@ -130,7 +130,8 @@ class ProductsController extends AppController
         }
     }
 
-    public function remveProductImage(){
+    public function remveProductImage()
+    {
         $this->autoRender = false;
         $data = $this->request->data;
         if (!empty($data['id'])) {
@@ -141,18 +142,19 @@ class ProductsController extends AppController
         }
     }
 
-    function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
+    function dateDifference($date_1, $date_2, $differenceFormat = '%a')
     {
 
         $datetime1 = date_create($date_1);
         $datetime2 = date_create($date_2);
         $interval = date_diff($datetime1, $datetime2);
         $return = $interval->format('%m');
-        if($interval->format('%d') > 0){
-            $return = $return+1;
+        if ($interval->format('%d') > 0) {
+            $return = $return + 1;
         }
         return $return;
 
     }
+
 
 }

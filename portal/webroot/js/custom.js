@@ -1,7 +1,7 @@
 function deleteProduct(id, name) {
     swal({
             title: "ต้องการลบข้อมูล ?",
-            text: "ข้อมูลสินค้า "+name+" จะถูกลบออกจากระบบ",
+            text: "ข้อมูลสินค้า " + name + " จะถูกลบออกจากระบบ",
             type: "warning",
 
             confirmButtonClass: "btn-danger",
@@ -11,11 +11,11 @@ function deleteProduct(id, name) {
             closeOnConfirm: false,
             showLoaderOnConfirm: true
         },
-        function(){
-            $.post('/products/remove',{id:id}, function (e) {
-                if(e == 1){
+        function () {
+            $.post('/products/remove', {id: id}, function (e) {
+                if (e == 1) {
                     swal("เรียบร้อย!", "ลบข้อมูลสินค้าแล้ว.", "success");
-                }else{
+                } else {
                     swal("Error!", "ไม่สามารถลบข้อมูลได้.", "error");
                 }
             })
@@ -40,15 +40,16 @@ function removeProductImage(id) {
             closeOnConfirm: false,
             showLoaderOnConfirm: true
         },
-        function(){
-            $.post('/products/remveProductImage',{id:id}, function (e) {
-                if(e == 1){
+        function () {
+            $.post('/products/remveProductImage', {id: id}, function (e) {
+                if (e == 1) {
                     swal("เรียบร้อย!", "ลบข้อมูลรูปภาพแล้ว.", "success");
-                    $('.product-image-'+id).remove()
-                }else{
+                    $('.product-image-' + id).remove()
+                } else {
                     swal("Error!", "ไม่สามารถลบข้อมูลได้.", "error");
                 }
             })
 
         });
 }
+
