@@ -5,26 +5,28 @@
                 <?php foreach ($product['ProductImage'] as $key => $image) { ?>
                     <div class='item <?php echo $key == 0 ? "active" : "" ?>'>
                         <figure>
-                            <img style="width: 357.5px; height: 403.96px;" src="<?php echo Configure::read('Portal.Domain') . $image['path'] ?>" alt="">
+                            <img style="width: 357.5px; height: 403.96px;"
+                                 src="<?php echo Configure::read('Portal.Domain') . $image['path'] ?>" alt="">
                         </figure>
                     </div><!-- end item -->
                 <?php } ?>
 
                 <!-- Arrows -->
-<!--                <a class='left carousel-control' href='.html' data-slide='prev'>-->
-<!--                    <span class='fa fa-angle-left'></span>-->
-<!--                </a>-->
-<!--                <a class='right carousel-control' href='.html' data-slide='next'>-->
-<!--                    <span class='fa fa-angle-right'></span>-->
-<!--                </a>-->
+                <!--                <a class='left carousel-control' href='.html' data-slide='prev'>-->
+                <!--                    <span class='fa fa-angle-left'></span>-->
+                <!--                </a>-->
+                <!--                <a class='right carousel-control' href='.html' data-slide='next'>-->
+                <!--                    <span class='fa fa-angle-right'></span>-->
+                <!--                </a>-->
             </div><!-- end carousel-inner -->
 
             <!-- thumbs -->
             <ol class='carousel-indicators mCustomScrollbar meartlab'>
                 <?php foreach ($product['ProductImage'] as $key => $image) { ?>
-                <li data-target='.product-slider' data-slide-to='<?php echo $key ?>' class='<?php echo $key == 0 ? "active" : "" ?>'><img
-                            src='<?php echo Configure::read('Portal.Domain') . $image['path'] ?>'
-                            alt=''/></li>
+                    <li data-target='.product-slider' data-slide-to='<?php echo $key ?>'
+                        class='<?php echo $key == 0 ? "active" : "" ?>'><img
+                                src='<?php echo Configure::read('Portal.Domain') . $image['path'] ?>'
+                                alt=''/></li>
                 <?php } ?>
             </ol><!-- end carousel-indicators -->
         </div><!-- end carousel -->
@@ -33,7 +35,10 @@
         <p class="text-gray alt-font">ชื่อสินค้า: <?php echo $product['Product']['name'] ?></p>
 
         <br>
-            ราคา <?php if($product['Product']['price'] < $product['Product']['normal_price']){ ?> <br><span style="text-decoration: line-through;" class="amount off text-danger"><?php echo $product['Product']['normal_price'] ?></span> <?php } ?> <h4 class="text-primary"><?php echo $product['Product']['price'] ?></h4>
+        ราคา <?php if ($product['Product']['price'] < $product['Product']['normal_price']) { ?> <br><span
+                style="text-decoration: line-through;"
+                class="amount off text-danger"><?php echo $product['Product']['normal_price'] ?> บาท</span> <?php } ?> <h4
+                class="text-primary"><?php echo $product['Product']['price'] ?> บาท/<?php echo $product['Product']['price_per_key'] ?></h4>
 
         <p>
             <?php echo $product['Product']['detail'] ?>
@@ -53,11 +58,13 @@
         <hr class="spacer-10">
         <ul class="list list-inline">
             <li>
-                <button type="button" onclick="addToCart(<?php echo $product['Product']['id'] ?>)" class="btn btn-default btn-md round"><i class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า
+                <button type="button" onclick="addToCart(<?php echo $product['Product']['id'] ?>)"
+                        class="btn btn-default btn-md round"><i class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า
                 </button>
             </li>
             <li>
-                <button type="button" onclick="addToWishlist(<?php echo $product['Product']['id'] ?>)" class="btn btn-gray btn-md round"><i class="fa fa-heart mr-5"></i>เพิ่มใส่สินค้าที่ชื่นชอบ
+                <button type="button" onclick="addToWishlist(<?php echo $product['Product']['id'] ?>)"
+                        class="btn btn-gray btn-md round"><i class="fa fa-heart mr-5"></i>เพิ่มใส่สินค้าที่ชื่นชอบ
                 </button>
             </li>
         </ul>

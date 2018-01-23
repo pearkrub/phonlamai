@@ -47,7 +47,7 @@
                         <?php if ($product['Product']['price'] < $product['Product']['normal_price']) { ?>
                             <small class="amount off text-danger"><?php echo $product['Product']['normal_price']; ?></small>
                         <?php } ?>
-                        <span class="amount text-primary"><?php echo $product['Product']['price']; ?></span>
+                        <span class="amount text-primary"><?php echo $product['Product']['price']; ?> บาท/<?php echo $product['Product']['price_per_key'] ?></span>
                     </div>
                     <a class="btn btn-default btn-md round"
                        onclick="addToCart(<?php echo $product['Product']['id'] ?>)"><i

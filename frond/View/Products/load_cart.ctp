@@ -15,7 +15,7 @@
             <p class="product-name">
                 <a href="/products/view/<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
             </p>
-            <strong><?php echo $product['qty'] ?></strong> x <span class="price text-primary"><?php echo $product['price'] ?></span>
+            <strong><?php echo $product['qty'] ?></strong> x <span class="price text-primary"><?php echo $product['price'] ?> บ.</span>
         </div><!-- end product-details -->
     </li><!-- end item -->
 <?php } ?>
