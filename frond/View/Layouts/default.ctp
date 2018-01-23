@@ -43,19 +43,19 @@
                             <!--<h2 class="title">Our Collections</h2>-->
                             <!--<p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>-->
                         <!--</div>-->
-<!--                    </div><!-- end col -->-->
-<!--                </div><!-- end row -->-->
+<!--                    </div><!-- end col -->
+<!--                </div><!-- end row -->
 <!--                -->
 <!--              -->
 <!--                                -->
-<!--                    <!--<div class="col-sm-8 col-sm-offset-2">-->-->
+<!--                    <!--<div class="col-sm-8 col-sm-offset-2">-->
 <!--                        <!--<d-->
-<!--                            </div><!-- end caption -->-->
-<!--                        </div><!-- end thumbnail -->-->
-<!--                    </div><!-- end col -->-->
-<!--                </div><!-- end row -->-->
+<!--                            </div><!-- end caption -->
+<!--                        </div><!-- end thumbnail -->
+<!--                    </div><!-- end col -->
+<!--                </div><!-- end row -->
 <!--                -->
-<!--            </div><!-- end container -->-->
+<!--            </div><!-- end container -->
 <!--        </section>-->
         <!-- end section -->
 

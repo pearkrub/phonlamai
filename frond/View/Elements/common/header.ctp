@@ -66,9 +66,9 @@
                     </li>
                     <li>
                         <div class="cart-footer">
-                            <a href="cart.html" class="pull-left"><i
+                            <a href="/cart" class="pull-left"><i
                                         class="fa fa-cart-plus mr-5"></i>ดูสินค้าในตะกร้า</a>
-                            <a href="checkout.html" class="pull-right"><i class="fa fa-shopping-basket mr-5"></i>สั่งซื้อ</a>
+                            <a href="/cart/checkout" class="pull-right"><i class="fa fa-shopping-basket mr-5"></i>สั่งซื้อ</a>
                         </div>
                     </li>
                 </ul>
