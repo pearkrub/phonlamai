@@ -34,8 +34,9 @@
                     <?php } ?>
                     <div class="icons">
                         <a class="icon semi-circle" href="javascript:void(0);"><i class="fa fa-heart-o"></i></a>
-                        <a class="icon semi-circle" href="javascript:void(0);"><i class="fa fa-gift"></i></a>
+                        <a class="icon semi-circle" title="เพิ่มเข้าตะกร้า" onclick="addToCart(<?php echo $product['Product']['id'] ?>)" href="javascript:void(0);"><i class="fa fa-shopping-basket"></i></a>
                         <a onclick="viewProduct(<?php echo $product['Product']['id'] ?>, '<?php echo $product['Product']['name'] ?>')"
+                           title="ดูรายละเอียด"
                            class="icon semi-circle" href="javascript:void(0);" data-toggle="modal"
                            data-target=".productQuickView"><i class="fa fa-search"></i></a>
                     </div>

@@ -26,11 +26,11 @@ function addToCart(id) {
     if (count >= 1) {
 
         $.post('/products/addToCart', {id: id, qty: count}, function (e) {
-            if(e == 1){
+            if (e == 1) {
                 swal("เรียบร้อย!", "เพิ่มข้อมูลไปที่ตะกร้าแล้ว", "success");
                 loadCart()
                 $('.productQuickView').modal('hide')
-            }else{
+            } else {
                 swal("มีบางอย่างผิดพลาด!", "เพิ่มข้อมูลไปที่ตะกร้าล้มเหลว", "error");
             }
         })
@@ -39,15 +39,55 @@ function addToCart(id) {
 }
 
 function removeProductInCart(id) {
-    $.post('/products/removeProductInCart', {id: id}, function (e) {
-        if(e == 1){
-            swal("เรียบร้อย!", "ลบสินค้าออกจากตะกร้าแล้ว", "success");
-            loadCart()
-            $('.productQuickView').modal('hide')
-        }else{
-            swal("มีบางอย่างผิดพลาด!", "ลบสินค้าออกจากตะกร้าล้มเหลว", "error");
-        }
-    })
+    swal({
+            title: "ยืนยัน ?",
+            text: "ต้องการลบสินค้าออกจากตะกร้า",
+            type: "warning",
+
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "ยืนยัน",
+            showCancelButton: true,
+            cancelButtonText: "ยกเลิก",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+        function () {
+            $.post('/products/removeProductInCart', {id: id}, function (e) {
+                if (e == 1) {
+                    swal("เรียบร้อย!", "ลบสินค้าออกจากตะกร้าแล้ว", "success");
+                    loadCart()
+                    $('.productQuickView').modal('hide')
+                } else {
+                    swal("มีบางอย่างผิดพลาด!", "ลบสินค้าออกจากตะกร้าล้มเหลว", "error");
+                }
+            })
+        });
+}
+
+function removeProductInCartPage(id) {
+    swal({
+            title: "ยืนยัน ?",
+            text: "ต้องการลบสินค้าออกจากตะกร้า",
+            type: "warning",
+
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "ยืนยัน",
+            showCancelButton: true,
+            cancelButtonText: "ยกเลิก",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+        function () {
+            $.post('/products/removeProductInCart', {id: id}, function (e) {
+                if (e == 1) {
+                    swal("เรียบร้อย!", "ลบสินค้าออกจากตะกร้าแล้ว", "success");
+                    location.reload()
+                } else {
+                    swal("มีบางอย่างผิดพลาด!", "ลบสินค้าออกจากตะกร้าล้มเหลว", "error");
+                }
+            })
+
+        });
 }
 
 function addToWishlist(id) {

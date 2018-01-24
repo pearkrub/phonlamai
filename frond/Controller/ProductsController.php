@@ -103,7 +103,7 @@ class ProductsController extends AppController
         $carts = $this->Session->read('carts');
         if(empty($carts)){
             $carts = array();
-            $this->set('carts', $carts);
+            $this->set('cart_products', $carts);
         }else{
             $carts = json_decode($carts, true);
             $product_ids = array();
