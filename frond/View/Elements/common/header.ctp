@@ -51,7 +51,7 @@
                 <a href="javascript:void(0);">
                     <i class="fa fa-shopping-basket mr-5"></i>
                     <span class="hidden-xs">
-                        ตะกร้าสินค้า <sup class="text-primary count-product-of-cart">(2)</sup>
+                        ตะกร้าสินค้า <sup class="text-primary count-product-of-cart"></sup>
                         <i class="fa fa-angle-down ml-5"></i>
                     </span>
                 </a>

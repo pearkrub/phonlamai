@@ -38,6 +38,7 @@ class CartController extends  AppController
                 $cart_products[$key]['qty'] = $carts[$product['Product']['id']]['qty'];
                 $cart_products[$key]['price'] = $product['Product']['price'];
                 $cart_products[$key]['shop_name'] = $product['Merchant']['shop_name'];
+                $cart_products[$key]['in_stock'] = $product['Product']['quantity'];
             }
 
             $this->set('cart_products', $cart_products);

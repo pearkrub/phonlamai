@@ -1,5 +1,32 @@
 $(document).ready(function () {
     loadCart()
+
+    $('.product_qty').on('change', function () {
+        var id = $(this).attr('id')
+        var price = $(this).attr('price')
+        var qty = $(this).val()
+        var in_stock = $(this).attr('qty')
+        if (parseInt(qty) > parseInt(in_stock)) {
+            swal("มีบางอย่างผิดพลาด!", "จำนวนสอนค้าในร้านไม่พอ", "error");
+            $(this).val(qty-1)
+        }
+
+        if (qty < 1) {
+            removeProductInCartPage(id)
+            $(this).val(parseInt(qty)+1)
+        }
+
+        if (qty > 0 && qty <= parseInt(in_stock)) {
+            var total = qty * price
+            $.post('/products/addToCart', {id: id,qty:qty,update:'Y'}, function (e) {
+                if (e == 1) {
+                    loadCart()
+                }
+            })
+            $('#price_' + id).html(total)
+        }
+
+    })
 })
 
 function viewProduct(id, name) {
