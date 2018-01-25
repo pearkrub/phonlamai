@@ -28,7 +28,7 @@ class LoginController extends AppController {
                 'conditions' => array(
                     'username' => $data['username'],
                     'password' => md5($data['password']),
-                    'status' => 'N',
+                    'status' => 'Y',
                     'deleted' => 'N'
                 )
             ));

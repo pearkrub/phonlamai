@@ -13,4 +13,6 @@
  */
 class Product extends AppModel{ 
     public $hasMany = array('ProductImage');
+
+    public $belongsTo = array('Merchant');
 }
