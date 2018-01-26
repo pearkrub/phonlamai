@@ -20,6 +20,4 @@
 <!--            </li>-->
         </ul>
     </div><!-- end widget -->
-
-    
 </div><!-- end col -->
