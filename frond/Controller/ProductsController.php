@@ -50,11 +50,6 @@ class ProductsController extends AppController
 
                 $cart = $this->Session->read('carts');
 
-                if (empty($cart)) {
-                    $cart = array();
-                } else {
-                    $cart = json_decode($cart, true);
-                }
                 if (!empty($cart[$product_id]) && empty($data['update'])) {
                     $cart[$product_id]['qty'] = $cart[$product_id]['qty'] + $qty;
 
@@ -62,7 +57,7 @@ class ProductsController extends AppController
                     $cart[$product_id]['qty'] = $qty;
                 }
 
-                $cart = $this->Session->write('carts', json_encode($cart));
+                $cart = $this->Session->write('carts', $cart);
 
                 return $cart;
             }
@@ -83,15 +78,10 @@ class ProductsController extends AppController
 
                 $cart = $this->Session->read('carts');
 
-                if (empty($cart)) {
-                    $cart = array();
-                } else {
-                    $cart = json_decode($cart, true);
-                }
                 if (!empty($cart[$product_id])) {
                     unset($cart[$product_id]);
                 }
-                $cart = $this->Session->write('carts', json_encode($cart));
+                $cart = $this->Session->write('carts', $cart);
 
                 return $cart;
             }
@@ -109,7 +99,6 @@ class ProductsController extends AppController
             $carts = array();
             $this->set('cart_products', $carts);
         } else {
-            $carts = json_decode($carts, true);
             $product_ids = array();
 
             foreach ($carts as $key => $cart) {
@@ -144,7 +133,6 @@ class ProductsController extends AppController
         if (empty($carts)) {
             return '(0)';
         } else {
-            $carts = json_decode($carts, true);
             return '(' . count($carts) . ')';
         }
     }
