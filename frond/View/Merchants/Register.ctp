@@ -28,15 +28,15 @@
                         <div class="col-sm-4">
                             <input type="text" name="first_name" class="form-control input-md" id="name" placeholder="Name">
                         </div>
-                        <label for="name" class="col-sm-2 control-label">นามสกุล</label>
+                        <label for="last_name" class="col-sm-2 control-label">นามสกุล</label>
                         <div class="col-sm-4">
-                            <input type="text" name="last_name" class="form-control input-md" id="name" placeholder="Last name">
+                            <input type="text" name="last_name" class="form-control input-md" id="last_name" placeholder="Last name">
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">เลขที่บัตรประชาชน</label>
+                        <label for="id_cart" class="col-sm-2 control-label">เลขที่บัตรประชาชน</label>
                         <div class="col-sm-4">
-                            <input type="text" name="id_cart" class="form-control input-md" id="name" placeholder="x-xxxx-xxxxx-xx-x">
+                            <input type="text" name="id_cart" class="form-control input-md" id="id_cart" placeholder="x-xxxx-xxxxx-xx-x">
                         </div>
                         <label for="email" class="col-sm-2 control-label">อีเมล <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
@@ -44,22 +44,22 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">ชื่อร้านค้า</label>
+                        <label for="shop_name" class="col-sm-2 control-label">ชื่อร้านค้า</label>
                         <div class="col-sm-4">
-                            <input type="text" name="shop_name" class="form-control input-md" id="name" placeholder="Shop name">
+                            <input type="text" name="shop_name" class="form-control input-md" id="shop_name" placeholder="Shop name">
                         </div>
-                        <label for="email" class="col-sm-2 control-label">เบอร์โทร <span class="text-danger">*</span></label>
+                        <label for="phone" class="col-sm-2 control-label">เบอร์โทร <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="text" name="phone" class="form-control input-md" id="email" placeholder="Mobile">
+                            <input required type="text" name="phone" class="form-control input-md" id="phone" placeholder="Mobile">
                         </div>
                     </div><!-- end form-group -->
                     <hr class="spacer-5"><hr class="spacer-20 no-border">
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">ที่อยู่ <span class="text-danger">*</span></label>
+                        <label for="address" class="col-sm-2 control-label">ที่อยู่ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="text" name="address" class="form-control input-md" id="email" placeholder="Address">
+                            <input required type="text" name="address" class="form-control input-md" id="address" placeholder="Address">
                         </div>
-                        <label for="email" class="col-sm-2 control-label">จังหวัด <span class="text-danger">*</span></label>
+                        <label for="province_id" class="col-sm-2 control-label">จังหวัด <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
                             <select class="form-control" name="province_id" id="province_id" required>
                                 <option value="">- - - เลือกจังหวัด - - -</option>
@@ -70,13 +70,13 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">อำเภอ <span class="text-danger">*</span></label>
+                        <label for="amphur_id" class="col-sm-2 control-label">อำเภอ <span class="text-danger">*</span></label>
                         <div class="col-sm-4 amphur_div">
                             <select class="form-control" name="amphur_id" id="amphur_id">
                                 <option value="">- - - เลือกอำเภอ - - -</option>
                             </select>
                         </div>
-                        <label for="email" class="col-sm-2 control-label">ตำบล <span class="text-danger">*</span></label>
+                        <label for="district_id" class="col-sm-2 control-label">ตำบล <span class="text-danger">*</span></label>
                         <div class="col-sm-4 district_div">
                             <select class="form-control" name="district_id" id="district_id">
                                 <option value="">- - - เลือกตำบล - - -</option>
@@ -84,13 +84,13 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
+                        <label for="zipcode" class="col-sm-2 control-label">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
                             <input required type="text" name="zipcode" class="form-control input-md" id="zipcode" placeholder="xxxxx">
                         </div>
-                        <label for="password" class="col-sm-2 control-label">ไฟล์เอกสารแนบ <span class="text-danger">*</span></label>
+                        <label for="document" class="col-sm-2 control-label">ไฟล์เอกสารแนบ <span class="text-danger">*</span></label>
                         <div class="col-sm-4">
-                            <input required type="file" name="document" class="form-control input-md" id="password" placeholder="Confirm Password">
+                            <input required type="file" name="document" class="form-control input-md" id="document" placeholder="document">
                         </div>
                     </div><!-- end form-group -->
                     <hr class="spacer-5"><hr class="spacer-20 no-border">

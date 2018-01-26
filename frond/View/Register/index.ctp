@@ -30,9 +30,9 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">นามสกุล</label>
+                        <label for="last_name" class="col-sm-2 control-label">นามสกุล</label>
                         <div class="col-sm-10">
-                            <input type="text" name="last_name" class="form-control input-md" id="name" placeholder="Name">
+                            <input type="text" name="last_name" class="form-control input-md" id="last_name" placeholder="Name">
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
@@ -42,9 +42,9 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">เบอร์โทร <span class="text-danger">*</span></label>
+                        <label for="phone" class="col-sm-2 control-label">เบอร์โทร <span class="text-danger">*</span></label>
                         <div class="col-sm-10">
-                            <input required type="text" name="phone" class="form-control input-md" id="email" placeholder="Mobile">
+                            <input required type="text" name="phone" class="form-control input-md" id="phone" placeholder="Mobile">
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
@@ -54,9 +54,9 @@
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
-                        <label for="password" class="col-sm-2 control-label">ยืนยันรหัสผ่าน <span class="text-danger">*</span></label>
+                        <label for="confirm_password" class="col-sm-2 control-label">ยืนยันรหัสผ่าน <span class="text-danger">*</span></label>
                         <div class="col-sm-10">
-                            <input required type="password" name="confirm_password" class="form-control input-md" id="password" placeholder="Confirm Password">
+                            <input required type="password" name="confirm_password" class="form-control input-md" id="confirm_password" placeholder="Confirm Password">
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">
