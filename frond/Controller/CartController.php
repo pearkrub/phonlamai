@@ -6,21 +6,23 @@
  * Time: 9:39
  */
 
-class CartController extends  AppController
+class CartController extends AppController
 {
     public $uses = array('Product');
-    public function index(){
+
+    public function index()
+    {
         $this->layout = 'cart';
 
         $carts = $this->Session->read('carts');
-        if(empty($carts)){
+        if (empty($carts)) {
             $carts = array();
             $this->set('cart_products', $carts);
-        }else{
+        } else {
             $carts = json_decode($carts, true);
             $product_ids = array();
 
-            foreach ($carts as $key => $cart){
+            foreach ($carts as $key => $cart) {
                 $product_ids[] = $key;
             }
 
@@ -31,10 +33,10 @@ class CartController extends  AppController
             ));
             $cart_products = array();
 
-            foreach ($products as $key => $product){
+            foreach ($products as $key => $product) {
                 $cart_products[$key]['id'] = $product['Product']['id'];
                 $cart_products[$key]['name'] = $product['Product']['name'];
-                $cart_products[$key]['image'] = empty($product['ProductImage'])?'':$product['ProductImage'][0]['path'];
+                $cart_products[$key]['image'] = empty($product['ProductImage']) ? '' : $product['ProductImage'][0]['path'];
                 $cart_products[$key]['qty'] = $carts[$product['Product']['id']]['qty'];
                 $cart_products[$key]['price'] = $product['Product']['price'];
                 $cart_products[$key]['shop_name'] = $product['Merchant']['shop_name'];
@@ -43,5 +45,10 @@ class CartController extends  AppController
 
             $this->set('cart_products', $cart_products);
         }
+    }
+
+    public function checkout()
+    {
+        $this->layout = 'cart';
     }
 }
