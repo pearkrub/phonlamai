@@ -21,6 +21,7 @@ $(document).ready(function () {
             $.post('/products/addToCart', {id: id,qty:qty,update:'Y'}, function (e) {
                 if (e == 1) {
                     loadCart()
+                    getSummary()
                 }
             })
             $('#price_' + id).html(formatDollar(total))
@@ -135,4 +136,7 @@ function loadCart() {
 
 function loadCount() {
     $('.count-product-of-cart').load('/products/cartCount')
+}
+function getSummary() {
+    $('#cart-summary').load('/cart/getSummary')
 }

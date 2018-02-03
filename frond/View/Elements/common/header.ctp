@@ -132,7 +132,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="javascript:void(0);" class="navbar-brand visible-xs">
-                <img src="img/logo.png" alt="logo">
+                <img src="/img/logo.png" alt="logo">
             </a>
         </div>
         <div id="navbar-collapse-3" class="navbar-collapse collapse">

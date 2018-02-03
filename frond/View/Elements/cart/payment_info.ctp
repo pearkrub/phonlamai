@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-md-6">
-        <h5 class="thin subtitle">Choose a Payment Method</h5>
+        <h5 class="thin subtitle">กรุณาเลือกช่องทางการชำระเงิน</h5>
         <div class="panel-group accordion style2" id="accordionPayment" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingPayment1">
                     <h4 class="panel-title">
                         <a class="" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment1" aria-expanded="true" aria-controls="collapsePayment1">
-                            <i class="fa fa-credit-card mr-10"></i>Credit or Debit Card
+                            <i class="fa fa-credit-card mr-10"></i>โอนผ่านธนาคาร
                         </a>
                     </h4><!-- end panel-title -->
                 </div><!-- end panel-heading -->
@@ -92,7 +92,7 @@
                 <div class="panel-heading" role="tab" id="headingPayment2">
                     <h4 class="panel-title">
                         <a class="collapsed" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment2" aria-expanded="false" aria-controls="collapsePayment2">
-                            <i class="fa fa-paypal mr-10"></i>Pay with PayPal
+                            <i class="fa fa-paypal mr-10"></i>จ่ายเงินที่เทศบาล
                         </a>
                     </h4>
                 </div><!-- end panel-heading -->
@@ -164,3 +164,8 @@
         </div><!-- end panel-group -->
     </div><!-- end col -->
 </div><!-- end row -->
+<div class="text-left">
+    <button type="submit" class="btn btn-default semi-circle btn-md">
+        <i class="fa fa-check mr-5"></i> ยืนยันการสั่งซื้อ
+    </button>
+</div>

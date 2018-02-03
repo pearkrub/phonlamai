@@ -10,7 +10,9 @@
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($cart_products as $product) { ?>
+            <?php
+            $total = 0;
+            foreach ($cart_products as $product) { ?>
                 <tr>
                     <td>
                         <a onclick="viewProduct(<?php echo $product['id'] ?>, '<?php echo $product['name'] ?>')"
@@ -23,7 +25,7 @@
                     </td>
                     <td>
                         <h6 class="regular"><a
-                                href="/products/view/<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
+                                    href="/products/view/<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
                         </h6>
                         <p>ผู้ขาย : <?php echo $product['shop_name'] ?></p>
                     </td>
@@ -32,7 +34,8 @@
                     </td>
                     <td>
                         <div class="col-sm-6">
-                            <input type="number" qty="<?php echo $product['in_stock'] ?>" class="form-control product_qty" price="<?php echo $product['price'] ?>"
+                            <input type="number" qty="<?php echo $product['in_stock'] ?>"
+                                   class="form-control product_qty" price="<?php echo $product['price'] ?>"
                                    id="<?php echo $product['id'] ?>" value="<?php echo $product['qty'] ?>">
                         </div>
 
@@ -47,19 +50,40 @@
                         </button>
                     </td>
                 </tr>
-            <?php } ?>
+            <?php
+                $total = $total+($product['qty'] * $product['price']);
+            } ?>
             </tbody>
         </table><!-- end table -->
     </div><!-- end table-responsive -->
     <hr class="spacer-10 no-border">
+    <hr class="spacer-30">
 
-    <a href="/" class="btn btn-light semi-circle btn-md pull-left">
-        <i class="fa fa-arrow-left mr-5"></i> เลือกซื้อสินค้าต่อ
-    </a>
+    <div class="row">
+        <div class="col-sm-7 text-left">
+        </div><!-- end col -->
 
-    <a href="cart/checkout" class="btn btn-default semi-circle btn-md pull-right">
-        ยืนยันการสั่งซ์้อ <i class="fa fa-arrow-right ml-5"></i>
-    </a>
+        <div class="col-sm-5">
+            <div id="cart-summary" class="table-responsive">
+                <table class="table no-border">
+                    <tr>
+                        <th>ราคารวม</th>
+                        <td><?php echo number_format($total) ?> บ.</td>
+                    </tr>
+                    <tr>
+                        <th>ข้อมูลการส่งสินค้า</th>
+                        <td>ฟรี</td>
+                    </tr>
+                    <tr>
+                        <th>ยอดสุทธิ</th>
+                        <td><?php echo number_format($total) ?> บ.</td>
+                    </tr>
+                </table><!-- end table -->
+            </div><!-- end table-responsive -->
+        </div><!-- end col -->
+    </div><!-- end row -->
+
+
 <?php } else { ?>
     <div class="text-center">
         <h4>- - -ไม่มีสินค้าในตะกร้า- - -</h4>

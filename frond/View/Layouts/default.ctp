@@ -8,7 +8,7 @@
     <meta name="description" content="Phonlamai.com - ตลาดขายผลไม้ออนไลน์">
     <meta name="author" content="Diamant Gjota" />
     <meta name="keywords" content="plus, html5, css3, template, ecommerce, e-commerce, bootstrap, responsive, creative" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -79,7 +79,7 @@
         <script type="text/javascript" src="/js/pace.min.js"></script>
         <script type="text/javascript" src="/js/star-rating.min.js"></script>
         <script type="text/javascript" src="/js/wow.min.js"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<!--        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
         <script type="text/javascript" src="/js/gmaps.js"></script>
         <script src="/js/sweetalert.min.js"></script>
         <script src="/js/custom.js"></script>
