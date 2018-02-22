@@ -18,7 +18,7 @@ if (!empty($Auth)) { ?>
                 <div class="row bs-wizard" style="border-bottom:0;">
 
                     <div class="col-xs-3 bs-wizard-step active">
-                        <div class="text-center bs-wizard-stepnum">ตะกร้าสินค้า</div>
+                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-shopping-cart"></i> ตะกร้าสินค้า</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
                         </div>
@@ -27,7 +27,7 @@ if (!empty($Auth)) { ?>
                     </div>
 
                     <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-                        <div class="text-center bs-wizard-stepnum">ข้อมูลการจัดส่ง</div>
+                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-truck"></i> ข้อมูลการจัดส่ง</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
                         </div>
@@ -36,7 +36,7 @@ if (!empty($Auth)) { ?>
                     </div>
 
                     <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-                        <div class="text-center bs-wizard-stepnum">ช่องทางการชำระเงิน</div>
+                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-credit-card"></i> ช่องทางการชำระเงิน</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
                         </div>
@@ -45,7 +45,7 @@ if (!empty($Auth)) { ?>
                     </div>
 
                     <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
-                        <div class="text-center bs-wizard-stepnum">สรุปการสั่งซื้อ</div>
+                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-check-square-o"></i> สรุปการสั่งซื้อ</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
                         </div>

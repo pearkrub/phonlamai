@@ -84,7 +84,7 @@
     </div><!-- end row -->
     <div class="text-right">
         <a href="/cart/shipping" class="btn btn-default semi-circle btn-md">
-            <i class="glyphicon glyphicon-arrow-right"></i> ดำเนินการต่อ
+            ดำเนินการต่อ <i class="glyphicon glyphicon-arrow-right"></i>
         </a>
     </div>
 
