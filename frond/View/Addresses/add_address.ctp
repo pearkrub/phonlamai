@@ -23,8 +23,7 @@
                         class="text-danger">*</span></label>
                 <div class="col-sm-8">
                     <textarea rows="3" type="text" name="address" class="form-control input-md" id="address"
-                           placeholder="หมู่บ้าน บ้านเลขที่ หมู่ ซอย ถนน">
-                    </textarea>
+                           placeholder="หมู่บ้าน บ้านเลขที่ หมู่ ซอย ถนน"></textarea>
                 </div>
             </div><!-- end form-group -->
             <div class="form-group">
