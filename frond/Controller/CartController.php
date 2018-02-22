@@ -96,6 +96,14 @@ class CartController extends AppController
     /**
      * @return array
      */
+    public function shipping()
+    {
+        $this->layout = 'cart';
+    }
+
+    /**
+     * @return array
+     */
     public function getSummary()
     {
         $this->layout = 'ajax';

@@ -17,7 +17,7 @@ if (!empty($Auth)) { ?>
 
                 <div class="row bs-wizard" style="border-bottom:0;">
 
-                    <div class="col-xs-3 bs-wizard-step active">
+                    <div class="col-xs-3 bs-wizard-step complete">
                         <div class="text-center bs-wizard-stepnum">ตะกร้าสินค้า</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
@@ -26,7 +26,7 @@ if (!empty($Auth)) { ?>
                         <!--            <div class="bs-wizard-info text-center">Lorem ipsum dolor sit amet.</div>-->
                     </div>
 
-                    <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                    <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
                         <div class="text-center bs-wizard-stepnum">ข้อมูลการจัดส่ง</div>
                         <div class="progress">
                             <div class="progress-bar"></div>
@@ -54,7 +54,7 @@ if (!empty($Auth)) { ?>
                     </div>
                 </div>
                 <div class="tab-content pills">
-                        <?php echo $this->element('cart/cart') ?>
+                        <?php echo $this->element('cart/billing_info') ?>
                 </div><!-- end pills content -->
             </div>
 
@@ -93,7 +93,7 @@ if (!empty($Auth)) { ?>
 
                         <div class="form-group">
                             <label for="email" class="col-sm-4 control-label">อีเมล <span
-                                        class="text-danger">*</span></label>
+                                    class="text-danger">*</span></label>
                             <div class="col-sm-8">
                                 <input required type="email" name="email" class="form-control input-md" id="email"
                                        placeholder="Email">
@@ -102,7 +102,7 @@ if (!empty($Auth)) { ?>
 
                         <div class="form-group">
                             <label for="password" class="col-sm-4 control-label">รหัสผ่าน <span
-                                        class="text-danger">*</span></label>
+                                    class="text-danger">*</span></label>
                             <div class="col-sm-8">
                                 <input required type="password" name="password" class="form-control input-md"
                                        id="password"

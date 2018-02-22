@@ -18,6 +18,28 @@
         </div><!-- end productRewiew -->
 
 
+        <div class="modal fade addressModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h6 class="modal-header-address"></h6>
+                    </div><!-- end modal-header -->
+                    <div class="modal-body-address">
+
+                    </div><!-- end modal-body -->
+                    <div class="modal-footer">
+                        <button id="save-address-btn" class="btn btn-primary">บันทึก</button>
+                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            ยกเลิก
+                        </button>
+                    </div>
+                </div><!-- end modal-content -->
+            </div><!-- end modal-dialog -->
+        </div><!-- end productRewiew -->
+
         <!-- Modal Login -->
         <div class="modal fade account loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-sm" role="document">
@@ -42,8 +64,6 @@
                                             <input type="submit" class="btn btn-default btn-block round " value="Log In">
                                         </div><!-- end form-group -->
                                     </form>
-
-
                                 </div><!-- inner-content -->
 
                             </div><!-- end col -->

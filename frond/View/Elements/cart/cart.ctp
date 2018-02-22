@@ -82,7 +82,11 @@
             </div><!-- end table-responsive -->
         </div><!-- end col -->
     </div><!-- end row -->
-
+    <div class="text-right">
+        <a href="/cart/shipping" class="btn btn-default semi-circle btn-md">
+            <i class="glyphicon glyphicon-arrow-right"></i> ดำเนินการต่อ
+        </a>
+    </div>
 
 <?php } else { ?>
     <div class="text-center">
