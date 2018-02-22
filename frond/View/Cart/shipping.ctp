@@ -3,7 +3,7 @@ $Auth = $this->Session->read('Auth');
 if (!empty($Auth)) { ?>
     <div class="row">
         <div class="col-sm-12 text-left">
-            <h2 class="title">ดำเนินการสั่งซื้อ</h2>
+            <h5 class="title">ดำเนินการสั่งซื้อ</h5>
         </div>
     </div>
 
@@ -79,7 +79,7 @@ if (!empty($Auth)) { ?>
         <div class="col-sm-9">
             <div class="row">
                 <div class="col-sm-12 text-left">
-                    <h2 class="title">คุณยังไม่ได้เข้าสู่ระบบ</h2>
+                    <h5 class="title">คุณยังไม่ได้เข้าสู่ระบบ</h5>
                 </div><!-- end col -->
             </div><!-- end row -->
 
