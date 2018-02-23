@@ -98,6 +98,7 @@
 <script type="text/javascript" src="/js/custom.js"></script>
 <script type="text/javascript" src="/js/address.js"></script>
 <script src="/js/sweetalert.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
 
 <!-- Initialize Swiper slide -->
 <script>

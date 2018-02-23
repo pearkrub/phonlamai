@@ -8,5 +8,5 @@
 
 class CustomerAddress extends  AppModel
 {
-
+    public $belongsTo = array('Amphure', 'District', 'Province');
 }

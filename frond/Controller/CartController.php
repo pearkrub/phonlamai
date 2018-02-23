@@ -8,7 +8,7 @@
 
 class CartController extends AppController
 {
-    public $uses = array('Product');
+    public $uses = array('Product', 'CustomerAddress');
 
     public function index()
     {
@@ -88,7 +88,6 @@ class CartController extends AppController
                 $this->set('cart_products', $cart_products);
             }
         }catch (\Exception $exception){
-            die;
             $this->prd($exception);
         }
     }
@@ -99,6 +98,15 @@ class CartController extends AppController
     public function shipping()
     {
         $this->layout = 'cart';
+        $Customer = $this->Session->read('Auth');
+        $customer_id = $Customer['Customer']['id'];
+        $CustomerAddresses = $this->CustomerAddress->find('all',array(
+            'conditions' => array(
+                'CustomerAddress.customer_id' => $customer_id
+            )
+        ));
+
+        $this->set('CustomerAddresses', $CustomerAddresses);
     }
 
     /**

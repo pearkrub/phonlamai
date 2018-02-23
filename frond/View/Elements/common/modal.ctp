@@ -31,10 +31,10 @@
 
                     </div><!-- end modal-body -->
                     <div class="modal-footer">
-                        <button id="save-address-btn" class="btn btn-primary">บันทึก</button>
                         <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">
                             ยกเลิก
                         </button>
+                        <button id="save-address-btn" class="btn btn-primary">บันทึก</button>
                     </div>
                 </div><!-- end modal-content -->
             </div><!-- end modal-dialog -->

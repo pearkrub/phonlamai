@@ -13,7 +13,7 @@ $(document).ready(function () {
 
         if (qty < 1) {
             removeProductInCartPage(id)
-            $(this).val(parseInt(qty)+1)
+            $(this).val(1)
         }
 
         if (qty > 0 && qty <= parseInt(in_stock)) {
