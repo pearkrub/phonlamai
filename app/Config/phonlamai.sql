@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-02-22 09:19:42
+Date: 2018-02-23 09:48:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1084,21 +1084,24 @@ INSERT INTO `customers` VALUES ('1', null, '123456', 'Y', 'Praibool', 'Namwong',
 -- ----------------------------
 DROP TABLE IF EXISTS `customer_addresses`;
 CREATE TABLE `customer_addresses` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `province_id` int(11) DEFAULT NULL,
-  `amphur_id` int(11) DEFAULT NULL,
+  `amphure_id` int(11) DEFAULT NULL,
   `district_id` int(11) DEFAULT NULL,
   `zipcode` varchar(255) DEFAULT NULL,
   `full_name` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer_addresses
 -- ----------------------------
+INSERT INTO `customer_addresses` VALUES ('2', '1', '15/8 ม.6', '1', '2', '14', '10300', 'ณเดช', 'บ้าน');
+INSERT INTO `customer_addresses` VALUES ('3', '1', '65/88', '8', '111', '871', '16150', 'ญาญ่า', 'ออฟฟิส');
+INSERT INTO `customer_addresses` VALUES ('4', '1', '4444', '1', '2', '14', '10300', '4444', '5555');
 
 -- ----------------------------
 -- Table structure for districts
