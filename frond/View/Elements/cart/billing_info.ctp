@@ -6,7 +6,7 @@
                 <div class="panel-body">
 
                     <label class="thin subtitle">
-                        <input type="radio" name="address_id" value="<?php echo $address['CustomerAddress']['id'] ?>"/>
+                        <input required type="radio" name="address_id" value="<?php echo $address['CustomerAddress']['id'] ?>"/>
                         <b><?php echo $address['CustomerAddress']['title'] ?></b>
                     </label>
                     <p>

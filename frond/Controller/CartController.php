@@ -141,4 +141,18 @@ class CartController extends AppController
             $this->set('total', $total);
         }
     }
+
+    public function saveAddress()
+    {
+        $this->autoRender = false;
+        $data = $this->request->data;
+        return $this->Session->write('shippingAddressId', $data['address_id']);
+        
+    }
+
+    public function payment()
+    {
+        $this->layout = 'cart';
+        pr($this->Session->read('shippingAddressId'));
+    }
 }

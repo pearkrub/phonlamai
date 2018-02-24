@@ -54,3 +54,27 @@ function removeAddress(id) {
             })
         });
 }
+
+function saveShipping() {
+    var validator = $( ".shipping-form" ).validate({
+        showErrors: function(errorMap, errorList) {
+            $('#error_count').val(this.numberOfInvalids())
+            this.defaultShowErrors();
+        },
+        messages: {
+            address_id: {
+                required: 'กรุณาเลือกที่อยู่'
+            }
+        }
+    });
+    validator.form();
+
+    if($('#error_count').val() == 0) {
+        $.post('/cart/saveAddress', $('.shipping-form').serialize(), function (data) {
+            console.log(data)
+            window.location = '/cart/payment'
+        })
+    }else{
+        swal("แจ้งเตือน!", "กรุณาเลือกที่อยู่จัดส่งสินค้า", "warning");
+    }
+}

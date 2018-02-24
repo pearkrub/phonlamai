@@ -54,7 +54,11 @@ if (!empty($Auth)) { ?>
                     </div>
                 </div>
                 <div class="tab-content pills">
+                    <form method="post" class="shipping-form">
+                        <label id="address_id-error" class="error" style="color:red; display:none" for="address_id">กรุณาเลือกที่อยู่.</label>
                         <?php echo $this->element('cart/billing_info') ?>
+                        <input type="hidden" id="error_count"/>
+                        </form>
                 </div><!-- end pills content -->
             </div>
 
@@ -66,7 +70,7 @@ if (!empty($Auth)) { ?>
         <a href="/cart/checkout" class="btn btn-info semi-circle btn-md pull-left">
             <i class="glyphicon glyphicon-arrow-left"></i> กลับไปหน้าตะกร้า
         </a>
-        <a href="/cart/shipping" class="btn btn-default semi-circle btn-md">
+        <a onclick="saveShipping()" class="btn btn-default semi-circle btn-md">
             ดำเนินการต่อ <i class="glyphicon glyphicon-arrow-right"></i>
         </a>
     </div>

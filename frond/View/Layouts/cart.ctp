@@ -63,8 +63,8 @@
 <section class="section white-backgorund">
     <div class="container">
         <div class="row">
-                <?php echo $this->element('common/sidebar') ?>
-            <div class="col-sm-9">
+                <?php //echo $this->element('common/sidebar') ?>
+            <div class="col-sm-12">
                 <?php echo $this->fetch('content'); ?>
             </div>
         </div>
