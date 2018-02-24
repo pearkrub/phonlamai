@@ -3,17 +3,17 @@
         <h5 class="thin subtitle">เลือกช่องทางการชำระเงิน</h5>
 
         <label class="thin subtitle">
-            <input required type="radio" name="payment_method" value="pay_at_store"/>
+            <input required type="radio" class="payment_method" name="payment_method" value="pay_at_store"/>
              <i class="fa fa-home mr-10"></i><b>จ่ายเงินที่เทศบาล</b>
         </label><br>
         <label class="thin subtitle">
-            <input required type="radio" name="payment_method" value="bank"/>
+            <input required type="radio" class="payment_method" name="payment_method" value="bank"/>
              <i class="fa fa-credit-card mr-10"></i><b>โอนผ่านธนาคาร</b>
         </label>
-        <div class="panel-group accordion style2" id="accordionPayment" role="tablist" aria-multiselectable="true">
+        <div style="display: none;" class="panel-group accordion style2 panel-bank" id="accordionPayment" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingPayment1">
-                    <h4 class="panel-title">
+                    <h4 class="panel-title" style="background-color: #00aced">
                         <a class="" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment1" aria-expanded="true" aria-controls="collapsePayment1">
                             <i class="fa fa-credit-card mr-10"></i>โอนผ่านธนาคาร
                         </a>
@@ -111,10 +111,10 @@
                 </div><!-- end collapse -->
             </div><!-- end panel -->
         </div><!-- end panel-group -->
+        <div class="text-left">
+            <button type="submit" class="btn btn-default semi-circle btn-md">
+                <i class="fa fa-check mr-5"></i> ยืนยันการสั่งซื้อ
+            </button>
+        </div>
     </div><!-- end col -->
 </div><!-- end row -->
-<div class="text-right">
-    <button type="submit" class="btn btn-default semi-circle btn-md">
-        <i class="fa fa-check mr-5"></i> ยืนยันการสั่งซื้อ
-    </button>
-</div>

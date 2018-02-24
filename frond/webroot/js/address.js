@@ -78,3 +78,11 @@ function saveShipping() {
         swal("แจ้งเตือน!", "กรุณาเลือกที่อยู่จัดส่งสินค้า", "warning");
     }
 }
+
+$('.payment_method').on('change', function () {
+    if($(this).val() === 'bank') {
+        $('.panel-bank').show()
+    }else {
+        $('.panel-bank').hide()
+    }
+})
