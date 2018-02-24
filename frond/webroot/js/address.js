@@ -86,3 +86,27 @@ $('.payment_method').on('change', function () {
         $('.panel-bank').hide()
     }
 })
+
+function checkout() {
+    var validator = $( ".payment-form" ).validate({
+        showErrors: function(errorMap, errorList) {
+            $('#error_count').val(this.numberOfInvalids())
+            this.defaultShowErrors();
+        },
+        messages: {
+            payment_method: {
+                required: 'กรุณาเลือกช่องทางการชำระเงิน'
+            }
+        }
+    });
+    validator.form();
+
+    if($('#error_count').val() == 0) {
+        $.post('/orders/create', $('.payment-form').serialize(), function (data) {
+            swal("สำเร็จ!", "ขอขอบคุณสำหรับการสั่งซื้อของคุณ\n", "success");
+            window.location = '/orders/success/'+data
+        })
+    }else{
+        swal("แจ้งเตือน!", "กรุณาเลือกช่องทางการชำระเงิน", "warning");
+    }
+}

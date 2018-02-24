@@ -1,48 +1,60 @@
 <div class="row">
     <div class="col-md-6">
-        <h5 class="thin subtitle">เลือกช่องทางการชำระเงิน</h5>
-
-        <label class="thin subtitle">
-            <input required type="radio" class="payment_method" name="payment_method" value="pay_at_store"/>
-             <i class="fa fa-home mr-10"></i><b>จ่ายเงินที่เทศบาล</b>
-        </label><br>
-        <label class="thin subtitle">
-            <input required type="radio" class="payment_method" name="payment_method" value="bank"/>
-             <i class="fa fa-credit-card mr-10"></i><b>โอนผ่านธนาคาร</b>
-        </label>
-        <div style="display: none;" class="panel-group accordion style2 panel-bank" id="accordionPayment" role="tablist" aria-multiselectable="true">
+        <div>
+            <h5 class="thin subtitle">เลือกช่องทางการชำระเงิน</h5>
+            <form class="payment-form" method="post">
+                <label class="thin subtitle">
+                    <input required type="radio" class="payment_method" name="payment_method" value="pay_at_store"/>
+                    <i class="fa fa-home mr-10"></i><b>จ่ายเงินที่เทศบาล</b>
+                </label><br>
+                <label class="thin subtitle">
+                    <input required type="radio" class="payment_method" name="payment_method" value="bank"/>
+                    <i class="fa fa-credit-card mr-10"></i><b>โอนผ่านธนาคาร</b>
+                </label><br>
+                <label id="payment_method-error" class="error" style="display:none; color: red" for="payment_method">กรุณาเลือกช่องทางการชำระเงิน.</label>
+                <input type="hidden" id="error_count">
+            </form>
+        </div>
+        <div style="display: none;" class="panel-group accordion style2 panel-bank" id="accordionPayment" role="tablist"
+             aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingPayment1">
-                    <h4 class="panel-title" style="background-color: #00aced">
-                        <a class="" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment1" aria-expanded="true" aria-controls="collapsePayment1">
+                    <h4 class="panel-title">
+                        <a class="" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment1"
+                           aria-expanded="true" aria-controls="collapsePayment1">
                             <i class="fa fa-credit-card mr-10"></i>โอนผ่านธนาคาร
                         </a>
                     </h4><!-- end panel-title -->
                 </div><!-- end panel-heading -->
-                <div id="collapsePayment1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingPayment1">
+                <div id="collapsePayment1" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="headingPayment1">
                     <div class="panel-body">
                         <div class="row col-md-6">
-                            <div class="text-center"><img src="/img/bank/krb.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center"><img src="/img/bank/krb.png" style="width: 150px;height: 150px;">
+                            </div>
                             <div class="text-center">ธนาคารกรุงไทย</div>
                             <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
                             <div class="text-center">เลขที่ 132-4-54446-9</div>
                         </div>
                         <div class="row col-md-6">
-                            <div class="text-center"><img src="/img/bank/kbank.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center"><img src="/img/bank/kbank.png" style="width: 150px;height: 150px;">
+                            </div>
                             <div class="text-center">ธนาคารกสิกรไทย</div>
                             <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
                             <div class="text-center">เลขที่ 546-4-23423-3</div>
                         </div>
                         <div class="row col-md-6">
                             <br>
-                            <div class="text-center"><img src="/img/bank/BBL.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center"><img src="/img/bank/BBL.png" style="width: 150px;height: 150px;">
+                            </div>
                             <div class="text-center">ธนาคารกรุงเทพ</div>
                             <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
                             <div class="text-center">เลขที่ 343-4-36784-1</div>
                         </div>
                         <div class="row col-md-6">
                             <br>
-                            <div class="text-center"><img src="/img/bank/scb.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center"><img src="/img/bank/scb.png" style="width: 150px;height: 150px;">
+                            </div>
                             <div class="text-center">ธนาคารไทยพานิชย์</div>
                             <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
                             <div class="text-center">เลขที่ 895-4-45332-7</div>
@@ -58,12 +70,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="questionOne">
                     <h4 class="panel-title">
-                        <a class="" data-toggle="collapse" data-parent="#question" href="#collapseQuestionOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="" data-toggle="collapse" data-parent="#question" href="#collapseQuestionOne"
+                           aria-expanded="true" aria-controls="collapseOne">
                             ฉันจะชำระผ่านธนาคารอย่างไร ?
                         </a>
                     </h4>
                 </div><!-- end panel-heading -->
-                <div id="collapseQuestionOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="questionOne">
+                <div id="collapseQuestionOne" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="questionOne">
                     <div class="panel-body">
                         <ul>
                             <li>โอนเข้าบัญชีตามธนาคารที่เทศบาลแจ้งไว้ทางซ้ายมือ</li>
@@ -76,12 +90,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="questionTwo">
                     <h4 class="panel-title">
-                        <a class="collapsed" data-toggle="collapse" data-parent="#question" href="#collapseQuestionTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#question" href="#collapseQuestionTwo"
+                           aria-expanded="false" aria-controls="collapseTwo">
                             การแจ้งชำระเงิน (โอนผ่านธนาคาร)
                         </a>
                     </h4>
                 </div><!-- end panel-heading -->
-                <div id="collapseQuestionTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="questionTwo">
+                <div id="collapseQuestionTwo" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="questionTwo">
                     <div class="panel-body">
                         <ul>
                             <li>เข้าเมนู แจ้งชำระเงิน ที่เมนูด้านบน</li>
@@ -95,14 +111,16 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="questionThree">
                     <h4 class="panel-title">
-                        <a class="collapsed" data-toggle="collapse" data-parent="#question" href="#collapseQuestionThree" aria-expanded="false" aria-controls="collapseThree">
-                        การชำระเงิน (จ่ายเงินที่เทศบาล)
+                        <a class="collapsed" data-toggle="collapse" data-parent="#question"
+                           href="#collapseQuestionThree" aria-expanded="false" aria-controls="collapseThree">
+                            การชำระเงิน (จ่ายเงินที่เทศบาล)
                         </a>
                     </h4>
                 </div><!-- end panel-heading -->
-                <div id="collapseQuestionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="questionThree">
+                <div id="collapseQuestionThree" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="questionThree">
                     <div class="panel-body">
-                    <ul>
+                        <ul>
                             <li>เมื่อทำการสั่งซื้อสำเร็จให้ปริ้นใบสั่งซื้อ</li>
                             <li>นำใบสั่งซื้อไปชำระเงินที่เทศบาล</li>
                             <li>ติดตามสถานะใบสั่งซื้อ</li>
@@ -112,7 +130,7 @@
             </div><!-- end panel -->
         </div><!-- end panel-group -->
         <div class="text-left">
-            <button type="submit" class="btn btn-default semi-circle btn-md">
+            <button onclick="checkout()" class="btn btn-default semi-circle btn-md">
                 <i class="fa fa-check mr-5"></i> ยืนยันการสั่งซื้อ
             </button>
         </div>

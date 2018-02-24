@@ -12,5 +12,5 @@
  * @author ptum
  */
 class Order extends AppModel{ 
-    //put your code here
+    public $hasMany = array('OrderDetail');
 }
