@@ -153,6 +153,5 @@ class CartController extends AppController
     public function payment()
     {
         $this->layout = 'cart';
-        pr($this->Session->read('shippingAddressId'));
     }
 }

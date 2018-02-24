@@ -21,7 +21,32 @@
                 </div><!-- end panel-heading -->
                 <div id="collapsePayment1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingPayment1">
                     <div class="panel-body">
-                        
+                        <div class="row col-md-6">
+                            <div class="text-center"><img src="/img/bank/krb.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center">ธนาคารกรุงไทย</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 132-4-54446-9</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <div class="text-center"><img src="/img/bank/kbank.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center">ธนาคารกสิกรไทย</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 546-4-23423-3</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <br>
+                            <div class="text-center"><img src="/img/bank/BBL.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center">ธนาคารกรุงเทพ</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 343-4-36784-1</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <br>
+                            <div class="text-center"><img src="/img/bank/scb.png" style="width: 150px;height: 150px;"></div>
+                            <div class="text-center">ธนาคารไทยพานิชย์</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 895-4-45332-7</div>
+                        </div>
                     </div><!-- end panel-body -->
                 </div><!-- end collapse -->
             </div><!-- end panel -->
