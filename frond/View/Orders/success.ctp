@@ -81,8 +81,7 @@ function DateThai($strDate)
                                     </a>
                                 </td>
                                 <td>
-                                    <h6 class="regular"><a
-                                                href="/products/view/<?php echo $product['Product']['id'] ?>"><?php echo $product['product_name'] ?></a>
+                                    <h6 class="regular"><a ><?php echo $product['product_name'] ?></a>
                                     </h6>
                                     <div>ผู้ขาย : <?php echo $product['Merchant']['shop_name'] ?></div>
                                     <div>พร้อมส่งประมาน : <?php echo DateThai(date('Y-m-d', strtotime("+".$product['category_id']." months"))) ?></div>
