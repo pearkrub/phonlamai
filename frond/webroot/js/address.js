@@ -103,8 +103,15 @@ function checkout() {
 
     if($('#error_count').val() == 0) {
         $.post('/orders/create', $('.payment-form').serialize(), function (data) {
-            swal("สำเร็จ!", "ขอขอบคุณสำหรับการสั่งซื้อของคุณ\n", "success");
-            window.location = '/orders/success/'+data
+            var rs = JSON.parse(data)
+            if(rs.error){
+                swal("ผิดพลาด!", "สินค้าไม่พอ\n"+rs.error, "error");
+            }else {
+                swal("สำเร็จ!", "ขอขอบคุณสำหรับการสั่งซื้อของคุณ\n", "success");
+                 window.location = '/orders/success/'+rs.id
+            }
+
+
         })
     }else{
         swal("แจ้งเตือน!", "กรุณาเลือกช่องทางการชำระเงิน", "warning");

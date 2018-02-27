@@ -34,6 +34,15 @@ class OrdersController extends AppController
             ));
         }
 
+        $error['error'] = [];
+
+        $outOfStocks = $this->checkProduct($products);
+        if (!empty($outOfStocks)) {
+            $error['error'] = join('<br>', $outOfStocks);
+
+            return json_encode($error);
+        }
+
         $address = $this->CustomerAddress->findById($shippingAddressId);
         $order['order_no'] = $this->getOrderNo();
         $order['order_date'] = date('Y-m-d H:i:s');
@@ -53,14 +62,21 @@ class OrdersController extends AppController
                 $order_detail['merchant_id'] = $product['Product']['merchant_id'];
                 $order_detail['count'] = $carts[$product['Product']['id']]['qty'];
                 $order_detail['normal_price'] = $carts[$product['Product']['id']]['qty'] * $product['Product']['normal_price'];
-                $order_detail['price'] = $carts[$product['Product']['id']]['qty'] * $product['Product']['price'];
+                $order_detail['total_price'] = $carts[$product['Product']['id']]['qty'] * $product['Product']['price'];
                 $order_detail['product_name'] = $product['Product']['name'];
                 $order_detail['product_detail'] = $product['Product']['detail'];
                 $order_detail['category_id'] = $product['Product']['category_id'];
-                $order_detail['price_per_key'] = $product['Product']['price'];
+                $order_detail['price'] = $product['Product']['price'];
+                $order_detail['available_date'] = date('Y-m-d', strtotime("+" . $product['Product']['category_id'] . " months"));
                 $this->OrderDetail->create();
                 $this->OrderDetail->save($order_detail);
                 $total = $total + ($carts[$product['Product']['id']]['qty'] * $product['Product']['price']);
+
+                $updateProduct = array();
+                $updateProduct['id'] = $product['Product']['id'];
+                $updateProduct['quantity'] = intval($product['Product']['quantity']) - intval($carts[$product['Product']['id']]['qty']);
+
+                $this->Product->save($updateProduct);
             }
 
             $order = array();
@@ -70,10 +86,10 @@ class OrdersController extends AppController
             if ($this->Order->save($order)) {
                 $this->Session->delete('carts');
                 $this->Session->delete('shippingAddressId');
-                echo base64_encode($order_id);
             }
         }
 
+        return json_encode(['id' => base64_encode($order_id)]);
     }
 
     public function getOrderNo()
@@ -112,5 +128,21 @@ class OrdersController extends AppController
         } else {
             $this->redirect('/');
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function checkProduct($products = null)
+    {
+        $carts = $this->Session->read('carts');
+        $error = array();
+        foreach ($products as $key => $product) {
+            if ($product['Product']['quantity'] < $carts[$product['Product']['id']]['qty']) {
+                $error[] = '- ' . $product['Product']['name'] . ' ขาด ' . intval($carts[$product['Product']['id']]['qty'] - $product['Product']['quantity']) . ' ' . $product['Product']['price_per_key'];
+            }
+        }
+
+        return $error;
     }
 }

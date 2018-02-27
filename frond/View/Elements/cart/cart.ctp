@@ -1,4 +1,33 @@
-<?php if (!empty($cart_products)) { ?>
+<?php
+
+function DateThai($strDate)
+{
+    $strYear = date("Y", strtotime($strDate)) + 543;
+    $strMonth = date("n", strtotime($strDate));
+    $strDay = date("j", strtotime($strDate));
+    $strHour = date("H", strtotime($strDate));
+    $strMinute = date("i", strtotime($strDate));
+    $strSeconds = date("s", strtotime($strDate));
+    $strMonthCut = Array(
+        "",
+        "ม.ค.",
+        "ก.พ.",
+        "มี.ค.",
+        "เม.ย.",
+        "พ.ค.",
+        "มิ.ย.",
+        "ก.ค.",
+        "ส.ค.",
+        "ก.ย.",
+        "ต.ค.",
+        "พ.ย.",
+        "ธ.ค."
+    );
+    $strMonthThai = $strMonthCut[$strMonth];
+    return "$strDay $strMonthThai $strYear";
+}
+
+if (!empty($cart_products)) { ?>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -27,7 +56,8 @@
                         <h6 class="regular"><a
                                     href="/products/view/<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
                         </h6>
-                        <p>ผู้ขาย : <?php echo $product['shop_name'] ?></p>
+                        <div>ผู้ขาย : <?php echo $product['shop_name'] ?></div>
+                        <div>พร้อมส่งประมาน : <?php echo DateThai(date('Y-m-d', strtotime("+".$product['category_id']." months"))).' - '.DateThai(date('Y-m-d', strtotime(date('Y-m-d', strtotime("+".$product['category_id']." months"))." + 7 days"))) ?></div>
                     </td>
                     <td>
                         <span><?php echo $product['price'] ?></span>
