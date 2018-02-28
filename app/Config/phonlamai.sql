@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-02-23 09:48:34
+Date: 2018-02-28 09:31:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1078,6 +1078,26 @@ CREATE TABLE `customers` (
 -- Records of customers
 -- ----------------------------
 INSERT INTO `customers` VALUES ('1', null, '123456', 'Y', 'Praibool', 'Namwong', '90452345', 'praiboolkrub@gmail.com', null, 'N');
+
+-- ----------------------------
+-- Table structure for customer_address
+-- ----------------------------
+DROP TABLE IF EXISTS `customer_address`;
+CREATE TABLE `customer_address` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `province_id` int(11) DEFAULT NULL,
+  `amphur_id` int(11) DEFAULT NULL,
+  `district_id` int(11) DEFAULT NULL,
+  `zipcode` varchar(255) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of customer_address
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for customer_addresses
@@ -10085,14 +10105,26 @@ CREATE TABLE `orders` (
   `total_price` decimal(10,0) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `customer_id` (`customer_id`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `payment_method` varchar(50) DEFAULT NULL,
+  `shipping_address` text,
+  `payment_status` varchar(255) DEFAULT 'waiting',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
+INSERT INTO `orders` VALUES ('1', 'INV20180200001', '2018-02-24 14:24:01', 'new_order', '1', null, null, null, '2018-02-24 14:24:01', '2018-02-24 14:24:01', 'bank', '{\"CustomerAddress\":{\"id\":\"3\",\"customer_id\":\"1\",\"address\":\"65\\/88\",\"province_id\":\"8\",\"amphure_id\":\"111\",\"district_id\":\"871\",\"zipcode\":\"16150\",\"full_name\":\"\\u0e0d\\u0e32\\u0e0d\\u0e48\\u0e32\",\"title\":\"\\u0e2d\\u0e2d\\u0e1f\\u0e1f\\u0e34\\u0e2a\"},\"Amphure\":{\"id\":\"111\",\"amphur_code\":\"1703\",\"amphur_name\":\"\\u0e04\\u0e48\\u0e32\\u0e22\\u0e1a\\u0e32\\u0e07\\u0e23\\u0e30\\u0e08\\u0e31\\u0e19   \",\"amphur_name_eng\":\"Khai Bang Rachan\",\"province_id\":\"8\"},\"District\":{\"id\":\"871\",\"district_code\":\"170301\",\"district_name\":\"\\u0e42\\u0e1e\\u0e17\\u0e30\\u0e40\\u0e25   \",\"district_name_eng\":\"Pho Thale\",\"amphur_id\":\"111\",\"province_id\":\"8\"},\"Province\":{\"id\":\"8\",\"province_code\":\"17\",\"province_name\":\"\\u0e2a\\u0e34\\u0e07\\u0e2b\\u0e4c\\u0e1a\\u0e38\\u0e23\\u0e35   \",\"province_name_eng\":\"Sing Buri\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('2', 'INV20180200002', '2018-02-24 14:26:18', 'new_order', '1', '300', null, '300', '2018-02-24 14:26:18', '2018-02-24 14:26:18', 'bank', '{\"CustomerAddress\":{\"id\":\"3\",\"customer_id\":\"1\",\"address\":\"65\\/88\",\"province_id\":\"8\",\"amphure_id\":\"111\",\"district_id\":\"871\",\"zipcode\":\"16150\",\"full_name\":\"\\u0e0d\\u0e32\\u0e0d\\u0e48\\u0e32\",\"title\":\"\\u0e2d\\u0e2d\\u0e1f\\u0e1f\\u0e34\\u0e2a\"},\"Amphure\":{\"id\":\"111\",\"amphur_code\":\"1703\",\"amphur_name\":\"\\u0e04\\u0e48\\u0e32\\u0e22\\u0e1a\\u0e32\\u0e07\\u0e23\\u0e30\\u0e08\\u0e31\\u0e19   \",\"amphur_name_eng\":\"Khai Bang Rachan\",\"province_id\":\"8\"},\"District\":{\"id\":\"871\",\"district_code\":\"170301\",\"district_name\":\"\\u0e42\\u0e1e\\u0e17\\u0e30\\u0e40\\u0e25   \",\"district_name_eng\":\"Pho Thale\",\"amphur_id\":\"111\",\"province_id\":\"8\"},\"Province\":{\"id\":\"8\",\"province_code\":\"17\",\"province_name\":\"\\u0e2a\\u0e34\\u0e07\\u0e2b\\u0e4c\\u0e1a\\u0e38\\u0e23\\u0e35   \",\"province_name_eng\":\"Sing Buri\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('3', 'INV20180200003', '2018-02-24 17:13:04', 'new_order', '1', '800', null, '800', '2018-02-24 17:13:04', '2018-02-24 17:13:04', 'bank', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('4', 'INV20180200004', '2018-02-24 17:15:21', 'new_order', '1', '1200', null, '1200', '2018-02-24 17:15:21', '2018-02-24 17:15:21', 'pay_at_store', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('5', 'INV20180200005', '2018-02-24 17:18:41', 'new_order', '1', '350', null, '350', '2018-02-24 17:18:41', '2018-02-24 17:18:41', 'bank', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('6', 'INV20180200006', '2018-02-27 00:00:52', 'new_order', '1', '150', null, '150', '2018-02-27 00:00:52', '2018-02-27 00:00:52', 'bank', '{\"CustomerAddress\":{\"id\":\"3\",\"customer_id\":\"1\",\"address\":\"65\\/88\",\"province_id\":\"8\",\"amphure_id\":\"111\",\"district_id\":\"871\",\"zipcode\":\"16150\",\"full_name\":\"\\u0e0d\\u0e32\\u0e0d\\u0e48\\u0e32\",\"title\":\"\\u0e2d\\u0e2d\\u0e1f\\u0e1f\\u0e34\\u0e2a\"},\"Amphure\":{\"id\":\"111\",\"amphur_code\":\"1703\",\"amphur_name\":\"\\u0e04\\u0e48\\u0e32\\u0e22\\u0e1a\\u0e32\\u0e07\\u0e23\\u0e30\\u0e08\\u0e31\\u0e19   \",\"amphur_name_eng\":\"Khai Bang Rachan\",\"province_id\":\"8\"},\"District\":{\"id\":\"871\",\"district_code\":\"170301\",\"district_name\":\"\\u0e42\\u0e1e\\u0e17\\u0e30\\u0e40\\u0e25   \",\"district_name_eng\":\"Pho Thale\",\"amphur_id\":\"111\",\"province_id\":\"8\"},\"Province\":{\"id\":\"8\",\"province_code\":\"17\",\"province_name\":\"\\u0e2a\\u0e34\\u0e07\\u0e2b\\u0e4c\\u0e1a\\u0e38\\u0e23\\u0e35   \",\"province_name_eng\":\"Sing Buri\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('7', 'INV20180200007', '2018-02-27 20:14:14', 'new_order', '1', '500', null, '500', '2018-02-27 20:14:14', '2018-02-27 20:14:14', 'bank', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('8', 'INV20180200008', '2018-02-27 21:09:48', 'new_order', '1', '2500', null, '2500', '2018-02-27 21:09:48', '2018-02-27 21:09:48', 'pay_at_store', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('9', 'INV20180200009', '2018-02-27 21:13:36', 'new_order', '1', '0', null, '0', '2018-02-27 21:13:36', '2018-02-27 21:13:36', 'bank', '[]', 'waiting');
+INSERT INTO `orders` VALUES ('10', 'INV20180200010', '2018-02-27 21:44:37', 'new_order', '1', '600', null, '600', '2018-02-27 21:44:37', '2018-02-27 21:44:38', 'pay_at_store', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
+INSERT INTO `orders` VALUES ('11', 'INV20180200011', '2018-02-27 21:45:41', 'new_order', '1', '350', null, '350', '2018-02-27 21:45:41', '2018-02-27 21:45:41', 'bank', '{\"CustomerAddress\":{\"id\":\"2\",\"customer_id\":\"1\",\"address\":\"15\\/8 \\u0e21.6\",\"province_id\":\"1\",\"amphure_id\":\"2\",\"district_id\":\"14\",\"zipcode\":\"10300\",\"full_name\":\"\\u0e13\\u0e40\\u0e14\\u0e0a\",\"title\":\"\\u0e1a\\u0e49\\u0e32\\u0e19\"},\"Amphure\":{\"id\":\"2\",\"amphur_code\":\"1002\",\"amphur_name\":\"\\u0e40\\u0e02\\u0e15\\u0e14\\u0e38\\u0e2a\\u0e34\\u0e15   \",\"amphur_name_eng\":\"Khet Dusit\",\"province_id\":\"1\"},\"District\":{\"id\":\"14\",\"district_code\":\"100202\",\"district_name\":\"\\u0e27\\u0e0a\\u0e34\\u0e23\\u0e1e\\u0e22\\u0e32\\u0e1a\\u0e32\\u0e25   \",\"district_name_eng\":\"Wachiraphayaban\",\"amphur_id\":\"2\",\"province_id\":\"1\"},\"Province\":{\"id\":\"1\",\"province_code\":\"10\",\"province_name\":\"\\u0e01\\u0e23\\u0e38\\u0e07\\u0e40\\u0e17\\u0e1e\\u0e21\\u0e2b\\u0e32\\u0e19\\u0e04\\u0e23   \",\"province_name_eng\":\"Bangkok\"}}', 'waiting');
 
 -- ----------------------------
 -- Table structure for order_details
@@ -10106,22 +10138,38 @@ CREATE TABLE `order_details` (
   `merchant_id` int(11) DEFAULT NULL,
   `count` int(11) DEFAULT NULL,
   `normal_price` decimal(10,0) DEFAULT NULL,
-  `price` decimal(10,0) DEFAULT NULL,
+  `total_price` decimal(10,0) DEFAULT NULL,
   `product_name` varchar(255) DEFAULT NULL,
   `product_detail` varchar(255) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `price_per_key` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `available_date` datetime DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  KEY `merchant_id` (`merchant_id`),
-  CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `orders` (`id`),
-  CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `order_details_ibfk_3` FOREIGN KEY (`merchant_id`) REFERENCES `merchants` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `merchant_id` (`merchant_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of order_details
 -- ----------------------------
+INSERT INTO `order_details` VALUES ('2', '3', '2', '1', '2', '2', '400', '300', 'Jeamsak2', '-', '2', '150', null, null);
+INSERT INTO `order_details` VALUES ('3', '2', '3', '1', '2', '1', '200', '200', 'Jeamsak', '-', '1', '200', null, null);
+INSERT INTO `order_details` VALUES ('4', '3', '3', '1', '2', '1', '200', '150', 'Jeamsak2', '-', '2', '150', null, null);
+INSERT INTO `order_details` VALUES ('5', '4', '3', '1', '2', '3', '900', '450', 'เงาะ', 'ไม่มี', '1', '150', null, null);
+INSERT INTO `order_details` VALUES ('6', '2', '4', '1', '2', '3', '600', '600', 'Jeamsak', '-', '1', '200', null, null);
+INSERT INTO `order_details` VALUES ('7', '3', '4', '1', '2', '1', '200', '150', 'Jeamsak2', '-', '2', '150', null, null);
+INSERT INTO `order_details` VALUES ('8', '4', '4', '1', '2', '3', '900', '450', 'เงาะ', 'ไม่มี', '1', '150', null, null);
+INSERT INTO `order_details` VALUES ('9', '2', '5', '1', '2', '1', '200', '200', 'Jeamsak', '-', '1', '200', null, null);
+INSERT INTO `order_details` VALUES ('10', '4', '5', '1', '2', '1', '300', '150', 'เงาะ', 'ไม่มี', '1', '150', null, null);
+INSERT INTO `order_details` VALUES ('11', '4', '6', '1', '2', '1', '300', '150', 'เงาะ', 'ไม่มี', '1', '150', null, null);
+INSERT INTO `order_details` VALUES ('12', '2', '7', '1', '2', '1', '200', '200', 'Jeamsak', '-', '1', '200', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('13', '3', '7', '1', '2', '1', '200', '150', 'Jeamsak2', '-', '2', '150', '2018-04-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('14', '4', '7', '1', '2', '1', '300', '150', 'เงาะ', 'ไม่มี', '1', '150', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('15', '2', '8', '1', '2', '5', '1000', '1000', 'Jeamsak', '-', '1', '200', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('16', '4', '8', '1', '2', '10', '3000', '1500', 'เงาะ', 'ไม่มี', '1', '150', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('17', '4', '10', '1', '2', '4', '1200', '600', 'เงาะ', 'ไม่มี', '1', '150', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('18', '2', '11', '1', '2', '1', '200', '200', 'Jeamsak', '-', '1', '200', '2018-03-27 00:00:00', null);
+INSERT INTO `order_details` VALUES ('19', '4', '11', '1', '2', '1', '300', '150', 'เงาะ', 'ไม่มี', '1', '150', '2018-03-27 00:00:00', null);
 
 -- ----------------------------
 -- Table structure for products
@@ -10142,17 +10190,15 @@ CREATE TABLE `products` (
   `end_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `merchant_product` (`merchant_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `merchant_product` FOREIGN KEY (`merchant_id`) REFERENCES `merchants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
+  KEY `category_id` (`category_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES ('2', 'Jeamsak', '-', '2', '1', '50', 'ลูก', '200', '200', 'Y', '2018-01-16 00:00:00', '2018-02-11 23:59:59');
+INSERT INTO `products` VALUES ('2', 'Jeamsak', '-', '2', '1', '44', 'ลูก', '200', '200', 'Y', '2018-01-16 00:00:00', '2018-02-11 23:59:59');
 INSERT INTO `products` VALUES ('3', 'Jeamsak2', '-', '2', '2', '50', 'ลูก', '150', '200', 'Y', '2018-01-07 00:00:00', '2018-02-21 23:59:59');
-INSERT INTO `products` VALUES ('4', 'เงาะ', 'ไม่มี', '2', '1', '50', 'kg', '150', '300', 'Y', '2018-01-25 00:00:00', '2018-02-19 23:59:59');
+INSERT INTO `products` VALUES ('4', 'เงาะ', 'ไม่มี', '2', '1', '1', 'kg', '150', '300', 'Y', '2018-01-25 00:00:00', '2018-02-19 23:59:59');
 
 -- ----------------------------
 -- Table structure for product_images
@@ -10166,8 +10212,7 @@ CREATE TABLE `product_images` (
   `file_size` double DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  CONSTRAINT `product_images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+  KEY `product_id` (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
