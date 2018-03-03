@@ -56,9 +56,10 @@
                         <h6 class="modal-header-address">เข้าสู่ระบบ</h6>
                     </div><!-- end modal-header -->
                     <div class="modal-body">
-                        <div class="row display-table text-center">
-                            <div class="col-sm-12 vertical-align">
-                                <div class="inner-content">
+                        <div class="row display-table text-left">
+                            <div class="col-sm-10 vertical-align">
+<!--                                <div class="inner-content">-->
+                                <hr class="spacer-10 no-border">
                                     <form method="post" class="login-form">
                                         <div class="form-group">
                                             <input required name="email" type="email" class="form-control " placeholder="อีเมล">
@@ -70,7 +71,7 @@
                                             <input type="hidden" id="error_count_login">
                                         </div><!-- end form-group -->
                                     </form>
-                                </div><!-- inner-content -->
+<!--                                </div>-->
                             </div><!-- end col -->
                         </div><!-- end row -->
                     </div><!-- end modal-body -->

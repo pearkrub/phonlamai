@@ -145,7 +145,7 @@ function getSummary() {
 function login() {
     var validator = $(".login-form").validate({
         showErrors: function (errorMap, errorList) {
-            $('#error_count').val(this.numberOfInvalids())
+            $('#error_count_login').val(this.numberOfInvalids())
             this.defaultShowErrors();
         },
         messages: {

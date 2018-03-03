@@ -90,25 +90,42 @@
                 <form action="/products">
                     <div class="row grid-space-1">
                         <div class="col-sm-4">
-                            <input type="text" name="keyword" class="form-control" placeholder="ค้นหา">
+                            <?php
+                            $keyword = '';
+                            if(!empty($this->request->query['keyword'])) {
+                                $keyword = $this->request->query['keyword'];
+                            }
+                            ?>
+                            <input type="text" value="<?php echo $keyword ?>" name="keyword" class="form-control" placeholder="ค้นหา">
                         </div><!-- end col -->
                         <div class="col-sm-3">
                             <select class="form-control" name="merchant_id">
                                 <option value="">แสดงทุกร้านค้า</option>
-                                <?php if (!empty($merchants)) {
+                                <?php
+                                $selected = '';
+                                if(!empty($this->request->query['merchant_id'])) {
+                                    $selected = $this->request->query['merchant_id'];
+                                }
+                                if (!empty($merchants)) {
                                     foreach ($merchants as $merchant) {
                                         ?>
-                                        <option value="<?php echo $merchant['Merchant']['id'] ?>"><?php echo $merchant['Merchant']['shop_name'] ?></option>
+                                        <option <?php if($selected == $merchant['Merchant']['id']){ echo 'selected'; } ?> value="<?php echo $merchant['Merchant']['id'] ?>"><?php echo $merchant['Merchant']['shop_name'] ?></option>
                                     <?php }
                                 } ?>
                             </select>
                         </div><!-- end col -->
+                        <?php
+                        $category = '';
+                        if(!empty($this->request->query['category_id'])) {
+                            $category = $this->request->query['category_id'];
+                        }
+                        ?>
                         <div class="col-sm-3">
                             <select class="form-control" name="category_id">
                                 <option value="">แสดงสินค้าทุกประเภท</option>
-                                <option value="1">สินค้าล่วงหน้า 1 เดือน</option>
-                                <option value="2">สินค้าล่วงหน้า 2 เดือน</option>
-                                <option value="3">สินค้าล่วงหน้า 3 เดือน</option>
+                                <option <?php if($category == 1){ echo 'selected'; } ?> value="1">สินค้าล่วงหน้า 1 เดือน</option>
+                                <option <?php if($category == 2){ echo 'selected'; } ?> value="2">สินค้าล่วงหน้า 2 เดือน</option>
+                                <option <?php if($category == 3){ echo 'selected'; } ?> value="3">สินค้าล่วงหน้า 3 เดือน</option>
                             </select>
                         </div><!-- end col -->
                         <div class="col-sm-2">
