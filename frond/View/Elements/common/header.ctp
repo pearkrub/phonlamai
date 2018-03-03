@@ -154,14 +154,14 @@
                 <li class="dropdown"><a href="/">หน้าแรก</a>
                 </li><!-- end li dropdown -->
                 <!-- Features -->
-                <li class="dropdown left"><a href="#" data-toggle="dropdown" class="dropdown-toggle">ประเภทสินค้า<i
-                                class="fa fa-angle-down ml-5"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/products/index/1">สินค้าล่วงหน้า 1 เดือน</a></li>
-                        <li><a href="/products/index/2">สินค้าล่วงหน้า 2 เดือน</a></li>
-                        <li><a href="/products/index/3">สินค้าล่วงหน้า 3 เดือน</a></li>
-                    </ul><!-- end ul dropdown-menu -->
-                </li><!-- end li dropdown -->
+<!--                <li class="dropdown left"><a href="#" data-toggle="dropdown" class="dropdown-toggle">ประเภทสินค้า<i-->
+<!--                                class="fa fa-angle-down ml-5"></i></a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li><a href="/products/index/1">สินค้าล่วงหน้า 1 เดือน</a></li>-->
+<!--                        <li><a href="/products/index/2">สินค้าล่วงหน้า 2 เดือน</a></li>-->
+<!--                        <li><a href="/products/index/3">สินค้าล่วงหน้า 3 เดือน</a></li>-->
+<!--                    </ul><!-- end ul dropdown-menu -->
+<!--                </li><!-- end li dropdown -->
                 <!-- Pages -->
                 <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">แจ้งชำระเงิน</a>
                 <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">เกี่ยวกับเรา</a>
