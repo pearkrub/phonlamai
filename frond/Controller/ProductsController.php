@@ -13,15 +13,30 @@
  */
 class ProductsController extends AppController
 {
-
+    public $uses = ['Product','Merchant'];
     public function index($category_id = null)
     {
         $this->layout = 'product';
-        if (!empty($category_id)) {
-            $this->set('products', $this->Product->find('all', array('conditions' => array('category_id' => $category_id))));
-        } else {
-            $this->set('products', $this->Product->find('all'));
+        $merchants = $this->Merchant->find('all', array(
+            'conditions' => array(
+                'Merchant.status' => 'Y',
+                'Merchant.deleted' => 'N'
+            )
+        ));
+        $this->set('merchants', $merchants);
+        
+        $conditions = [];
+        $data = $this->request->query;
+        if(!empty($data['category_id'])) {
+            $conditions['category_id'] = $data['category_id'];
         }
+        if (!empty($data['merchant_id'])) {
+            $conditions['merchant_id'] = $data['merchant_id'];
+        }
+        if (!empty($data['keyword'])) {
+            $conditions['Product.name'] = $data['keyword'];
+        }
+        $this->set('products', $this->Product->find('all', array('conditions' => array($conditions))));
     }
 
     public function ajaxView()

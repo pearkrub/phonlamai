@@ -1,14 +1,14 @@
-<div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-        <div class="title-wrap">
-            <?php if (!empty($this->request->params['pass'][0])) { ?><h2 class="title">
-                สินค้าล่วงหน้า <?php echo $this->request->params['pass'][0]; ?> เดือน</h2><?php } else { ?>
-                <h2 class="title">สินค้าทั้งหมด</h2>
-            <?php } ?>
-            <!--<p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>-->
-        </div>
-    </div><!-- end col -->
-</div><!-- end row -->
+<!--<div class="row">-->
+<!--    <div class="col-sm-8 col-sm-offset-2">-->
+<!--        <div class="title-wrap">-->
+<!--            --><?php //if (!empty($this->request->params['pass'][0])) { ?><!--<h2 class="title">-->
+<!--                สินค้าล่วงหน้า --><?php //echo $this->request->params['pass'][0]; ?><!-- เดือน</h2>--><?php //} else { ?>
+<!--                <h2 class="title">สินค้าทั้งหมด</h2>-->
+<!--            --><?php //} ?>
+<!--            <p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <div class="row column-4">

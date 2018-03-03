@@ -87,25 +87,38 @@
                 </a>
             </div><!-- end col -->
             <div class="col-sm-7 vertical-align text-center">
-                <form>
+                <form action="/products">
                     <div class="row grid-space-1">
-                        <div class="col-sm-6">
-                            <input type="text" name="keyword" class="form-control input-lg" placeholder="ค้นหา">
+                        <div class="col-sm-4">
+                            <input type="text" name="keyword" class="form-control" placeholder="ค้นหา">
                         </div><!-- end col -->
                         <div class="col-sm-3">
-                            <select class="form-control input-lg" name="category">
-                                <option value="all">แสดงทุกร้านค้า</option>
-
+                            <select class="form-control" name="merchant_id">
+                                <option value="">แสดงทุกร้านค้า</option>
+                                <?php if (!empty($merchants)) {
+                                    foreach ($merchants as $merchant) {
+                                        ?>
+                                        <option value="<?php echo $merchant['Merchant']['id'] ?>"><?php echo $merchant['Merchant']['shop_name'] ?></option>
+                                    <?php }
+                                } ?>
                             </select>
                         </div><!-- end col -->
                         <div class="col-sm-3">
-                            <input type="submit" class="btn btn-default btn-block btn-lg" value="ค้นหา">
+                            <select class="form-control" name="category_id">
+                                <option value="">แสดงสินค้าทุกประเภท</option>
+                                <option value="1">สินค้าล่วงหน้า 1 เดือน</option>
+                                <option value="2">สินค้าล่วงหน้า 2 เดือน</option>
+                                <option value="3">สินค้าล่วงหน้า 3 เดือน</option>
+                            </select>
+                        </div><!-- end col -->
+                        <div class="col-sm-2">
+                            <input type="submit" class="btn btn-default btn-block" value="ค้นหา">
                         </div><!-- end col -->
                     </div><!-- end row -->
                 </form>
             </div><!-- end col -->
             <div class="col-sm-2 vertical-align header-items hidden-xs">
-                <div class="header-item mr-5">
+                <div class="header-item mr-1">
                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Wishlist">
                         <i class="fa fa-heart-o"></i>
                         <sub>1</sub>
