@@ -1,3 +1,8 @@
+<style>
+    .error{
+        color: red;
+    }
+</style>
 <section>
     <div class="container">
         <!-- Modal Product Quick View -->
@@ -42,35 +47,39 @@
 
         <!-- Modal Login -->
         <div class="modal fade account loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h6 class="modal-header-address">เข้าสู่ระบบ</h6>
+                    </div><!-- end modal-header -->
                     <div class="modal-body">
                         <div class="row display-table text-center">
                             <div class="col-sm-12 vertical-align">
                                 <div class="inner-content">
-                                    <h5>เข้าสู่ระบบ</h5>
-                                    <p class="lead"></p>
-
-                                    <hr class="spacer-5 no-border">
-                                    <form method="post" action="/login/authen">
+                                    <form method="post" class="login-form">
                                         <div class="form-group">
-                                            <input required name="email" type="email" class="form-control " placeholder="Email">
+                                            <input required name="email" type="email" class="form-control " placeholder="อีเมล">
+                                            <label id="email-error" style="display: none" class="error" for="email">กรถณากรอกอีเมล</label>
                                         </div><!-- end form-group -->
                                         <div class="form-group">
-                                            <input required name="password" type="password" class="form-control " placeholder="Password">
-                                        </div><!-- end form-group -->
-                                       
-                                        <div class="form-group">
-                                            <input type="submit" class="btn btn-default btn-block round " value="Log In">
+                                            <input required name="password" type="password" class="form-control " placeholder="รหัสผ่าน">
+                                            <label style="display: none" id="password-error" class="error" for="password">กรุณากรอกรหัสผ่าน</label>
+                                            <input type="hidden" id="error_count_login">
                                         </div><!-- end form-group -->
                                     </form>
                                 </div><!-- inner-content -->
-
                             </div><!-- end col -->
-
-
                         </div><!-- end row -->
                     </div><!-- end modal-body -->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            ปิด
+                        </button>
+                        <button onclick="login()" class="btn btn-primary"><i class="fa fa-sign-in"></i> เข้าสู่ระบบ</button>
+                    </div>
                 </div><!-- end modal-content -->
             </div><!-- end modal-dialog -->
         </div><!-- end loginModal -->

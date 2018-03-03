@@ -23,7 +23,7 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-10 col-lg-12">
-                <form class="form-horizontal" action="<?php echo Configure::read('App.Domain') ?>register/save"
+                <form class="form-horizontal register-form"
                       method="post">
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">ชื่อ</label>
@@ -72,10 +72,11 @@
                     </div><!-- end form-group -->
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button class="btn btn-default round btn-md"><i class="fa fa-user mr-5"></i> ลงทะเบียน
-                            </button>
+                            <a onclick="register()" class="btn btn-default round btn-md"><i class="fa fa-user mr-5"></i> ลงทะเบียน
+                            </a>
                         </div>
                     </div><!-- end form-group -->
+                    <input type="hidden" id="error_count_regis"/>
                 </form>
             </div><!-- end col -->
         </div><!-- end row -->

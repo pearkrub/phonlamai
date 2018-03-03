@@ -82,6 +82,7 @@
 <!--        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
         <script type="text/javascript" src="/js/gmaps.js"></script>
         <script src="/js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
         <script src="/js/custom.js"></script>
 
         <!-- Initialize Swiper slide -->

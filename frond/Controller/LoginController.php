@@ -27,18 +27,16 @@ class LoginController extends AppController {
             $user = $this->Customer->find('first', array(//ค้นหาข้อมูล ตามเงื่อนไข
                 'conditions' => array(
                     'email' => $data['email'],
-                    'password' => $data['password'],
+                    'password' => md5($data['password']),
                     'status' => 'Y',
                     'deleted' => 'N'
                 )
             ));
             if (!empty($user)) {
                 $this->Session->write('Auth', $user); // เขียน Session
+                return 'success';
             }
-            $this->redirect('/');
-
-
-            
+            return 'fail';
         }
     }
     
