@@ -24,6 +24,22 @@
                         </div>
                     </div><!-- end slider-content -->
                 </div><!-- end swiper-slider -->
+                <?php foreach ($products as $product) {
+                    ?>
+                    <div class="swiper-slide" style="background-color:#e1e6e6;">
+                        <div class="slider-content">
+                            <div class="box text-left">
+                                <h1 class="text-primary">สินค้าล่าสุด</h1>
+                                <h1 class="text-info"><?php echo $product['Product']['name'] ?></h1>
+                                <p class="text-dark"><?php echo $product['Product']['detail'] ?></p>
+                                <a href="javascript:void(0);" class="btn btn-default semi-circle">ดูรายละเอียด</a>
+                            </div>
+                            <div class="box text-right hidden-xs hidden-sm fa">
+                                <img style="width: 400px; height: 500px" src="<?php echo Configure::read('Portal.Domain') .$product['ProductImage'][0]['path'] ?>" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                <?php }?>
             </div><!-- end swiper wrapper -->
             <!-- Pagination -->
             <div class="swiper-pagination swiper-pagination-h"></div>

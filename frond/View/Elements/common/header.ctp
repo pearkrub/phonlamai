@@ -17,8 +17,8 @@
                     </a>
                     <ul class="w-150">
                         <li><a href="checkout.html">ข้อมูลส่วนตัว</a></li>
-                        <li><a href="wishlist.html">รายการสินค้าโปรด (5)</a></li>
-                        <li><a href="cart.html">รายการสั่งซื้อ</a></li>
+<!--                        <li><a href="wishlist.html">รายการสินค้าโปรด (5)</a></li>-->
+                        <li><a href="/orders">รายการสั่งซื้อ</a></li>
                         <li><a href="/logout">ออกจากระบบ</a></li>
                     </ul>
                 </li>
@@ -135,12 +135,12 @@
                 </form>
             </div><!-- end col -->
             <div class="col-sm-2 vertical-align header-items hidden-xs">
-                <div class="header-item mr-1">
-                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Wishlist">
-                        <i class="fa fa-heart-o"></i>
-                        <sub>1</sub>
-                    </a>
-                </div>
+<!--                <div class="header-item mr-1">-->
+<!--                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Wishlist">-->
+<!--                        <i class="fa fa-heart-o"></i>-->
+<!--                        <sub>1</sub>-->
+<!--                    </a>-->
+<!--                </div>-->
                 <!--                <div class="header-item">-->
                 <!--                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Compare">-->
                 <!--                        <i class="fa fa-refresh"></i>-->

@@ -10,6 +10,19 @@ class OrdersController extends AppController
 {
     public $uses = array('Product', 'Order', 'CustomerAddress', 'OrderDetail');
 
+    public function index() {
+        $this->layout = 'cart';
+        $auth = $this->Session->read('Auth');
+        if(empty($auth)){
+            $this->redirect('/');
+        }
+        $orders = $this->Order->find('all', array(
+            'conditions' => array(
+                'Order.customer_id' => $auth['Customer']['id']
+            )
+        ));
+        $this->set('orders', $orders);
+    }
     public function create()
     {
         $this->autoRender = false;

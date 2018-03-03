@@ -42,9 +42,13 @@ class PagesController extends AppController
         ));
         $products = $this->Product->find('all',array(
             'conditions' => array(
-
-            )
+                'Product.start_date <=' => date('Y-m-d H:i:s'),
+                'Product.end_date >=' => date('Y-m-d H:i:s')
+            ),
+            'order' => array('Product.id desc'),
+            'limit' => '5'
         ));
+        $this->set('products', []);
         $this->set('merchants', $merchants);
     }
 }

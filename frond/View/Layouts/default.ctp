@@ -79,6 +79,7 @@
         <script type="text/javascript" src="/js/pace.min.js"></script>
         <script type="text/javascript" src="/js/star-rating.min.js"></script>
         <script type="text/javascript" src="/js/wow.min.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
 <!--        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
         <script type="text/javascript" src="/js/gmaps.js"></script>
         <script src="/js/sweetalert.min.js"></script>
@@ -87,23 +88,23 @@
 
         <!-- Initialize Swiper slide -->
         <script>
-            // var swiperH = new Swiper('.swiper-coverflow', {
-            //     pagination: '.swiper-pagination',
-            //     nextButton: '.swiper-button-next',
-            //     prevButton: '.swiper-button-prev',
-            //     paginationClickable: true,
-            //     effect: 'coverflow',
-            //     centeredSlides: true,
-            //     slidesPerView: 'auto',
-            //     loop: true,
-            //     coverflow: {
-            //         rotate: 50,
-            //         stretch: 0,
-            //         depth: 100,
-            //         modifier: 1,
-            //         slideShadows : true
-            //     }
-            // });
+            var swiperH = new Swiper('.swiper-coverflow', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                effect: 'coverflow',
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                loop: true,
+                coverflow: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows : true
+                }
+            });
         </script>
 
     </body>
