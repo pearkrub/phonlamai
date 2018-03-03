@@ -123,7 +123,7 @@ if (!empty($cart_products)) { ?>
         <h4>- - -ไม่มีสินค้าในตะกร้า- - -</h4>
         <br>
         <a href="/" class="btn btn-default semi-circle btn-md">
-            <i class="fa fa-shopping-bag mr-5"></i> เลือกซื้อสินค้าต่อ
+            <i class="fa fa-shopping-cart mr-5"></i> เลือกซื้อสินค้าต่อ
         </a>
     </div>
 <?php } ?>

@@ -86,38 +86,7 @@ if (!empty($Auth)) { ?>
             <hr class="spacer-5">
             <hr class="spacer-20 no-border">
 
-            <div class="row">
-                <div class="col-sm-6 col-md-10 col-lg-6">
-                    <form class="form-horizontal" action="<?php echo Configure::read('App.Domain') ?>login/authen"
-                          method="post">
-
-                        <div class="form-group">
-                            <label for="email" class="col-sm-4 control-label">อีเมล <span
-                                        class="text-danger">*</span></label>
-                            <div class="col-sm-8">
-                                <input required type="email" name="email" class="form-control input-md" id="email"
-                                       placeholder="Email">
-                            </div>
-                        </div><!-- end form-group -->
-
-                        <div class="form-group">
-                            <label for="password" class="col-sm-4 control-label">รหัสผ่าน <span
-                                        class="text-danger">*</span></label>
-                            <div class="col-sm-8">
-                                <input required type="password" name="password" class="form-control input-md"
-                                       id="password"
-                                       placeholder="Password">
-                            </div>
-                        </div><!-- end form-group -->
-                        <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-10">
-                                <button class="btn btn-default round btn-md"><i class="fa fa-user mr-5"></i> เข้าสู่ระบบ
-                                </button>
-                            </div>
-                        </div><!-- end form-group -->
-                    </form>
-                </div><!-- end col -->
-            </div><!-- end row -->
+            <a class="btn btn-primary" data-toggle="modal" data-target=".loginModal"><i class="fa fa-sign-in"></i> เข้าสู่ระบบ</a>
         </div><!-- end col -->
     </div>
 <?php } ?>

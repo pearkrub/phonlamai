@@ -44,11 +44,14 @@ function DateThai($strDate)
 
     <div class="row">
         <div class="col-sm-12">
-            <button class="no-print pull-right btn btn-default" onclick="window.print()"><i class="fa fa-print"></i> พิมพ์ใบสั่งซื้อ
+            <button class="no-print pull-right btn btn-primary" onclick="window.print()"><i class="fa fa-print"></i> พิมพ์ใบสั่งซื้อ
             </button>
+
             <h5 class="thin no-print">ขอขอบคุณสำหรับการสั่งซื้อของคุณ</h5>
             <p class="no-print">คุณสามารถติดตามสถานะคำส่ังซื้อได้ที่เมนู รายการสั่งซื้อ</p>
-
+            <a href="/" class="no-print pull-left btn btn-default"><i class="fa fa-shopping-cart"></i> เลือกซื้อสินค้าต่อ
+            </a>
+            <br>
             <hr class="spacer-30 no-print">
             <h5 class="text-center">ใบสั่งซื้อเลขที่: <?php echo $order['Order']['order_no'] ?></h5>
             <hr class="spacer-10 no-border">

@@ -34,7 +34,9 @@
                     <?php } ?>
                     <div class="icons">
                         <a class="icon semi-circle" href="javascript:void(0);"><i class="fa fa-heart-o"></i></a>
+                        <?php if(intval($product['Product']['quantity']) > 0) { ?>
                         <a class="icon semi-circle" title="เพิ่มเข้าตะกร้า" onclick="addToCart(<?php echo $product['Product']['id'] ?>)" href="javascript:void(0);"><i class="fa fa-shopping-basket"></i></a>
+                        <?php }?>
                         <a onclick="viewProduct(<?php echo $product['Product']['id'] ?>, '<?php echo $product['Product']['name'] ?>')"
                            title="ดูรายละเอียด"
                            class="icon semi-circle" href="javascript:void(0);" data-toggle="modal"
@@ -50,9 +52,17 @@
                         <?php } ?>
                         <span class="amount text-primary"><?php echo $product['Product']['price']; ?> บาท/<?php echo $product['Product']['price_per_key'] ?></span>
                     </div>
+                    <small class="text-gray">เหลือ <?php echo $product['Product']['quantity'].' '.$product['Product']['price_per_key']; ?> </small>
+                    <?php if(intval($product['Product']['quantity']) > 0) { ?>
+
+                        <br>
                     <a class="btn btn-default btn-md round"
                        onclick="addToCart(<?php echo $product['Product']['id'] ?>)"><i
-                                class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า</a>
+                                class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า
+                    </a>
+                    <?php }else{ ?>
+                        <p style="color: #0c5480">สินค้าหมด</p>
+                    <?php }?>
                 </div><!-- end caption -->
             </div><!-- end thumbnail -->
         </div><!-- end col -->

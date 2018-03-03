@@ -37,8 +37,10 @@
         <br>
         ราคา <?php if ($product['Product']['price'] < $product['Product']['normal_price']) { ?> <br><span
                 style="text-decoration: line-through;"
-                class="amount off text-danger"><?php echo $product['Product']['normal_price'] ?> บาท</span> <?php } ?> <h4
-                class="text-primary"><?php echo $product['Product']['price'] ?> บาท/<?php echo $product['Product']['price_per_key'] ?></h4>
+                class="amount off text-danger"><?php echo $product['Product']['normal_price'] ?> บาท</span> <?php } ?>
+        <h4
+                class="text-primary"><?php echo $product['Product']['price'] ?>
+            บาท/<?php echo $product['Product']['price_per_key'] ?></h4>
 
         <p>
             <?php echo $product['Product']['detail'] ?>
@@ -58,9 +60,13 @@
         <hr class="spacer-10">
         <ul class="list list-inline">
             <li>
-                <button type="button" onclick="addToCart(<?php echo $product['Product']['id'] ?>)"
-                        class="btn btn-default btn-md round"><i class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า
-                </button>
+                <?php if (intval($product['Product']['quantity']) > 0) { ?>
+                    <button type="button" onclick="addToCart(<?php echo $product['Product']['id'] ?>)"
+                            class="btn btn-default btn-md round"><i class="fa fa-shopping-basket mr-5"></i>เพิ่มใส่ตะกร้า
+                    </button>
+                <?php }else{ ?>
+                    <span style="color: #0a6aa1">สินค้าหมด</span>
+                <?php }?>
             </li>
             <li>
                 <button type="button" onclick="addToWishlist(<?php echo $product['Product']['id'] ?>)"
