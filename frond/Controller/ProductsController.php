@@ -25,7 +25,10 @@ class ProductsController extends AppController
         ));
         $this->set('merchants', $merchants);
         
-        $conditions = [];
+        $conditions = [
+            'Product.start_date <=' => date('Y-m-d H:i:s'),
+            'Product.end_date >=' => date('Y-m-d H:i:s')
+        ];
         $data = $this->request->query;
         if(!empty($data['category_id'])) {
             $conditions['category_id'] = $data['category_id'];

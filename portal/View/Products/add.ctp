@@ -2,7 +2,11 @@
     <div class="card">
         <form action="/products/save" method="post" enctype="multipart/form-data" class="form-horizontal">
             <div class="card-header">
-                <?php if (!empty($product['Product']['id'])) { ?>
+                <?php
+                $category_id = '';
+                if (!empty($product['Product']['id'])) {
+                    $category_id = $product['Product']['category_id'];
+                    ?>
                     <strong>แก้ไขสินค้า</strong>
                 <?php } else { ?>
                     <strong>เพิ่มสินค้า</strong>
@@ -63,7 +67,17 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="text-input">ช่วงเวลาสั่งจอง</label>
+                    <label class="col-md-3 col-form-label" for="text-input">ประเภทสินค้า</label>
+                    <div class="col-md-6">
+                        <select class="form-control" name="category_id">
+                            <option <?php echo $category_id == 1 ? 'selected' : '' ?> value="1">สั่งล่วงหน้า 1 เดือน</option>
+                            <option <?php echo $category_id == 2 ? 'selected' : '' ?> value="2">สั่งล่วงหน้า 2 เดือน</option>
+                            <option <?php echo $category_id == 3 ? 'selected' : '' ?> value="3">สั่งล่วงหน้า 3 เดือน</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="text-input">ช่วงเวลาเปิดสั่งจอง</label>
                     <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -87,14 +101,15 @@
                                 <?php
                                 foreach ($product['ProductImage'] as $image) {
                                     ?>
-                                    <div class="col-md-4 product-image-<?php echo $image['id'] ?>">
+                                    <div class="col-md-4 col-sm-4 product-image-<?php echo $image['id'] ?>">
                                         <div class="thumbnail">
                                             <a href="/<?php echo $image['path'] ?>" target="_blank">
                                                 <img src="/<?php echo $image['path'] ?>" alt="Fjords"
-                                                     style="width:300px; height: 400px">
+                                                     style="width:180px; height: 200px">
                                             </a>
                                             <div class="caption">
-                                                <a onclick="removeProductImage(<?php echo $image['id'] ?>)" style="cursor: pointer" title="ลบรูปภาพ" class="btn btn-danger"> <i
+                                                <a onclick="removeProductImage(<?php echo $image['id'] ?>)"
+                                                   style="cursor: pointer" title="ลบรูปภาพ" class="btn btn-danger"> <i
                                                             class="fa fa-trash "></i></a>
                                             </div>
                                         </div>
@@ -109,8 +124,8 @@
                 <?php } ?>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> บันทึก</button>
+                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> รีเซ็ต</button>
             </div>
         </form>
     </div>

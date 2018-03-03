@@ -40,6 +40,11 @@ class PagesController extends AppController
                 'Merchant.deleted' => 'N'
             )
         ));
+        $products = $this->Product->find('all',array(
+            'conditions' => array(
+
+            )
+        ));
         $this->set('merchants', $merchants);
     }
 }

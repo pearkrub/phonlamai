@@ -61,8 +61,8 @@ class ProductsController extends AppController
             // $time = strtotime(date('Y-m-d')); //แปลงเวลา
             // $end_date = date("Y-m-d", strtotime("+" . $data['category_id'] . " month", $time));
             $data['end_date'] = $end_date . ' 23:59:59';
-            $month_count = $this->dateDifference($start_date, $end_date);
-            $data['category_id'] = $month_count;
+//            $month_count = $this->dateDifference($start_date, $end_date);
+//            $data['category_id'] = $month_count;
             // $time = strtotime($end_date);
             // $receive_date = date("Y-m-d", strtotime("+5 days", $time));
             // $data['receive_date'] = $receive_date;
