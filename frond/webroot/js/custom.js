@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     loadCart()
 
     $('.product_qty').on('change', function () {
@@ -240,5 +239,82 @@ function register() {
                 swal("ผิดพลาด!", "มีบางอย่างผิดพลาด", "error");
             }
         })
+    }
+}
+
+function saveMerchant() {
+    var validator = $(".merchant-register-form").validate({
+        showErrors: function (errorMap, errorList) {
+            $('#error_count_regis').val(this.numberOfInvalids())
+            this.defaultShowErrors();
+        },
+        rules: {
+            email: {
+                email: true,
+                required: true
+            },
+            password: {
+                required: true,
+                minlength: 6,
+                maxlength: 20
+            },
+            confirm_password: {
+                required: true,
+                minlength: 6,
+                maxlength: 20,
+                equalTo: "#password"
+            },
+            phone: {
+                required: true,
+                digits: true,
+                maxlength: 20
+            }
+        },
+        messages: {
+            email: {
+                required: 'กรุณากรอกอีเมล',
+                email: 'รูปแบบอีเมลไม่ถูกต้อง'
+            },
+            password: {
+                required: 'กรุณากรอกรหัสผ่าน',
+                minlength: 'ความยาวรหัสผ่านต้องไม่น้อยกว่า 6 ตัวอักษร',
+                maxlength: 'ความยาวรหัสผ่านต้องไม่เกิน 20 ตัวอักษร'
+            },
+            confirm_password: {
+                required: 'กรุณายืนยันรหัสผ่าน',
+                minlength: 'ความยาวรหัสผ่านต้องไม่น้อยกว่า 6 ตัวอักษร',
+                maxlength: 'ความยาวรหัสผ่านต้องไม่เกิน 20 ตัวอักษร',
+                equalTo: 'รหัสผ่านไม่ตรงกัน'
+            },
+            phone: {
+                required: 'กรุณากรอก เบอร์โทร',
+                digits: 'กรอกได้เฉพาะตัวเลขเท่านั้น'
+            },
+            address: {
+                required: 'กรุณากรอกที่อยู่'
+            },
+            province_id: {
+                required: 'กรุณาเลือกจังหวัด'
+            },
+            amphur_id: {
+                required: 'กรุณาเลือกอำเภอ'
+            },
+            district_id: {
+                required: 'กรุณาเลือกตำบล'
+            },
+            zipcode: {
+                required: 'กรุณากรอกรหัสไปรษณีย์',
+                digits: 'กรอกได้เฉพาะตัวเลขเท่านั้น',
+                minlength: 5,
+                maxlength: 5
+            },
+            document: {
+                required: 'กรุณาแนบไฟล์เพื่อยืนยันตัวตน'
+            }
+        }
+    });
+    validator.form();
+    if ($('#error_count_regis').val() == 0) {
+        $('.merchant-register-form').submit()
     }
 }

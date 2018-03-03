@@ -21,7 +21,14 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-10 col-lg-12">
-                <form class="form-horizontal" action="<?php echo Configure::read('App.Domain') ?>merchants/save"
+                <?php if (!empty($this->request->query['status'])) {
+                    if ($this->request->query['status'] == 'fail') {
+                        ?>
+                        <div class="alert alert-danger">Email ไม่สามารถใช้งานได้ เนื่องจากมีในระบบแล้ว</div>
+                    <?php }
+                } ?>
+                <form class="form-horizontal merchant-register-form"
+                      action="<?php echo Configure::read('App.Domain') ?>merchants/save"
                       enctype="multipart/form-data" method="post">
 
                     <div class="form-group">
@@ -86,13 +93,13 @@
                         <label for="amphur_id" class="col-sm-2 control-label">อำเภอ <span
                                     class="text-danger">*</span></label>
                         <div class="col-sm-4 amphur_div">
-                            <select class="form-control" name="amphur_id" id="amphur_id">
+                            <select class="form-control" required name="amphur_id" id="amphur_id">
                                 <option value="">- - - เลือกอำเภอ - - -</option>
                             </select>
                         </div>
                         <label for="district_id" class="col-sm-2 control-label">ตำบล <span class="text-danger">*</span></label>
                         <div class="col-sm-4 district_div">
-                            <select class="form-control" name="district_id" id="district_id">
+                            <select class="form-control" required name="district_id" id="district_id">
                                 <option value="">- - - เลือกตำบล - - -</option>
                             </select>
                         </div>
@@ -119,20 +126,22 @@
                             <input required type="password" name="password" class="form-control input-md" id="password"
                                    placeholder="Password">
                         </div>
-                        <label for="password" class="col-sm-2 control-label">ยืนยันรหัสผ่าน <span
+                        <label for="confirm_password" class="col-sm-2 control-label">ยืนยันรหัสผ่าน <span
                                     class="text-danger">*</span></label>
                         <div class="col-sm-4">
                             <input required type="password" name="confirm_password" class="form-control input-md"
-                                   id="password" placeholder="Confirm Password">
+                                   id="confirm_password" placeholder="Confirm Password">
                         </div>
                     </div><!-- end form-group -->
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-4">
-                            <button class="btn btn-default round btn-md"><i class="fa fa-user mr-5"></i> ลงทะเบียน
-                            </button>
+                            <a onclick="saveMerchant()" class="btn btn-default round btn-md"><i
+                                        class="fa fa-user mr-5"></i> ลงทะเบียน
+                            </a>
                         </div>
                     </div><!-- end form-group -->
+                    <input type="hidden" id="error_count_regis">
                 </form>
             </div><!-- end col -->
         </div><!-- end row -->

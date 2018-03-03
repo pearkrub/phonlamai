@@ -8,8 +8,6 @@ class MerchantsController extends AppController {
         $this->layout = 'register';
         $provinces = $this->Province->find('list', array('fields' => array('id', 'province_name')));
         $this->set('province_list', $provinces);
-        
-        
     }
      
 
@@ -18,6 +16,18 @@ class MerchantsController extends AppController {
         $data = $this->request->data;
         $data['password'] = md5($data['password']);
         $data['username'] = $data['email'];
+        $email = $data['email'];
+
+        $merchant = $this->Merchant->find('first', array(
+            'conditions' => array(
+                'Merchant.email' => $email
+            )
+        ));
+
+        if(!empty($merchant)) {
+            $this->redirect('/merchants/register?status=fail');
+        }
+
         if($this->Merchant->save($data)){
             if (!empty($_FILES['document']['name'])) {
                 $type = explode('.', $_FILES['document']['name']);
@@ -32,6 +42,8 @@ class MerchantsController extends AppController {
                 }
             }
             $this->redirect(Configure::read('Portal.Domain').'login');
+        }else{
+            $this->redirect('/merchants/register?status=fail');
         }
     }
 
