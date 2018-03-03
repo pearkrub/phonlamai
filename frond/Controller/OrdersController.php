@@ -38,7 +38,7 @@ class OrdersController extends AppController
 
         $outOfStocks = $this->checkProduct($products);
         if (!empty($outOfStocks)) {
-            $error['error'] = join('<br>', $outOfStocks);
+            $error['error'] = join(',', $outOfStocks);
 
             return json_encode($error);
         }
@@ -139,7 +139,7 @@ class OrdersController extends AppController
         $error = array();
         foreach ($products as $key => $product) {
             if ($product['Product']['quantity'] < $carts[$product['Product']['id']]['qty']) {
-                $error[] = '- ' . $product['Product']['name'] . ' ขาด ' . intval($carts[$product['Product']['id']]['qty'] - $product['Product']['quantity']) . ' ' . $product['Product']['price_per_key'];
+                $error[] = ' ' . $product['Product']['name'] . ' ขาด ' . intval($carts[$product['Product']['id']]['qty'] - $product['Product']['quantity']) . ' ' . $product['Product']['price_per_key'];
             }
         }
 

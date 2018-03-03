@@ -36,6 +36,33 @@
 <!--    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext"-->
 <!--          rel="stylesheet">-->
 
+    <style>
+        .lds-circle {
+            display: inline-block;
+            width: 51px;
+            height: 51px;
+            margin: 6px;
+            border-radius: 50%;
+            background: #4ee1ff;
+            animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        @keyframes lds-circle {
+            0%, 100% {
+                animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            }
+            0% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(1800deg);
+                animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+            }
+            100% {
+                transform: rotateY(3600deg);
+            }
+        }
+
+    </style>
 </head>
 <body>
 <?php echo $this->element('common/header') ?>

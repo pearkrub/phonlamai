@@ -1,6 +1,5 @@
 $(document).ready(function () {
     loadCart()
-
     $('.product_qty').on('change', function () {
         var id = $(this).attr('id')
         var price = $(this).attr('price')
@@ -26,7 +25,6 @@ $(document).ready(function () {
             })
             $('#price_' + id).html(formatDollar(total))
         }
-
     })
 })
 
@@ -40,7 +38,7 @@ function formatDollar(num) {
 function viewProduct(id, name) {
 
     $('.modal-header-text').html(name)
-    $('.modal-body-product').html('กำลังโหลด...')
+    $('.modal-body-product').html('<span class="lds-circle text-center"></span>กำลังโหลด...')
 
     $.post('/products/ajaxView', {id: id}, function (data) {
         $('.modal-body-product').html(data)
@@ -62,7 +60,23 @@ function addToCart(id) {
 
         $.post('/products/addToCart', {id: id, qty: count}, function (e) {
             if (e == 1) {
-                swal("เรียบร้อย!", "เพิ่มข้อมูลไปที่ตะกร้าแล้ว", "success");
+                // swal("เรียบร้อย!", "เพิ่มข้อมูลไปที่ตะกร้าแล้ว", "success");
+                swal({
+                        title: "เรียบร้อย !",
+                        text: "เพิ่มข้อมูลไปที่ตะกร้าแล้ว",
+                        type: "success",
+
+                        confirmButtonClass: "btn-success fa fa-credit-card",
+                        confirmButtonText: " ชำระเงิน",
+                        showCancelButton: true,
+                        cancelButtonClass: "btn-info fa fa-shopping-cart",
+                        cancelButtonText: " เลือกซื้อสินค้าต่อ",
+                        closeOnConfirm: false,
+                        showLoaderOnConfirm: true
+                    },
+                    function () {
+                        window.location = '/cart/checkout'
+                    });
                 loadCart()
                 $('.productQuickView').modal('hide')
             } else {

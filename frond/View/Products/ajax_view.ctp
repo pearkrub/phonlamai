@@ -51,12 +51,13 @@
                 จำนวน
             </div><!-- end col -->
             <div class="col-md-4 col-sm-6 col-xs-12">
-                <input class="form-control" id="product-count" type="number" value="1">
+                <input class="form-control" qty="<?php echo $product['Product']['quantity'] ?>" id="product-count" type="number" value="1">
             </div><!-- end col -->
             <div class="col-md-4 col-sm-12">
                 <?php echo $product['Product']['price_per_key'] ?>
             </div><!-- end col -->
         </div><!-- end row -->
+        <small class="text-gray">เหลือ <?php echo $product['Product']['quantity'].' '.$product['Product']['price_per_key']; ?> </small>
         <hr class="spacer-10">
         <ul class="list list-inline">
             <li>
@@ -76,3 +77,15 @@
         </ul>
     </div><!-- end col -->
 </div><!-- end row -->
+<script>
+    $('#product-count').on('input', function () {
+        var qty = $(this).val()
+        var in_stock = $(this).attr('qty')
+        console.log(qty)
+        console.log(in_stock)
+        if (parseInt(qty) > parseInt(in_stock)) {
+            swal("มีบางอย่างผิดพลาด!", "จำนวนสอนค้าในร้านไม่พอเหลือ " + in_stock + ' หน่วย', "error");
+            $(this).val(in_stock)
+        }
+    })
+</script>
