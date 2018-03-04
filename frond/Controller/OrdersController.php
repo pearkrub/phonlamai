@@ -19,10 +19,32 @@ class OrdersController extends AppController
         $orders = $this->Order->find('all', array(
             'conditions' => array(
                 'Order.customer_id' => $auth['Customer']['id']
-            )
+            ),
+            'order' => array('Order.id desc')
         ));
         $this->set('orders', $orders);
     }
+
+    public function view($id) {
+        $this->layout = 'cart';
+        $auth = $this->Session->read('Auth');
+        if(empty($auth)){
+            $this->redirect('/');
+        }
+
+        if(empty($id)){
+            $this->redirect('/');
+        }
+        $order = $this->Order->find('first', array(
+            'conditions' => array(
+                'Order.customer_id' => $auth['Customer']['id'],
+                'Order.id' => $id
+            ),
+            'recursive' => 3
+        ));
+        $this->set('order', $order);
+    }
+
     public function create()
     {
         $this->autoRender = false;

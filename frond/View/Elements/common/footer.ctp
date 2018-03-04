@@ -1,4 +1,12 @@
-<footer class="footer light">
+<style>
+    @media print {
+        .no-print, .no-print * {
+            display: none !important;
+        }
+    }
+
+</style>
+<footer class="footer light no-print">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">

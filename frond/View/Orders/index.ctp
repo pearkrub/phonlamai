@@ -93,7 +93,7 @@ function DateTimeThai($strDate)
                                 จ.<?php echo $address['Province']['province_name'] ?> <?php echo $address['CustomerAddress']['zipcode'] ?></p>
                             </td>
                             <td>
-                                <span><?php echo number_format($order['Order']['total_price'],2, '.',',') ?> บาท</span>
+                                <span><?php echo number_format($order['Order']['summary'],2, '.',',') ?> บาท</span>
                             </td>
                             <td>
                                 <?php echo DateTimeThai($order['Order']['order_date']) ?>

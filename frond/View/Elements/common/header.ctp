@@ -1,5 +1,13 @@
 <!-- start topBar -->
-<div class="topBar">
+<style>
+    @media print {
+        .no-print, .no-print * {
+            display: none !important;
+        }
+    }
+
+</style>
+<div class="topBar no-print">
     <div class="container">
 
         <ul class="topBarNav pull-right">
@@ -78,7 +86,7 @@
 </div>
 <!-- end topBar -->
 
-<div class="middleBar">
+<div class="middleBar no-print">
     <div class="container">
         <div class="row display-table">
             <div class="col-sm-3 vertical-align text-left hidden-xs">
@@ -153,7 +161,7 @@
 </div><!-- end middleBar -->
 
 <!-- start navbar -->
-<div class="navbar yamm navbar-default">
+<div class="navbar yamm navbar-default no-print">
     <div class="container">
         <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target="#navbar-collapse-3" class="navbar-toggle">

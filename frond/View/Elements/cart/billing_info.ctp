@@ -2,7 +2,7 @@
 
     <div class="row">
         <?php foreach ($CustomerAddresses as $address) { ?>
-            <div class="col-md-6 panel panel-default">
+            <div class="col-md-6 panel panel-default" style="margin-left: 5px; margin-right: 5px">
                 <div class="panel-body">
 
                     <label class="thin subtitle">
