@@ -151,6 +151,18 @@ function DateThai($strDate)
                 $step2 = 'disabled';
                 $step3 = 'disabled';
                 $step4 = 'disabled';
+                if($order['Order']['step'] == 2) {
+                    $step2 = 'active';
+                }
+                if($order['Order']['step'] == 3) {
+                    $step3 = 'active';
+                    $step2 = 'complete';
+                }
+                if($order['Order']['step'] == 4) {
+                    $step2 = 'complete';
+                    $step3 = 'complete';
+                    $step4 = 'active';
+                }
                 ?>
                 <div class="row bs-wizard" style="border-bottom:0;">
 
@@ -176,7 +188,7 @@ function DateThai($strDate)
                                             <?php if ($order['Order']['status'] == 'wait_payment') { ?>
                                                 <li><i class="fa fa-spinner fa-spin"></i> ใบสั่งซื้อรอชำระเงิน</li>
                                             <?php }
-                                            if ($order['Order']['status'] != 'wait_payment' && $order['Order']['status'] != 'new_order') { ?>
+                                            if ($order['Order']['step'] > 1) { ?>
                                                 <li><i class="fa fa-check"></i>
                                                     ชำระเงินเรียบร้อย
                                                 </li>
@@ -202,7 +214,7 @@ function DateThai($strDate)
                                             <?php if ($order['Order']['status'] == 'supplying') { ?>
                                                 <li><i class="fa fa-spinner fa-spin"></i> กำลังดำเนินการจัดหาสินค้า</li>
                                             <?php } ?>
-                                            <?php if ($order['Order']['status'] == 'delivery') { ?>
+                                            <?php if ($order['Order']['step'] > 2) { ?>
                                                 <li><i class="fa fa-check"></i>
                                                     สินค้าพร้อมส่ง
                                                 </li>
