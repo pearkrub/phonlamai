@@ -2,7 +2,7 @@
 
     <div class="row">
         <?php foreach ($CustomerAddresses as $address) { ?>
-            <div class="col-md-6 panel panel-default" style="margin-left: 5px; margin-right: 5px">
+            <div class="col-md-5 panel panel-default" style="margin-left: 5px; margin-right: 5px">
                 <div class="panel-body">
 
                     <label class="thin subtitle">
@@ -27,9 +27,9 @@
         <?php } ?>
     </div><!-- end row -->
     <div class="row text-center">
-        <button class="btn btn-primary" onclick="addAddress()" data-toggle="modal" data-target=".addressModal"><i
+        <a class="btn btn-primary" onclick="addAddress()" data-toggle="modal" data-target=".addressModal"><i
                     class="fa fa-plus"></i> เพิ่มที่อยู่
-        </button>
+        </a>
     </div>
 <?php } else { ?>
     <div class="row">
