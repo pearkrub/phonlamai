@@ -14,6 +14,7 @@
 class ProductsController extends AppController
 {
     public $uses = ['Product','Merchant'];
+
     public function index($category_id = null)
     {
         $this->layout = 'product';
@@ -40,6 +41,27 @@ class ProductsController extends AppController
             $conditions['Product.name'] = $data['keyword'];
         }
         $this->set('products', $this->Product->find('all', array('conditions' => array($conditions))));
+    }
+
+    public function view($id = null)
+    {
+        $this->layout = 'cart';
+
+        if(empty($id)) {
+            $this->redirect('/');
+        }
+
+        $product = $this->Product->find('first', array(
+            'conditions' => array(
+                'Product.id' => $id
+            )
+        ));
+
+        if(empty($product)) {
+            $this->redirect('/');
+        }
+
+        $this->set('product', $product);
     }
 
     public function ajaxView()

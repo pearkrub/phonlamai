@@ -10,7 +10,7 @@
 <!--    </div>-->
 <!--</div>-->
 
-
+<?php if(!empty($products)) { ?>
 <div class="row column-4">
     <?php foreach ($products as $product) { ?>
         <div class="col-sm-6 col-md-3">
@@ -19,7 +19,7 @@
                     <?php if (!empty($product['ProductImage'][0]['path'])) { ?>
                         <?php if ($product['Product']['price'] < $product['Product']['normal_price']) { ?>
                             <div class="badges">
-                                <span class="product-badge top left primary-background text-white semi-circle">ลดราคา</span>
+                                <span class="product-badge top left danger-background text-white semi-circle">ลดราคา</span>
                             </div>
                         <?php } ?>
                         <figure class="layer">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="caption">
                     <h6 class="regular"><a
-                                href="shop-single-product-v1.html"><?php echo $product['Product']['name']; ?></a></h6>
+                                href="/products/view/<?php echo $product['Product']['id'] ?>"><?php echo $product['Product']['name']; ?></a></h6>
                     <div class="price">
                         <?php if ($product['Product']['price'] < $product['Product']['normal_price']) { ?>
                             <small class="amount off text-danger"><?php echo $product['Product']['normal_price']; ?></small>
@@ -68,3 +68,13 @@
         </div><!-- end col -->
     <?php } ?>
 </div>
+<?php }else{ ?>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h1 class="text-danger alt-font" style="font-size: 10em;">404</h1>
+            <h2>ไม่พบสินค้า!</h2>
+            <p class="lead">ขออภัย ไม่พบสินค้าตามเงื่อนไขที่คุณค้นหา</p>
+            <a href="/products" class="btn btn-default round btn-lg"><i class="fa fa-shopping-cart"></i> เลือกซื้อสินค้า</a>
+        </div><!-- end col -->
+    </div>
+<?php }?>

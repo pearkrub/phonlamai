@@ -24,8 +24,8 @@
                     </span>
                     </a>
                     <ul class="w-150">
-                        <li><a href="checkout.html">ข้อมูลส่วนตัว</a></li>
-<!--                        <li><a href="wishlist.html">รายการสินค้าโปรด (5)</a></li>-->
+                        <li><a href="/accounts/profile">ข้อมูลส่วนตัว</a></li>
+                        <li><a href="/wishlists">รายการสินค้าโปรด (5)</a></li>
                         <li><a href="/orders">รายการสั่งซื้อ</a></li>
                         <li><a href="/logout">ออกจากระบบ</a></li>
                     </ul>
@@ -188,8 +188,9 @@
 <!--                    </ul><!-- end ul dropdown-menu -->
 <!--                </li><!-- end li dropdown -->
                 <!-- Pages -->
-                <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">แจ้งชำระเงิน</a>
-                <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">เกี่ยวกับเรา</a>
+                <li class="dropdown yamm-fw"><a href="/products">สินค้า</a>
+                <li class="dropdown yamm-fw"><a href="#">แจ้งชำระเงิน</a>
+                <li class="dropdown yamm-fw"><a href="#">เกี่ยวกับเรา</a>
 
                 </li><!-- end li dropdown -->
                 <!-- elements -->
