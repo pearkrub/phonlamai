@@ -36,9 +36,9 @@
         <div class="col-md-12 text-center">
             <h3><span class="fa fa-file-text"></span></h3>
             <h6>คุณยังไม่มีที่อยู่สำหรับจัดส่ง</h6><br>
-            <button class="btn btn-primary" onclick="addAddress()" data-toggle="modal" data-target=".addressModal"><i
+            <a class="btn btn-primary" onclick="addAddress()" data-toggle="modal" data-target=".addressModal"><i
                         class="fa fa-plus"></i> เพิ่มที่อยู่
-            </button>
+            </a>
         </div>
     </div><!-- end row -->
 <?php } ?>
