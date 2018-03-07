@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="/css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css" />
     <link href="/js/sweetalert.css" rel="stylesheet">
 
     <!-- this is default skin you can replace that with: dark.css, yellow.css, red.css ect -->
@@ -93,6 +94,7 @@
 <script type="text/javascript" src="/js/pace.min.js"></script>
 <script type="text/javascript" src="/js/star-rating.min.js"></script>
 <script type="text/javascript" src="/js/wow.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.min.js"></script>
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
 <script type="text/javascript" src="/js/gmaps.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>

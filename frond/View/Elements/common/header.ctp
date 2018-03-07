@@ -189,8 +189,8 @@
 <!--                </li><!-- end li dropdown -->
                 <!-- Pages -->
                 <li class="dropdown yamm-fw"><a href="/products">สินค้า</a>
-                <li class="dropdown yamm-fw"><a href="#">แจ้งชำระเงิน</a>
-                <li class="dropdown yamm-fw"><a href="#">เกี่ยวกับเรา</a>
+                <li class="dropdown yamm-fw"><a href="/orders/informPayment">แจ้งชำระเงิน</a>
+                <li class="dropdown yamm-fw"><a href="/aboutUs">เกี่ยวกับเรา</a>
 
                 </li><!-- end li dropdown -->
                 <!-- elements -->

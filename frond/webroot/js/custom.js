@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('#datetimepicker2').datetimepicker();
     loadCart()
     $('.product_qty').on('change', function () {
         var id = $(this).attr('id')
@@ -330,5 +331,34 @@ function saveMerchant() {
     validator.form();
     if ($('#error_count_regis').val() == 0) {
         $('.merchant-register-form').submit()
+    }
+}
+
+function saveInformPayment() {
+    var validator = $(".inform-payment-form").validate({
+        showErrors: function (errorMap, errorList) {
+            $('#error_count_inform').val(this.numberOfInvalids())
+            this.defaultShowErrors();
+        },
+        rules: {
+            order_no: {
+                required: true
+            },
+            payment_date: {
+                required: true
+            },
+            document: {
+                required: true,
+            },
+            amount: {
+                required: true,
+                digits: true,
+                maxlength: 10
+            }
+        }
+    });
+    validator.form();
+    if ($('#error_count_inform').val() == 0) {
+        $('.inform-payment-form').submit()
     }
 }

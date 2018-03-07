@@ -180,4 +180,16 @@ class OrdersController extends AppController
 
         return $error;
     }
+
+    /**
+     * @return array
+     */
+    public function informPayment()
+    {
+        $this->layout = 'cart';
+
+        if($this->request->is('post')) {
+            $data = $this->request->data;
+        }
+    }
 }
