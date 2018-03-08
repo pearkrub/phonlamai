@@ -198,10 +198,18 @@ class OrdersController extends AppController
                 ),
                 'recursive' => 3
             ));
+            $bank = [
+                'krb' => 'ธนาคารกรุงไทย',
+                'kbank' => 'ธนาคารกสิกรไทย',
+                'bbl' => 'ธนาคารกรุงเทพ',
+                'scb' => 'ธนาคารไทยพานิชย์',
+            ];
             if(!empty($order)) {
                 $inform['order_id'] = $order['Order']['id'];
                 $inform['payment_date'] = $data['payment_date'].':00';
                 $inform['amount'] = $data['amount'];
+                $inform['bank_code'] = $data['bank'];
+                $inform['bank_name'] = $bank[$data['bank']];
                 $file = $_FILES['document'];
                 $type = explode('.', $file['name']);
                 $file_name = $this->uniqid_base36(true) . '.' . end($type);

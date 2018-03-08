@@ -19,7 +19,57 @@ if (!empty($Auth)) { ?>
             </div>
         <?php }
     } ?>
-    <div class="col-sm-9">
+    <div class="col-md-6">
+        <div class="panel-group accordion style2 panel-bank" id="accordionPayment" role="tablist"
+             aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingPayment1">
+                    <h4 class="panel-title">
+                        <a class="" data-toggle="collapse" data-parent="#accordionPayment" href="#collapsePayment1"
+                           aria-expanded="true" aria-controls="collapsePayment1">
+                            <i class="fa fa-credit-card mr-10"></i>โอนผ่านธนาคาร
+                        </a>
+                    </h4><!-- end panel-title -->
+                </div><!-- end panel-heading -->
+                <div id="collapsePayment1" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="headingPayment1">
+                    <div class="panel-body">
+                        <div class="row col-md-6">
+                            <div class="text-center"><img src="/img/bank/krb.png" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="text-center">ธนาคารกรุงไทย</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 132-4-54446-9</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <div class="text-center"><img src="/img/bank/kbank.png" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="text-center">ธนาคารกสิกรไทย</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 546-4-23423-3</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <br>
+                            <div class="text-center"><img src="/img/bank/BBL.png" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="text-center">ธนาคารกรุงเทพ</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 343-4-36784-1</div>
+                        </div>
+                        <div class="row col-md-6">
+                            <br>
+                            <div class="text-center"><img src="/img/bank/scb.png" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="text-center">ธนาคารไทยพานิชย์</div>
+                            <div class="text-center">ชื่อบัญชี เทศบาลปลายบาง</div>
+                            <div class="text-center">เลขที่ 895-4-45332-7</div>
+                        </div>
+                    </div><!-- end panel-body -->
+                </div><!-- end collapse -->
+            </div><!-- end panel -->
+        </div><!-- end panel-group -->
+    </div>
+    <div class="col-sm-6">
         <div class="row">
             <div class="col-sm-12 text-left">
                 <h2 class="title">แจ้งชำระเงิน</h2>
@@ -39,6 +89,20 @@ if (!empty($Auth)) { ?>
                         <div class="col-sm-9">
                             <input required type="text" name="order_no" class="form-control input-md" id="order_no"
                                    placeholder="INV2018xxxxxx">
+                        </div>
+                    </div><!-- end form-group -->
+                    <div class="form-group">
+                        <label for="bank" class="col-sm-3 control-label">ธนาคารที่โอน <span
+                                    class="text-danger">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                           <select required name="bank" class="form-control input-md">
+                               <option value="">- - -เลือกธนาคาร- - -</option>
+                               <option value="krb">ธนาคารกรุงไทย</option>
+                               <option value="kbank">ธนาคารกสิกรไทย</option>
+                               <option value="bbl">ธนาคารกรุงเทพ</option>
+                               <option value="scb">ธนาคารไทยพานิชย์</option>
+                           </select>
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">

@@ -343,6 +343,9 @@ function saveInformPayment() {
             order_no: {
                 required: true
             },
+            bank: {
+                required: true
+            },
             payment_date: {
                 required: true
             },
