@@ -230,4 +230,14 @@ class OrdersController extends AppController
         $dec = $s[13] . substr($s, 15); // skip the dot
         return base_convert($hex, 16, 36) . base_convert($dec, 10, 36);
     }
+
+    public function receiveOrder() {
+        $this->autoRender = false;
+
+        if($this->request->data['id']) {
+            $order['status'] = 'received';
+            $order['id'] = $this->request->data['id'];
+            $this->Order->save($order);
+        }
+    }
 }

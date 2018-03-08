@@ -104,17 +104,24 @@ function DateTimeThai($strDate)
                                 <?php echo DateTimeThai($order['Order']['order_date']) ?>
                             </td>
                             <td>
-                                <?php if ($order['Order']['status'] == 'complete') { ?>
-                                    <span class="label label-success"><i class="fa fa-check"></i> ส่งสินค้าแล้ว</span>
-                                <?php }else{?>
-                                    <span class="label label-primary">รอตรวจสอบ</span>
+                                <?php if ($order['Order']['step'] == 4) { ?>
+                                    <span class="btn btn-success semi-circle btn-sm"><i class="fa fa-check"></i> ส่งสินค้าแล้ว</span>
+                                <?php }?>
+                                <?php if ($order['Order']['step'] == 1) { ?>
+                                    <span class="btn btn-primary semi-circle btn-sm"><i class="fa fa-spinner fa-spin"></i> รอตรวจสอบ</span>
+                                <?php }?>
+                                <?php if ($order['Order']['step'] == 2) { ?>
+                                    <span class="btn btn-primary semi-circle btn-sm"><i class="fa fa-refresh"></i> กำลังจัดหาสินค้า</span>
+                                <?php }?>
+                                <?php if ($order['Order']['step'] == 3) { ?>
+                                    <span class="btn btn-primary semi-circle btn-sm"><i class="fa fa-truck"></i> กำลังจัดส่ง</span>
                                 <?php }?>
                             </td>
                             <td>
                                 <?php if ($order['Order']['status'] == 'complete') { ?>
                                     <a onclick="receiveOrder(<?php echo $order['Order']['id'] ?>)" class="btn btn-primary btn-sm"><i class="fa fa-check"></i> แจ้งรับสินค้า</a>
                                 <?php } if($order['Order']['status'] == 'received') { ?>
-                                    <span class="label label-success"><i class="fa fa-check"></i> รับสินค้าแล้ว</span>
+                                    <span class="btn btn-success semi-circle btn-sm"><i class="fa fa-check"></i> รับสินค้าแล้ว</span>
                                 <?php } ?>
                             </td>
                         </tr>
