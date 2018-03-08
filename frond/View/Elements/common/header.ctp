@@ -25,7 +25,7 @@
                     </a>
                     <ul class="w-150">
                         <li><a href="/accounts/profile">ข้อมูลส่วนตัว</a></li>
-                        <li><a href="/wishlists">รายการสินค้าโปรด (5)</a></li>
+<!--                        <li><a href="/wishlists">รายการสินค้าโปรด (5)</a></li>-->
                         <li><a href="/orders">รายการสั่งซื้อ</a></li>
                         <li><a href="/logout">ออกจากระบบ</a></li>
                     </ul>

@@ -33,7 +33,7 @@
                         </figure>
                     <?php } ?>
                     <div class="icons">
-                        <a class="icon semi-circle" href="javascript:void(0);"><i class="fa fa-heart-o"></i></a>
+<!--                        <a class="icon semi-circle" href="javascript:void(0);"><i class="fa fa-heart-o"></i></a>-->
                         <?php if(intval($product['Product']['quantity']) > 0) { ?>
                         <a class="icon semi-circle" title="เพิ่มเข้าตะกร้า" onclick="addToCart(<?php echo $product['Product']['id'] ?>)" href="javascript:void(0);"><i class="fa fa-shopping-basket"></i></a>
                         <?php }?>

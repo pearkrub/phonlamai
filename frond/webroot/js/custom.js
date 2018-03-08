@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $('#datetimepicker2').datetimepicker();
     loadCart()
     $('.product_qty').on('change', function () {
         var id = $(this).attr('id')

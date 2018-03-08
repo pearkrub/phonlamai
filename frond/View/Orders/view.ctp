@@ -26,6 +26,32 @@ function DateThai($strDate)
     return "$strDay $strMonthThai $strYear";
 }
 
+function DateTimeThai($strDate)
+{
+    $strYear = date("Y", strtotime($strDate)) + 543;
+    $strMonth = date("n", strtotime($strDate));
+    $strDay = date("j", strtotime($strDate));
+    $strHour = date("H", strtotime($strDate));
+    $strMinute = date("i", strtotime($strDate));
+    $strSeconds = date("s", strtotime($strDate));
+    $strMonthCut = Array(
+        "",
+        "ม.ค.",
+        "ก.พ.",
+        "มี.ค.",
+        "เม.ย.",
+        "พ.ค.",
+        "มิ.ย.",
+        "ก.ค.",
+        "ส.ค.",
+        "ก.ย.",
+        "ต.ค.",
+        "พ.ย.",
+        "ธ.ค."
+    );
+    $strMonthThai = $strMonthCut[$strMonth];
+    return "$strDay $strMonthThai $strYear $strHour:$strMinute:$strSeconds น.";
+}
 ?>
 <style>
     @media print {
@@ -144,6 +170,17 @@ function DateThai($strDate)
                         <?php echo $address['CustomerAddress']['zipcode'] ?></p>
                 </div>
             </div>
+            <?php if (!empty($order['InformPayment'])) { ?>
+                <div class="col-sm-12 no-print">
+                    <hr class="spacer-30">
+                    <h6>การแจ้งชำระเงิน</h6>
+                    <?php foreach ($order['InformPayment'] as $inform) { ?>
+                    <div class="row">
+                        <p style="margin-left: 13px">เมื่อ <?php echo DateTimeThai($inform['payment_date']).' จำนาน '.number_format($inform['amount']).' บาท' ?> <a title="ดู" style="cursor: pointer" target="_blank" href="/<?php echo $inform['document_path'] ?>">ดูรูปภาพ <i class="fa fa-file"></i></a></p>
+                    </div>
+                    <?php }?>
+                </div>
+            <?php } ?>
             <div class="col-sm-12 no-print">
                 <hr class="spacer-30">
                 <h6>สถานะใบสั่งซื้อ</h6>
@@ -151,14 +188,14 @@ function DateThai($strDate)
                 $step2 = 'disabled';
                 $step3 = 'disabled';
                 $step4 = 'disabled';
-                if($order['Order']['step'] == 2) {
+                if ($order['Order']['step'] == 2) {
                     $step2 = 'active';
                 }
-                if($order['Order']['step'] == 3) {
+                if ($order['Order']['step'] == 3) {
                     $step3 = 'active';
                     $step2 = 'complete';
                 }
-                if($order['Order']['step'] == 4) {
+                if ($order['Order']['step'] == 4) {
                     $step2 = 'complete';
                     $step3 = 'complete';
                     $step4 = 'active';

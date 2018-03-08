@@ -8,7 +8,7 @@
 
 class OrdersController extends AppController
 {
-    public $uses = array('Product', 'Order', 'CustomerAddress', 'OrderDetail');
+    public $uses = array('Product', 'Order', 'CustomerAddress', 'OrderDetail', 'InformPayment');
 
     public function index() {
         $this->layout = 'cart';
@@ -190,6 +190,44 @@ class OrdersController extends AppController
 
         if($this->request->is('post')) {
             $data = $this->request->data;
+            $auth = $this->Session->read('Auth');
+            $order = $this->Order->find('first', array(
+                'conditions' => array(
+                    'Order.customer_id' => $auth['Customer']['id'],
+                    'Order.order_no' => $data['order_no']
+                ),
+                'recursive' => 3
+            ));
+            if(!empty($order)) {
+                $inform['order_id'] = $order['Order']['id'];
+                $inform['payment_date'] = $data['payment_date'].':00';
+                $inform['amount'] = $data['amount'];
+                $file = $_FILES['document'];
+                $type = explode('.', $file['name']);
+                $file_name = $this->uniqid_base36(true) . '.' . end($type);
+                $target_file = 'files/inform/' . $file_name;
+                if (move_uploaded_file($file["tmp_name"], $target_file)) {
+                    $inform['document_path'] = $target_file;
+                    if ($this->InformPayment->save($inform)) {
+                        $this->set('response', 'success');
+                    }
+                }else{
+                    $this->set('response', 'errorUpload');
+                }
+            }else{
+                $this->set('response', 'emptyOrder');
+            }
         }
+    }
+
+    public function uniqid_base36($more_entropy = false)
+    {
+        $s = uniqid('', $more_entropy);
+        if (!$more_entropy)
+            return base_convert($s, 16, 36);
+
+        $hex = substr($s, 0, 13);
+        $dec = $s[13] . substr($s, 15); // skip the dot
+        return base_convert($hex, 16, 36) . base_convert($dec, 10, 36);
     }
 }

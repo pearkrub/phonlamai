@@ -52,6 +52,7 @@ function DateTimeThai($strDate)
     $strMonthThai = $strMonthCut[$strMonth];
     return "$strDay $strMonthThai $strYear $strHour:$strMinute:$strSeconds น.";
 }
+
 ?>
 <div class="col-sm-12">
     <div class="row">
@@ -74,6 +75,7 @@ function DateTimeThai($strDate)
                         <th>ราคา</th>
                         <th>วันที่สั่งซื้อ</th>
                         <th>สถานะ</th>
+                        <th>รับสินค้า</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -81,25 +83,39 @@ function DateTimeThai($strDate)
                     foreach ($orders as $order) { ?>
                         <tr>
                             <td>
-                                <a title="ดูรายละเอียดใบสั่งซื้อ" href="orders/view/<?php echo $order['Order']['id'] ?>"><?php echo $order['Order']['order_no'] ?></a>
+                                <a title="ดูรายละเอียดใบสั่งซื้อ"
+                                   href="orders/view/<?php echo $order['Order']['id'] ?>"><?php echo $order['Order']['order_no'] ?></a>
                             </td>
                             <td>
                                 <?php
                                 $address = json_decode($order['Order']['shipping_address'], true);
                                 ?>
-<!--                                <h6 class="regular"><a href="shop-single-product-v1.html">--><?php //echo $address['CustomerAddress']['title'] ?><!--</a></h6>-->
+                                <!--                                <h6 class="regular"><a href="shop-single-product-v1.html">-->
+                                <?php //echo $address['CustomerAddress']['title'] ?><!--</a></h6>-->
                                 <p><?php echo $address['CustomerAddress']['address'] ?>
-                                    ต.<?php echo $address['District']['district_name'] ?></p><p> อ.<?php echo $address['Amphure']['amphur_name'] ?>
-                                จ.<?php echo $address['Province']['province_name'] ?> <?php echo $address['CustomerAddress']['zipcode'] ?></p>
+                                    ต.<?php echo $address['District']['district_name'] ?></p>
+                                <p> อ.<?php echo $address['Amphure']['amphur_name'] ?>
+                                    จ.<?php echo $address['Province']['province_name'] ?> <?php echo $address['CustomerAddress']['zipcode'] ?></p>
                             </td>
                             <td>
-                                <span><?php echo number_format($order['Order']['summary'],2, '.',',') ?> บาท</span>
+                                <span><?php echo number_format($order['Order']['summary'], 2, '.', ',') ?> บาท</span>
                             </td>
                             <td>
                                 <?php echo DateTimeThai($order['Order']['order_date']) ?>
                             </td>
                             <td>
-                                <span class="label label-primary">รอตรวจสอบ</span>
+                                <?php if ($order['Order']['status'] == 'complete') { ?>
+                                    <span class="label label-success"><i class="fa fa-check"></i> ส่งสินค้าแล้ว</span>
+                                <?php }else{?>
+                                    <span class="label label-primary">รอตรวจสอบ</span>
+                                <?php }?>
+                            </td>
+                            <td>
+                                <?php if ($order['Order']['status'] == 'complete') { ?>
+                                    <a onclick="receiveOrder(<?php echo $order['Order']['id'] ?>)" class="btn btn-primary btn-sm"><i class="fa fa-check"></i> แจ้งรับสินค้า</a>
+                                <?php } if($order['Order']['status'] == 'received') { ?>
+                                    <span class="label label-success"><i class="fa fa-check"></i> รับสินค้าแล้ว</span>
+                                <?php } ?>
                             </td>
                         </tr>
                     <?php } ?>

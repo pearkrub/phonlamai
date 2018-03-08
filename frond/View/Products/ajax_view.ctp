@@ -69,11 +69,11 @@
                     <span style="color: #0a6aa1">สินค้าหมด</span>
                 <?php }?>
             </li>
-            <li>
+            <!-- <li>
                 <button type="button" onclick="addToWishlist(<?php echo $product['Product']['id'] ?>)"
                         class="btn btn-gray btn-md round"><i class="fa fa-heart mr-5"></i>เพิ่มใส่สินค้าที่ชื่นชอบ
                 </button>
-            </li>
+            </li> -->
         </ul>
     </div><!-- end col -->
 </div><!-- end row -->
