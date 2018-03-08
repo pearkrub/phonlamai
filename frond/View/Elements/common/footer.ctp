@@ -36,14 +36,14 @@
                     <div class="col-sm-3">
                         <h5 class="title">ทั่วไป</h5>
                         <ul class="list alt-list">
-                            <li><a href="/about-us"><i class="fa fa-angle-right"></i>เกี่ยวกับเรา</a></li>
+<!--                            <li><a href="/about-us"><i class="fa fa-angle-right"></i>เกี่ยวกับเรา</a></li>-->
                             <li><a href="/faq"><i class="fa fa-angle-right"></i>คำถามที่พบบ่อย</a></li>
                             <li><a href="/privacy"><i class="fa fa-angle-right"></i>ข้อกำหนดและเงื่อนไข</a></li>
                             <li><a href="/contact-us"><i class="fa fa-angle-right"></i>ติดต่อเรา</a></li>
                         </ul>
                     </div><!-- end col -->
                     <div class="col-sm-3">
-                        <h5 class="title">ช่องทางการชำระเงิน</h5>
+                        <h5 class="title">การชำระเงิน</h5>
                         <p>ง่าย ทันสมัย และเปิดช่องทางในการซื้อขายที่สะดวกรวดเร็วยิ่งขึ้น.</p>
                         
                     </div><!-- end col -->

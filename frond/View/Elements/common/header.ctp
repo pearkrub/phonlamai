@@ -190,7 +190,7 @@
                 <!-- Pages -->
                 <li class="dropdown yamm-fw"><a href="/products">สินค้า</a>
                 <li class="dropdown yamm-fw"><a href="/orders/informPayment">แจ้งชำระเงิน</a>
-                <li class="dropdown yamm-fw"><a href="/about-us">เกี่ยวกับเรา</a>
+<!--                <li class="dropdown yamm-fw"><a href="/about-us">เกี่ยวกับเรา</a>-->
                 <li class="dropdown yamm-fw"><a href="/contact-us">ติดต่อเรา</a>
 
                 </li><!-- end li dropdown -->
