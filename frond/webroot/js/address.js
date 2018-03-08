@@ -88,6 +88,7 @@ $('.payment_method').on('change', function () {
 })
 
 function checkout() {
+
     var validator = $( ".payment-form" ).validate({
         showErrors: function(errorMap, errorList) {
             $('#error_count').val(this.numberOfInvalids())
@@ -107,11 +108,26 @@ function checkout() {
             if(rs.error){
                 swal("ผิดพลาด!", "สินค้าไม่พอ\n"+rs.error, "error");
             }else {
-                swal("สำเร็จ!", "ขอขอบคุณสำหรับการสั่งซื้อของคุณ\n", "success");
-                 window.location = '/orders/success/'+rs.id
+                swal({
+                        title: "สำเร็จ !",
+                        text: "ขอขอบคุณสำหรับการสั่งซื้อของคุณ",
+                        type: "success",
+
+                        confirmButtonClass: "btn-success",
+                        confirmButtonText: "แจ้งชำระเงิน",
+                        showCancelButton: true,
+                        cancelButtonText: "ดูรายละอียดใบสั่งซื้อ",
+                        closeOnConfirm: false,
+                        showLoaderOnConfirm: true
+                    },
+                    function (confirm) {
+                        if(confirm) {
+                            window.location = '/orders/informPayment/' + rs.id
+                        }else{
+                            window.location = '/orders/success/'+rs.id
+                        }
+                    });
             }
-
-
         })
     }else{
         swal("แจ้งเตือน!", "กรุณาเลือกช่องทางการชำระเงิน", "warning");
