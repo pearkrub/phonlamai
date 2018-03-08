@@ -51,4 +51,22 @@ class PagesController extends AppController
         $this->set('products', []);
         $this->set('merchants', $merchants);
     }
+
+    public function contact() {
+        $this->layout = 'product';
+    }
+
+    public function about() {
+        $this->layout = 'product';
+    }
+
+    public function faq()
+    {
+        $this->layout = 'product';
+    }
+
+    public function privacy()
+    {
+        $this->layout = 'product';
+    }
 }

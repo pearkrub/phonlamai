@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-03-08 10:09:41
+Date: 2018-03-08 21:30:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -10065,16 +10065,19 @@ CREATE TABLE `inform_payments` (
   `order_id` int(11) DEFAULT NULL,
   `status` varchar(255) DEFAULT 'new',
   `payment_date` datetime DEFAULT NULL,
+  `bank_code` varchar(255) DEFAULT NULL,
+  `bank_name` varchar(255) DEFAULT NULL,
   `amount` decimal(10,0) DEFAULT NULL,
   `document_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of inform_payments
 -- ----------------------------
-INSERT INTO `inform_payments` VALUES ('1', '11', 'new', '2018-03-08 07:22:00', '5000', 'files/inform/fp53q63zoxba6d3i.jpg');
-INSERT INTO `inform_payments` VALUES ('3', '2', 'new', '2018-03-08 08:11:00', '5000', 'files/inform/fp5522sy4b8akgic.jpg');
+INSERT INTO `inform_payments` VALUES ('1', '11', 'new', '2018-03-08 07:22:00', 'kbank', 'ธนาคารกสิกรไทย', '5000', 'files/inform/fp53q63zoxba6d3i.jpg');
+INSERT INTO `inform_payments` VALUES ('3', '2', 'new', '2018-03-08 08:11:00', 'kbank', 'ธนาคารกสิกรไทย', '5000', 'files/inform/fp5522sy4b8akgic.jpg');
+INSERT INTO `inform_payments` VALUES ('4', '11', 'new', '2018-03-08 20:52:00', 'kbank', 'ธนาคารกสิกรไทย', '5000', 'files/inform/fp5r273yilcba8b.png');
 
 -- ----------------------------
 -- Table structure for merchants

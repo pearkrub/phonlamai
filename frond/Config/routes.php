@@ -28,8 +28,8 @@
 Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/logout', array('controller' => 'login', 'action' => 'logout'));
 Router::connect('/about-us', array('controller' => 'pages', 'action' => 'about'));
-Router::connect('/contact-us', array('controller' => 'pages', 'action' => 'privacy'));
-Router::connect('/privacy', array('controller' => 'pages', 'action' => 'contact'));
+Router::connect('/contact-us', array('controller' => 'pages', 'action' => 'contact'));
+Router::connect('/privacy', array('controller' => 'pages', 'action' => 'privacy'));
 Router::connect('/faq', array('controller' => 'pages', 'action' => 'faq'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
