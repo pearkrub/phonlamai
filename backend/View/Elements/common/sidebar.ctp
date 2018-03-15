@@ -1,7 +1,7 @@
 <div class="page-sidebar pagescroll">
 
     <!-- MAIN MENU - START -->
-    <div class="page-sidebar-wrapper" id="main-menu-wrapper"> 
+    <div class="page-sidebar-wrapper" id="main-menu-wrapper">
 
         <!-- USER INFO - START -->
         <div class="profile-info row">
@@ -15,9 +15,9 @@
             <div class="profile-details col-xs-8">
 
                 <h3>
-                    
-                   <?php $user = $this->Session->read('Auth'); ?>
-                    <a href="#"><?php echo $user['User']['first_name'].' '.$user['User']['last_name']?></a>
+
+                    <?php $user = $this->Session->read('Auth'); ?>
+                    <a href="#"><?php echo $user['User']['first_name']?></a>
 
                     <!-- Available statuses: online, idle, busy, away and offline -->
                     <span class="profile-status online"></span>
@@ -31,63 +31,45 @@
         <!-- USER INFO - END -->
 
 
+        <ul class='wraplist'>
 
-        <ul class='wraplist'>	
-
-            
-                    <li class="open"> 
-                    <a href="index-ecommerce.html">
+            <li>
+                <a href="/">
                     <i class="fa fa-dashboard"></i>
                     <span class="title">หน้าแรก</span>
-                        </a>
-                    </li>
-                    <li class=""> 
-                    <a href="javascript:;">
+                </a>
+            </li>
+            <li class="">
+                <a href="/orders">
                     <i class="fa fa-shopping-cart"></i>
                     <span class="title">ข้อมูลการซื้อขาย</span>
-                        <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu" >
-                            <li>
-                            <a class="" href="eco-products.html" >เพิ่มสินค้า</a>
-                            </li>
-                            <li>
-                            <a class="" href="eco-product-add.html" >รายการสินค้า</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class=""> 
-                    <a href="javascript:;">
+                </a>
+            </li>
+            <li class="">
+                <a href="customers">
                     <i class="fa fa-users"></i>
                     <span class="title">ข้อมูลลูกค้า</span>
-                    </a>
-                    </li>
-                    <li class=""> 
-                    <a href="merchants">
+                </a>
+            </li>
+            <li class="">
+                <a href="merchants">
                     <i class="fa fa-meh-o"></i>
                     <span class="title">ข้อมูลพ่อค้า</span>
-                    </a>
-                    </li>
-                    <li class=""> 
-                    <a href="javascript:;">
-                    <i class="fa fa-cubes"></i>
-                    <span class="title">ประเภทสินค้า</span>
-                        </a>
-                    </li>
-                    <li class=""> 
-                    <a href="javascript:;">
-                    <i class="fa fa-info"></i>
-                    <span class="title">เกี่ยวกับเรา</span>
-                        </a>
-                    </li>
-                    
-            
+                </a>
+            </li>
+            <li class="">
+                <a href="merchants">
+                    <i class="fa fa-meh-o"></i>
+                    <span class="title">การแจ้งชำระเงิน</span>
+                </a>
+            </li>
+
+
         </ul>
 
 
     </div>
     <!-- MAIN MENU - END -->
-
 
 
 </div>

@@ -11,6 +11,14 @@
  *
  * @author ptum
  */
-class Order extends AppModel{ 
-    //put your code here
+class Order extends AppModel
+{
+    public $hasMany = array(
+        'OrderDetail',
+        'InformPayment' => array(
+            'order' => array(
+                'InformPayment.id desc'
+            )
+        )
+    );
 }

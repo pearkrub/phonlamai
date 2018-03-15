@@ -31,4 +31,31 @@ App::uses('Controller', 'Controller');
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
+    public $uses = array('InformPayment', 'Order');
+
+    public function beforeFilter()
+    {
+        $Auth = $this->Session->read('Auth');
+        if(empty($Auth)) {
+            $this->Session->destroy();
+            $this->redirect('/login');
+        }
+        $newInforms = $this->InformPayment->find('all',array(
+            'conditions' => array(
+                'status' => 'new'
+            ),
+            'order' => array('id desc')
+        ));
+
+        $newOrders = $this->Order->find('all',array(
+            'conditions' => array(
+                'status' => 'new_order'
+            ),
+            'order' => array('Order.id desc')
+        ));
+        $this->set('newOrders', $newOrders);
+        $this->set('newInforms', $newInforms);
+
+    }
 }

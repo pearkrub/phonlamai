@@ -12,5 +12,7 @@
  * @author ptum
  */
 class Product extends AppModel{ 
-    //put your code here
+    public $hasMany = array('ProductImage');
+
+    public $belongsTo = array('Merchant');
 }
