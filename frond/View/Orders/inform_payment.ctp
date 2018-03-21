@@ -87,7 +87,7 @@ if (!empty($Auth)) { ?>
                                     class="text-danger">*</span>
                         </label>
                         <div class="col-sm-9">
-                            <input required type="text" name="order_no" class="form-control input-md" id="order_no"
+                            <input required type="text" value="<?php echo empty($order['Order']['order_no'])? '': $order['Order']['order_no'] ?>" name="order_no" class="form-control input-md" id="order_no"
                                    placeholder="INV2018xxxxxx">
                         </div>
                     </div><!-- end form-group -->
@@ -124,7 +124,7 @@ if (!empty($Auth)) { ?>
                         <label for="amount" class="col-sm-3 control-label ">จำนานเงินที่โอน(บาท)<span
                                     class="text-danger">*</span></label>
                         <div class="col-sm-9">
-                            <input required type="text" name="amount" class="form-control input-md" id="amount"
+                            <input required type="text" name="amount" value="<?php echo empty($order['Order']['summary'])? '': $order['Order']['summary'] ?>" class="form-control input-md" id="amount"
                                    placeholder="0">
                         </div>
                     </div><!-- end form-group -->
@@ -132,7 +132,7 @@ if (!empty($Auth)) { ?>
                         <label for="document" class="col-sm-3 control-label">หลักฐานการโอน <span
                                     class="text-danger">*</span></label>
                         <div class="col-sm-9">
-                            <input required type="file" name="document" class="form-control input-md" id="document"/>
+                            <input required type="file" accept="image/*" name="document" class="form-control input-md" id="document"/>
                         </div>
                     </div><!-- end form-group -->
                     <div class="form-group">

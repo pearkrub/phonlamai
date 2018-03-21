@@ -184,10 +184,14 @@ class OrdersController extends AppController
     /**
      * @return array
      */
-    public function informPayment()
+    public function informPayment($id = null)
     {
         $this->layout = 'cart';
-
+        if(!empty($id)) {
+            $id = base64_decode($id);
+            $order = $this->Order->findById($id);
+            $this->set('order', $order);
+        }
         if($this->request->is('post')) {
             $data = $this->request->data;
             $auth = $this->Session->read('Auth');
