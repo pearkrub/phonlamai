@@ -53,6 +53,8 @@
                         <span class="amount text-primary"><?php echo $product['Product']['price']; ?> บาท/<?php echo $product['Product']['price_per_key'] ?></span>
                     </div>
                     <small class="text-gray">เหลือ <?php echo $product['Product']['quantity'].' '.$product['Product']['price_per_key']; ?> </small>
+                    <br>
+                    <small class="text-gray">สั่งซื้อได้ถึง <?php echo $this->Phonlamai->DateThai($product['Product']['end_date']) ?> </small>
                     <?php if(intval($product['Product']['quantity']) > 0) { ?>
 
                         <br>

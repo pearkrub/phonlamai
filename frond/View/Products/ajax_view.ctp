@@ -1,3 +1,4 @@
+
 <div class="row">
     <div class="col-sm-5">
         <div class='carousel slide product-slider' data-ride='carousel' data-interval="false">
@@ -58,6 +59,8 @@
             </div><!-- end col -->
         </div><!-- end row -->
         <small class="text-gray">เหลือ <?php echo $product['Product']['quantity'].' '.$product['Product']['price_per_key']; ?> </small>
+        <br>
+        <small class="text-gray">สามารถสั่งซื้อได้ถึง <?php echo $this->Phonlamai->DateThai($product['Product']['end_date']) ?> </small>
         <hr class="spacer-10">
         <ul class="list list-inline">
             <li>
