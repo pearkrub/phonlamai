@@ -36,31 +36,31 @@
             <li>
                 <a href="/">
                     <i class="fa fa-dashboard"></i>
-                    <span class="title">หน้าแรก</span>
+                    <label class="title">หน้าแรก</label>
                 </a>
             </li>
             <li class="">
                 <a href="/orders">
                     <i class="fa fa-shopping-cart"></i>
-                    <span class="title">ข้อมูลการซื้อขาย</span>
+                    <label class="title">ข้อมูลการซื้อขาย</label>
                 </a>
             </li>
             <li class="">
                 <a href="customers">
                     <i class="fa fa-users"></i>
-                    <span class="title">ข้อมูลลูกค้า</span>
+                    <label class="title">ข้อมูลลูกค้า</label>
                 </a>
             </li>
             <li class="">
                 <a href="merchants">
                     <i class="fa fa-meh-o"></i>
-                    <span class="title">ข้อมูลพ่อค้า</span>
+                    <label class="title">ข้อมูลพ่อค้า</label>
                 </a>
             </li>
             <li class="">
                 <a href="merchants">
                     <i class="fa fa-meh-o"></i>
-                    <span class="title">การแจ้งชำระเงิน</span>
+                    <label class="title">การแจ้งชำระเงิน</label>
                 </a>
             </li>
 
