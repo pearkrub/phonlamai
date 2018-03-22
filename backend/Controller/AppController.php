@@ -47,7 +47,6 @@ class AppController extends Controller {
             ),
             'order' => array('id desc')
         ));
-
         $newOrders = $this->Order->find('all',array(
             'conditions' => array(
                 'status' => 'new_order'
