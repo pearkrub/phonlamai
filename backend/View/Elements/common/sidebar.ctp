@@ -7,7 +7,7 @@
         <div class="profile-info row">
 
             <div class="profile-image col-xs-4">
-                <a href="ui-profile.html">
+                <a>
                     <img alt="" src="/data/profile/profile-ecommerce.jpg" class="img-responsive img-circle">
                 </a>
             </div>
@@ -59,7 +59,7 @@
             </li>
             <li class="">
                 <a href="/informs">
-                    <i class="fa fa-meh-o"></i>
+                    <i class="fa fa-credit-card"></i>
                     <span class="title">การแจ้งชำระเงิน</span>
                 </a>
             </li>

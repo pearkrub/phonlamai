@@ -78,7 +78,6 @@ function DateTimeThai($strDate)
                                 <th>ราคา(บาท)</th>
                                 <th>วันที่สั่งซื้อ</th>
                                 <th>สถานะ</th>
-                                <th>รับสินค้า</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -124,15 +123,6 @@ function DateTimeThai($strDate)
                                         <?php } ?>
                                         <?php if ($order['Order']['step'] == 3) { ?>
                                             <span class="btn btn-primary semi-circle btn-sm"><i class="fa fa-truck"></i> กำลังจัดส่ง</span>
-                                        <?php } ?>
-                                    </td>
-                                    <td>
-                                        <?php if ($order['Order']['status'] == 'complete') { ?>
-                                            <a onclick="receiveOrder(<?php echo $order['Order']['id'] ?>)"
-                                               class="btn btn-primary btn-sm"><i class="fa fa-check"></i> แจ้งรับสินค้า</a>
-                                        <?php }
-                                        if ($order['Order']['status'] == 'received') { ?>
-                                            <span class="btn btn-success semi-circle btn-sm"><i class="fa fa-check"></i> รับสินค้าแล้ว</span>
                                         <?php } ?>
                                     </td>
                                 </tr>
