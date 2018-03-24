@@ -24,8 +24,7 @@
                         <li class="list">
 
                             <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
-                                <?php foreach ($newInforms as $key => $newInform) {
-                                    if($key < 10) {
+                                <?php foreach ($newInforms as $newInform) {
                                     ?>
                                     <li class="unread available">
                                         <a href="javascript:;">
@@ -40,7 +39,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                <?php }
+                                <?php 
                             } ?>
                             </ul>
 
@@ -68,8 +67,7 @@
                         <li class="list">
 
                             <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
-                            <?php foreach ($newOrders as $key => $newOrder) { 
-                                if($key < 10) {
+                            <?php foreach ($newOrders as $newOrder) { 
                                 ?>
                                 <li class="unread available"> <!-- available: success, warning, info, error -->
                                     <a href="/orders/view/<?php echo $newOrder['Order']['id'] ?>">
@@ -85,7 +83,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <?php }
+                                <?php 
                             } ?>
                             </ul>
                         </li>
