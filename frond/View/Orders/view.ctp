@@ -276,11 +276,11 @@ function DateTimeThai($strDate)
                                 <div class="panel panel-default" style="margin-left: 5px; margin-right: 5px">
                                     <div class="panel-body">
                                         <ul>
-                                            <?php if ($order['Order']['status'] == 'delivery') { ?>
+                                            <?php if ($order['Order']['step'] == 3) { ?>
                                                 <li><i class="fa fa-spinner fa-spin"></i> กำลังดำเนินการจัดส่งสินค้า
                                                 </li>
                                             <?php } ?>
-                                            <?php if ($order['Order']['status'] == 'complete') { ?>
+                                            <?php if ($order['Order']['step'] > 3) { ?>
                                                 <li><i class="fa fa-check"></i> ส่งสินค้าแล้ว</li>
                                             <?php } ?>
                                         </ul>
