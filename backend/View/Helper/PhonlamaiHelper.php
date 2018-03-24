@@ -81,50 +81,50 @@ class PhonlamaiHelper extends  AppHelper
         //Minutes
         else if($minutes <=60){
             if($minutes==1){
-                return "one minute ago";
+                return "นาทีที่แล้ว";
             }
             else{
-                return "$minutes minutes ago";
+                return "$minutes นาทีที่แล้ว";
             }
         }
         //Hours
         else if($hours <=24){
             if($hours==1){
-                return "an hour ago";
+                return "ชั่วโมงที่แล้ว";
             }else{
-                return "$hours hrs ago";
+                return "$hours ชั่วโมวที่แล้ว";
             }
         }
         //Days
         else if($days <= 7){
             if($days==1){
-                return "yesterday";
+                return "เมื่อวานนี้";
             }else{
-                return "$days days ago";
+                return "$days วันที่แล้ว";
             }
         }
         //Weeks
         else if($weeks <= 4.3){
             if($weeks==1){
-                return "a week ago";
+                return "สัปดาห์ที่แล้ว";
             }else{
-                return "$weeks weeks ago";
+                return "$weeks สัปดาห์ที่แล้ว";
             }
         }
         //Months
         else if($months <=12){
             if($months==1){
-                return "a month ago";
+                return "เดือนที่แล้ว";
             }else{
-                return "$months months ago";
+                return "$months เดือนที่แล้ว";
             }
         }
         //Years
         else{
             if($years==1){
-                return "one year ago";
+                return "ปีที่แล้ว";
             }else{
-                return "$years years ago";
+                return "$years ปีที่แล้ว";
             }
         }
     }

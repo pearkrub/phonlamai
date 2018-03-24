@@ -8,5 +8,5 @@
 
 class InformPayment extends AppModel
 {
-
+    public $belongsTo = array('Order');
 }

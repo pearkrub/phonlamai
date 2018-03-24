@@ -33,4 +33,10 @@ class LoginController extends AppController {
         }
     }
 
+    public function logout()
+    {
+        $this->Session->destroy();
+        $this->redirect('/login');
+    }
+
 }

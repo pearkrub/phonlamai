@@ -39,17 +39,17 @@ class AppController extends Controller {
         $Auth = $this->Session->read('Auth');
         if(empty($Auth)) {
             $this->Session->destroy();
-            $this->redirect('/login');
+//            $this->redirect('/login');
         }
         $newInforms = $this->InformPayment->find('all',array(
             'conditions' => array(
-                'status' => 'new'
+                'InformPayment.status' => 'new'
             ),
-            'order' => array('id desc')
+            'order' => array('InformPayment.id desc')
         ));
         $newOrders = $this->Order->find('all',array(
             'conditions' => array(
-                'status' => 'new_order'
+                'Order.status' => 'new_order'
             ),
             'order' => array('Order.id desc')
         ));

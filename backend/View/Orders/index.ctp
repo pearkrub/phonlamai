@@ -93,6 +93,7 @@ function DateTimeThai($strDate)
                                     <td>
                                         <?php
                                         $address = json_decode($order['Order']['shipping_address'], true);
+                                        if(!empty($address)) {
                                         ?>
                                         <p>
                                             คุณ: <?php echo $address['CustomerAddress']['full_name'] ?></p>
@@ -100,6 +101,7 @@ function DateTimeThai($strDate)
                                             ต.<?php echo $address['District']['district_name'] ?>
                                          อ.<?php echo $address['Amphure']['amphur_name'] ?>
                                             จ.<?php echo $address['Province']['province_name'] ?> <?php echo $address['CustomerAddress']['zipcode'] ?></p>
+                                        <?php }?>
                                     </td>
                                     <td>
                                         <span><?php echo number_format($order['Order']['summary'], 2, '.', ',') ?>
@@ -143,4 +145,9 @@ function DateTimeThai($strDate)
         </div>
     </section>
 </div>
-<!--<script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>-->
+<script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.DTTT_button_text').hide()
+    })
+</script>

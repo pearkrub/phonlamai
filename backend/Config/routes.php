@@ -26,6 +26,7 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'dashboard', 'action' => 'index' ));
+	Router::connect('/logout', array('controller' => 'login', 'action' => 'logout' ));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

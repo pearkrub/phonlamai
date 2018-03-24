@@ -18,113 +18,39 @@
                         <li class="total">
                             <span class="small">
                                 คุณมี <strong><?php echo count($newInforms) ?></strong> การแจ้งเตือนชำระเงินมาใหม่
-                                <a href="javascript:;" class="pull-right">ดูทั้งหมด</a>
+                                <a href="/informs" class="pull-right">ดูทั้งหมด</a>
                             </span>
                         </li>
                         <li class="list">
 
                             <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
-                                <li class="unread available"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>Server needs to reboot</strong>
-                                                    <span class="time small">15 mins ago</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="unread away"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-envelope"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>45 new messages</strong>
-                                                    <span class="time small">45 mins ago</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=" busy"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>Server IP Blocked</strong>
-                                                    <span class="time small">1 hour ago</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=" offline"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>10 Orders Shipped</strong>
-                                                    <span class="time small">5 hours ago</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=" offline"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>New Comment on blog</strong>
-                                                    <span class="time small">Yesterday</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=" available"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>Great Speed Notify</strong>
-                                                    <span class="time small">14th Mar</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class=" busy"> <!-- available: success, warning, info, error -->
-                                    <a href="javascript:;">
-                                        <div class="notice-icon">
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                        <div>
-                                                <span class="name">
-                                                    <strong>Team Meeting at 6PM</strong>
-                                                    <span class="time small">16th Mar</span>
-                                                </span>
-                                        </div>
-                                    </a>
-                                </li>
-
+                                <?php foreach ($newInforms as $key => $newInform) {
+                                    if($key < 10) {
+                                    ?>
+                                    <li class="unread available">
+                                        <a href="javascript:;">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-credit-card"></i>
+                                            </div>
+                                            <div>
+                                                <div class="name">
+                                                    <strong>ใบสั่งซื้อเลขที่ <?php echo $newInform['Order']['order_no'] ?></strong>
+                                                    <div class="time small"><?php echo $this->Phonlamai->timeAgo($newInform['InformPayment']['payment_date']) ?></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                <?php }
+                            } ?>
                             </ul>
 
                         </li>
 
-                        <li class="external">
-                            <a href="javascript:;">
-                                <span>Read All Notifications</span>
+                        <!-- <li class="external">
+                            <a href="/informs">
+                                <span>ดูทั้งหมด</span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li class="notify-toggle-wrapper">
@@ -136,128 +62,55 @@
                         <li class="total">
                             <span class="small">
                                 มี <strong><?php echo count($newOrders) ?></strong> รายการสั่งซื้อใหม่
-                                <a href="javascript:;" class="pull-right">ดูทั้งหมด</a>
+                                <a href="/orders" class="pull-right">ดูทั้งหมด</a>
                             </span>
                         </li>
                         <li class="list">
 
                             <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
-                                                                    <li class="unread available"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-check"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>Server needs to reboot</strong>
-                                                    <span class="time small">15 mins ago</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="unread away"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-envelope"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>45 new messages</strong>
-                                                    <span class="time small">45 mins ago</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class=" busy"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-times"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>Server IP Blocked</strong>
-                                                    <span class="time small">1 hour ago</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class=" offline"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>10 Orders Shipped</strong>
-                                                    <span class="time small">5 hours ago</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class=" offline"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-user"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>New Comment on blog</strong>
-                                                    <span class="time small">Yesterday</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class=" available"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-check"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>Great Speed Notify</strong>
-                                                    <span class="time small">14th Mar</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class=" busy"> <!-- available: success, warning, info, error -->
-                                        <a href="javascript:;">
-                                            <div class="notice-icon">
-                                                <i class="fa fa-times"></i>
-                                            </div>
-                                            <div>
-                                                <span class="name">
-                                                    <strong>Team Meeting at 6PM</strong>
-                                                    <span class="time small">16th Mar</span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </li>
-
+                            <?php foreach ($newOrders as $key => $newOrder) { 
+                                if($key < 10) {
+                                ?>
+                                <li class="unread available"> <!-- available: success, warning, info, error -->
+                                    <a href="/orders/view/<?php echo $newOrder['Order']['id'] ?>">
+                                        <div class="notice-icon">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </div>
+                                        <div>
+                                                <div class="name">
+                                                    <strong>คุณ <?php echo $newOrder['Customer']['first_name'].' '.$newOrder['Customer']['last_name'] ?></strong>
+                                                    <div class="time">ยอด <?php echo number_format($newOrder['Order']['summary']) ?> บาท</div>
+                                                    <div class="time small"><?php echo $this->Phonlamai->timeAgo($newOrder['Order']['order_date']) ?></div>
+                                                </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <?php }
+                            } ?>
                             </ul>
-
                         </li>
 
-                        <li class="external">
-                            <a href="javascript:;">
-                                <span>Read All Notifications</span>
+                        <!-- <li class="external">
+                            <a href="/orders">
+                                <span>ดูทั้งหมด</span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 </li>
             </ul>
-        </div>		
+        </div>
         <div class='pull-right'>
             <ul class="info-menu right-links list-inline list-unstyled">
                 <li class="profile">
                     <a href="#" data-toggle="dropdown" class="toggle">
                         <img src="/data/profile/profile-ecommerce.jpg" alt="user-image" class="img-circle img-inline">
                         <?php $user = $this->Session->read('Auth'); ?>
-                        <span><?php echo $user['User']['first_name'] . ' ' . $user['User']['last_name'] ?> <i class="fa fa-angle-down"></i></span>
+                        <span><?php echo $user['User']['first_name'] . ' ' . $user['User']['last_name'] ?> <i
+                                    class="fa fa-angle-down"></i></span>
                     </a>
                     <ul class="dropdown-menu profile animated fadeIn">
-                        <li>
+                        <!-- <li>
                             <a href="#settings">
                                 <i class="fa fa-wrench"></i>
                                 Settings
@@ -274,17 +127,17 @@
                                 <i class="fa fa-info"></i>
                                 Help
                             </a>
-                        </li>
+                        </li> -->
                         <li class="last">
-                            <a href="ui-login.html">
+                            <a href="/logout">
                                 <i class="fa fa-lock"></i>
                                 Logout
                             </a>
                         </li>
                     </ul>
                 </li>
-            </ul>			
-        </div>		
+            </ul>
+        </div>
     </div>
 
 </div>

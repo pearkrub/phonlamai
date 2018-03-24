@@ -10,10 +10,13 @@ class OrdersController extends AppController
 {
     public $uses = array('Product', 'Order', 'CustomerAddress', 'OrderDetail', 'InformPayment');
 
+//    function beforeFilter() {
+////        die(phpinfo());
+//    }
     public function index() {
         $auth = $this->Session->read('Auth');
         if(empty($auth)){
-            $this->redirect('/');
+            $this->redirect('/login');
         }
         $orders = $this->Order->find('all', array(
             'order' => array('Order.id desc')
