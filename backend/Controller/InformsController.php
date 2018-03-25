@@ -8,7 +8,9 @@
 
 class InformsController extends AppController
 {
+    public $uses = array('InformPayment');
+    
     public function index() {
-
+        $this->set('informs', $this->InformPayment->find('all', array('order' => array('InformPayment.id desc'))));
     }
 }

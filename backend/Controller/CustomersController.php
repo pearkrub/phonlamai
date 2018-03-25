@@ -9,6 +9,6 @@
 class CustomersController extends AppController
 {
     public function index() {
-
+        $this->set('customers', $this->Customer->find('all'));
     }
 }
