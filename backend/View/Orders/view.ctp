@@ -8,7 +8,8 @@
                     <a class="box_close fa fa-times"></a>
                 </div>
             </header>
-            <div class="content-body">    <div class="row">
+            <div class="content-body">    
+                <div class="row">
         <div class="col-xs-12">
 
 
@@ -124,12 +125,7 @@
 
             <div class="row">
                 <div class="col-xs-12 text-right">
-                    <a href="#" onclick="window.print()" class="btn btn-purple btn-md no-print"><i class="fa fa-print"></i> &nbsp; พิมพ์ </a>  
-                    <?php if($order['Order']['status'] != 'new_order'){ ?>            
-                        <a href="#" target="_blank" class="btn btn-success btn-md no-print"><i class="fa fa-check"></i> &nbsp; ตรวจสอบแล้ว </a>
-                    <?php }else{ ?>
-                        <a href="#" target="_blank" class="btn btn-primary btn-md no-print"><i class="fa fa-check"></i> &nbsp; ยืนยันการตรวจสอบ </a>      
-                    <?php }?>  
+                    <a href="#" onclick="window.print()" class="btn btn-purple btn-md no-print"><i class="fa fa-print"></i> &nbsp; พิมพ์ </a>    
                 </div>
             </div>
 
@@ -142,3 +138,100 @@
     </div>
         </section>
     </div>
+    <?php if(!empty($order['InformPayment'])){ ?>
+        <div class="col-lg-12">
+            <section class="box ">
+                <header class="panel_header">
+                    <h2 class="title pull-left">ข้อมูลการชำระเงิน</h2>
+                    <div class="actions panel_actions pull-right no-print">
+                        <a class="box_toggle fa fa-chevron-down"></a>
+                        <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                        <a class="box_close fa fa-times"></a>
+                    </div>
+                </header>
+                <div class="content-body">    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>รายการแจ้งชำระ</h3><br>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <td><h4>วันที่แจ้งโอน</h4></td>
+                                                    <td><h4>ธนาคารที่แจ้ง</h4></td>
+                                                    <td class="text-center"><h4>จำนวนเงิน</h4></td>
+                                                    <!-- <td class="text-center"><h4>หลักฐานการโอนเงิน</h4></td> -->
+                                                    <td class="text-center"><h4>ตรวจสอบ</h4></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach($order['InformPayment'] as $inform) { ?>
+                                                    <tr>
+                                                        <td><?php echo $this->Phonlamai->DateTimeThai($inform['payment_date']) ?></td>
+                                                        <td><?php echo $inform['bank_name'] ?></td>
+                                                        <td class="text-center"><?php echo number_format($inform['amount']) ?></td>
+                                                        <td class="text-center"><a target="_blank" class="btn btn-info btn-sm" href="<?php echo Configure::read('App.Domain').$inform['document_path'] ?>"><i class="fa fa-info"></i> ดูหลักฐาน</a></td>
+                                                        <!-- <td class="text-center"><a class="btn btn-info"><i class="fa fa-info"></i></a></td> -->
+                                                    </tr>
+                                                <?php }?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    <div>
+                </div>
+            </section>
+            <div class="row">
+                <div class="col-xs-12 text-left">
+                    <?php if($order['Order']['step'] == 1){ ?> 
+                        <a onclick="approveOrder(<?php echo $order['Order']['id'] ?>)" class="btn btn-primary btn-md no-print"><i class="fa fa-check"></i> &nbsp; ยืนยันการตรวจสอบ </a>             
+                    <?php }else{ ?>
+                        <a class="btn btn-success btn-md no-print"><i class="fa fa-check"></i> &nbsp; ชำระเงินแล้ว </a>
+                    <?php }?>  
+                </div>
+            </div>
+        </div>
+    <?php }?>
+    <script>
+        function approveOrder(id) {
+            swal({
+                title: 'ยืนยัน',
+                text: 'ยืนยันว่าชำระเงินแล้ว',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ยืนยัน',
+                cancelButtonText: 'ยกเลิก',
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true
+            }).then(function () {
+                var url = '/orders/approve'
+                $.post(url, {id: id}, function (e) {
+                    if (e == 1) {
+                        swal(
+                            'สำเร็จ!',
+                            'ยืนยันว่าตรวจสอบแล้ว',
+                            'success'
+                        )
+                        location.reload()
+                    } else {
+                        swal(
+                            'ผิดพลาด!',
+                            'ไม่สามารถดำเนินการได้',
+                            'error'
+                        )
+                    }
+                })
+            }).catch(
+                function() {
+                    
+                }
+            )
+        }
+    </script>
