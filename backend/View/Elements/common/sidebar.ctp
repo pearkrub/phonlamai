@@ -1,4 +1,4 @@
-<div class="page-sidebar pagescroll">
+<div class="page-sidebar pagescroll no-print">
 
     <!-- MAIN MENU - START -->
     <div class="page-sidebar-wrapper" id="main-menu-wrapper">

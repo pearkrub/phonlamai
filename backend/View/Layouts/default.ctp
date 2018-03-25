@@ -58,7 +58,14 @@
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
     <!-- CORE CSS TEMPLATE - END -->
+    <style>
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+        }
 
+    </style>
 </head>
 <!-- END HEAD -->
 
@@ -77,7 +84,7 @@
     <section id="main-content" class=" ">
         <section class="wrapper main-wrapper row" style=''>
 
-            <div class='col-xs-12'>
+            <div class='col-xs-12 no-print'>
                 <div class="page-title">
 
                     <!--<div class="pull-left">

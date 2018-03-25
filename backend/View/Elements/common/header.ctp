@@ -1,4 +1,4 @@
-<div class='page-topbar '>
+<div class='page-topbar no-print'>
     <div class='logo-area'>
     </div>
     <div class='quick-area'>

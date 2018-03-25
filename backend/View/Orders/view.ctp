@@ -1,324 +1,144 @@
-<?php
-function DateThai($strDate)
-{
-    $strYear = date("Y", strtotime($strDate)) + 543;
-    $strMonth = date("n", strtotime($strDate));
-    $strDay = date("j", strtotime($strDate));
-    $strHour = date("H", strtotime($strDate));
-    $strMinute = date("i", strtotime($strDate));
-    $strSeconds = date("s", strtotime($strDate));
-    $strMonthCut = Array(
-        "",
-        "ม.ค.",
-        "ก.พ.",
-        "มี.ค.",
-        "เม.ย.",
-        "พ.ค.",
-        "มิ.ย.",
-        "ก.ค.",
-        "ส.ค.",
-        "ก.ย.",
-        "ต.ค.",
-        "พ.ย.",
-        "ธ.ค."
-    );
-    $strMonthThai = $strMonthCut[$strMonth];
-    return "$strDay $strMonthThai $strYear";
-}
+<div class="col-lg-12">
+    <section class="box ">
+            <header class="panel_header">
+                <h2 class="title pull-left">ข้อมูลใบสั่งซื้อ</h2>
+                <div class="actions panel_actions pull-right no-print">
+                	<a class="box_toggle fa fa-chevron-down"></a>
+                    <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                    <a class="box_close fa fa-times"></a>
+                </div>
+            </header>
+            <div class="content-body">    <div class="row">
+        <div class="col-xs-12">
 
-function DateTimeThai($strDate)
-{
-    $strYear = date("Y", strtotime($strDate)) + 543;
-    $strMonth = date("n", strtotime($strDate));
-    $strDay = date("j", strtotime($strDate));
-    $strHour = date("H", strtotime($strDate));
-    $strMinute = date("i", strtotime($strDate));
-    $strSeconds = date("s", strtotime($strDate));
-    $strMonthCut = Array(
-        "",
-        "ม.ค.",
-        "ก.พ.",
-        "มี.ค.",
-        "เม.ย.",
-        "พ.ค.",
-        "มิ.ย.",
-        "ก.ค.",
-        "ส.ค.",
-        "ก.ย.",
-        "ต.ค.",
-        "พ.ย.",
-        "ธ.ค."
-    );
-    $strMonthThai = $strMonthCut[$strMonth];
-    return "$strDay $strMonthThai $strYear $strHour:$strMinute:$strSeconds น.";
-}
-?>
-<style>
-    @media print {
-        .no-print, .no-print * {
-            display: none !important;
-        }
-    }
 
-</style>
-<div class="col-sm-12">
-    <div class="row">
-        <div class="col-sm-12">
-            <button class="no-print pull-right btn btn-primary semi-circle btn-md" onclick="window.print()"><i
-                        class="fa fa-print"></i> พิมพ์
-            </button>
-            <a href="/orders" class="no-print pull-left btn btn-default semi-circle btn-md"><i
-                        class="glyphicon glyphicon-arrow-left"></i> กลับไปหน้ารายการสั่งซื้อ
-            </a>
-            <br>
-            <hr class="spacer-30 no-print">
-            <h5 class="text-center">ใบสั่งซื้อเลขที่: <?php echo $order['Order']['order_no'] ?></h5>
-            <hr class="spacer-10 no-border">
-            <div class="col-sm-12">
-                <h6>รายการสินค้า</h6>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th colspan="2">สินค้า</th>
-                            <th>ราคา</th>
-                            <th>จำนวน</th>
-                            <th>รวม</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        foreach ($order['OrderDetail'] as $product) { ?>
-                            <tr>
-                                <td>
-                                    <a onclick="viewProduct(<?php echo $product['Product']['id'] ?>, '<?php echo $product['product_name'] ?>')"
-                                       href="javascript:void(0);" class="product-image" data-toggle="modal"
-                                       data-target=".productQuickView">
-                                        <?php
-                                        $product_img = empty($product['Product']['ProductImage'][0]['path']) ? '' : $product['Product']['ProductImage'][0]['path'];
-                                        ?>
-                                        <img style="width: 60px; height: 78px"
-                                             src="<?php echo Configure::read('Portal.Domain') . $product['Product']['ProductImage'][0]['path'] ?>"
-                                             alt="Sample Product ">
-                                    </a>
-                                </td>
-                                <td>
-                                    <h6 class="regular"><a><?php echo $product['product_name'] ?></a>
-                                    </h6>
-                                    <div>ผู้ขาย : <?php echo $product['Merchant']['shop_name'] ?></div>
-                                    <div>พร้อมส่งประมาน
-                                        : <?php echo DateThai($product['available_date']) . ' - ' . DateThai(date('Y-m-d',
-                                                strtotime($product['available_date'] . " + 7 days"))) ?></div>
-                                </td>
-                                <td>
-                                    <span><?php echo $product['price'] ?> บ.</span>
-                                </td>
-                                <td>
-                                    <div class="col-sm-6"><?php echo $product['count'] ?>
-                                    </div>
 
-                                </td>
-                                <td>
-                                    <span class="text-primary"><?php echo number_format($product['total_price']) ?>
-                                        บ.</span>
-                                </td>
-                            </tr>
-                            <?php
-                        } ?>
-                        </tbody>
-                    </table><!-- end table -->
-                </div><!-- end table-responsive -->
+            <!-- start -->
 
-                <!--                <hr class="spacer-10 no-border">-->
-                <!--                <hr class="spacer-30">-->
-                <div class="row">
-                    <div class="col-sm-7 text-left">
-                    </div><!-- end col -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="invoice-head">
+                        <div class="col-xs-12 col-md-2 invoice-title">
+                            <h2 class="text-center bg-primary ">Invoice</h2>    
+                        </div>
+                        <div class="col-xs-12 col-md-3 invoice-head-info">
+                            <span class="text-muted">
+                            เทศบาลตำบลปลายบาง <br>อำเภอบางกรวย <br> จังหวัดนนทบุรี
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-md-3 invoice-head-info"><span class="text-muted">Invoice No # <?php echo $order['Order']['order_no'] ?><br><?php echo $this->Phonlamai->DateTimeThai($order['Order']['order_date']) ?></span></div>
+                        <div class="col-xs-12 col-md-3 invoice-logo col-md-offset-1">
+                            <!-- <img src="../data/invoice/invoice-logo.png" class="img-reponsive"> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div><br>
 
-                    <div class="col-sm-5">
-                        <div id="cart-summary" class="table-responsive">
-                            <table class="table no-border">
-                                <tr>
-                                    <th>ราคารวม</th>
-                                    <td><?php echo number_format($order['Order']['total_price']) ?> บ.</td>
-                                </tr>
-                                <tr>
-                                    <th>ค่าขนส่ง</th>
-                                    <td>ฟรี</td>
-                                </tr>
-                                <tr>
-                                    <th>ยอดสุทธิ</th>
-                                    <td><?php echo number_format($order['Order']['summary']) ?> บ.</td>
-                                </tr>
-                            </table><!-- end table -->
-                        </div><!-- end table-responsive -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                <div class="col-xs-6 invoice-infoblock pull-left">
+                    <h4>ที่อยู่สำหรับจัดส่ง :</h4>
+                    <address>
+                    <?php $address = json_decode($order['Order']['shipping_address'], true); ?>
+                        <h3>คุณ <?php echo $address['CustomerAddress']['full_name'] ?></h3>
+                        <span class="text-muted">
+                            <?php echo $address['CustomerAddress']['address'] ?><br>
+                            ต.<?php echo $address['District']['district_name'] ?>
+                            อ.<?php echo $address['Amphure']['amphur_name'] ?><br>
+                            จ.<?php echo $address['Province']['province_name'] ?>
+                            <br><?php echo $address['CustomerAddress']['zipcode'] ?></span>
+                    </address>
+                </div>
+
+                <div class="col-xs-6 invoice-infoblock text-right">
+                    <h4>ช่องทางการชำระเงิน :</h4>
+                    <address>
+                        <span class="text-muted"><?php echo $order['Order']['payment_method'] =='bank' ? 'โอนผ่านธนาคาร':'จ่ายที่เทศบาล' ?></span>
+                    </address>
+
+                    <div class="invoice-due">
+                        <h3 class="text-muted">ยอดรวม:</h3> &nbsp; <h2 class="text-primary"><?php echo number_format($order['Order']['summary']) ?> บาท</h2>                
+                    </div>
+
+                </div>
+
+
+                <div class="clearfix"></div><br>
+
             </div>
 
-            <div class="col-sm-12">
-                <hr class="spacer-30">
-                <h6>ที่อยู่สำหรับจัดส่ง</h6>
-                <?php $address = json_decode($order['Order']['shipping_address'], true); ?>
-                <div class="row">
-                    <br>
-                    <p style="margin-left: 13px">คุณ <?php echo $address['CustomerAddress']['full_name'] ?></p>
-                    <p style="margin-left: 13px"><?php echo $address['CustomerAddress']['address'] ?>
-                        ต.<?php echo $address['District']['district_name'] ?>
-                        อ.<?php echo $address['Amphure']['amphur_name'] ?>
-                        จ.<?php echo $address['Province']['province_name'] ?>
-                        <?php echo $address['CustomerAddress']['zipcode'] ?></p>
-                </div>
-            </div>
-            <?php if (!empty($order['InformPayment'])) { ?>
-                <div class="col-sm-12 no-print">
-                    <hr class="spacer-30">
-                    <h6>การแจ้งชำระเงิน</h6>
-                    <?php foreach ($order['InformPayment'] as $inform) { ?>
-                    <div class="row">
-                        <p style="margin-left: 13px">เมื่อ <?php echo DateTimeThai($inform['payment_date']).' จำนาน '.number_format($inform['amount']).' บาท' ?> <a title="ดู" style="cursor: pointer" target="_blank" href="/<?php echo $inform['document_path'] ?>">ดูรูปภาพ <i class="fa fa-file"></i></a></p>
-                    </div>
-                    <?php }?>
-                </div>
-            <?php } ?>
-            <div class="col-sm-12 no-print">
-                <hr class="spacer-30">
-                <h6>สถานะใบสั่งซื้อ</h6>
-                <?php
-                $step2 = 'disabled';
-                $step3 = 'disabled';
-                $step4 = 'disabled';
-                if ($order['Order']['step'] == 2) {
-                    $step2 = 'active';
-                }
-                if ($order['Order']['step'] == 3) {
-                    $step3 = 'active';
-                    $step2 = 'complete';
-                }
-                if ($order['Order']['step'] == 4) {
-                    $step2 = 'complete';
-                    $step3 = 'complete';
-                    $step4 = 'active';
-                }
-                ?>
-                <div class="row bs-wizard" style="border-bottom:0;">
-
-                    <div class="col-xs-3 bs-wizard-step <?php if ($order['Order']['step'] == 1) { ?>active <?php } else { ?> complete <?php } ?>">
-                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-hourglass-start"></i> รอตรวจสอบ
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <?php if ($order['Order']['step'] >= 1) { ?>
-                            <div class="bs-wizard-info">
-                                <div class="panel panel-default" style="margin-left: 5px; margin-right: 5px">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <?php if ($order['Order']['status'] == 'new_order') { ?>
-                                                <li><i class="fa fa-spinner fa-spin"></i> ใบสั่งซื้อรอการตรวจสอบ</li>
-                                            <?php } else { ?>
-                                                <li><i class="fa fa-check"></i>
-                                                    ตรวจสอบใบสั่งซื้อแล้ว
-                                                </li>
-                                            <?php } ?>
-                                            <?php if ($order['Order']['status'] == 'wait_payment') { ?>
-                                                <li><i class="fa fa-spinner fa-spin"></i> ใบสั่งซื้อรอชำระเงิน</li>
-                                            <?php }
-                                            if ($order['Order']['step'] > 1) { ?>
-                                                <li><i class="fa fa-check"></i>
-                                                    ชำระเงินเรียบร้อย
-                                                </li>
-                                            <?php } ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
-
-                    <div class="col-xs-3 bs-wizard-step <?php echo $step2 ?>"><!-- complete -->
-                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-refresh"></i> จัดหาสินค้า</div>
-                        <div class="progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <?php if ($order['Order']['step'] >= 2) { ?>
-                            <div class="bs-wizard-info">
-                                <div class="panel panel-default" style="margin-left: 5px; margin-right: 5px">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <?php if ($order['Order']['status'] == 'supplying') { ?>
-                                                <li><i class="fa fa-spinner fa-spin"></i> กำลังดำเนินการจัดหาสินค้า</li>
-                                            <?php } ?>
-                                            <?php if ($order['Order']['step'] > 2) { ?>
-                                                <li><i class="fa fa-check"></i>
-                                                    สินค้าพร้อมส่ง
-                                                </li>
-                                            <?php } ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                        <!--            <div class="bs-wizard-info text-center">Nam mollis tristique erat vel tristique. Aliquam erat volutpat. Mauris et vestibulum nisi. Duis molestie nisl sed scelerisque vestibulum. Nam placerat tristique placerat</div>-->
-                    </div>
-
-                    <div class="col-xs-3 bs-wizard-step <?php echo $step3 ?>"><!-- complete -->
-                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-truck"></i> ดำเนินการจัดส่ง
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <?php if ($order['Order']['step'] >= 3) { ?>
-                            <div class="bs-wizard-info">
-                                <div class="panel panel-default" style="margin-left: 5px; margin-right: 5px">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <?php if ($order['Order']['status'] == 'delivery') { ?>
-                                                <li><i class="fa fa-spinner fa-spin"></i> กำลังดำเนินการจัดส่งสินค้า
-                                                </li>
-                                            <?php } ?>
-                                            <?php if ($order['Order']['status'] == 'complete') { ?>
-                                                <li><i class="fa fa-check"></i> ส่งสินค้าแล้ว</li>
-                                            <?php } ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                        <!--            <div class="bs-wizard-info text-center">Integer semper dolor ac auctor rutrum. Duis porta ipsum vitae mi bibendum bibendum</div>-->
-                    </div>
-
-                    <div class="col-xs-3 bs-wizard-step <?php echo $step4 ?>"><!-- active -->
-                        <div class="text-center bs-wizard-stepnum"><i class="fa fa-check"></i> ส่งสินค้าแล้ว
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <a href="#" class="bs-wizard-dot"></a>
-                        <?php if ($order['Order']['step'] == 4) { ?>
-                            <div class="bs-wizard-info">
-                                <div class="panel panel-default" style="margin-left: 5px; margin-right: 5px">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><i class="fa fa-check"></i>
-                                                สินค้าของท่านได้รับการจัดส่งแล้ว
-                                                ขอบคุณสำหรับการสั่งผลไม้ออนไลน์กับทางเทศบาล
-                                                และหวังว่าจะได้รับโอกาสบริการท่านอีกครั้ง!
-
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                        <!--            <div class="bs-wizard-info text-center"> Curabitur mollis magna at blandit vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</div>-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>รายการสินค้า</h3><br>
+                    <div class="table-responsive">
+                        <table class="table table-hover invoice-table">
+                            <thead>
+                                <tr>
+                                    <td><h4>สินค้า</h4></td>
+                                    <td class="text-center"><h4>ราคา</h4></td>
+                                    <td class="text-center"><h4>จำนวน</h4></td>
+                                    <td class="text-right"><h4>รวม</h4></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($order['OrderDetail'] as $detail) { ?>
+                                    <tr>
+                                        <td><?php echo $detail['product_name'] ?></td>
+                                        <td class="text-center"><?php echo number_format($detail['price']) ?></td>
+                                        <td class="text-center"><?php echo $detail['count'] ?></td>
+                                        <td class="text-right"><?php echo number_format($detail['total_price']) ?></td>
+                                    </tr>
+                                <?php }?>
+                                <tr>
+                                    <td class="thick-line"></td>
+                                    <td class="thick-line"></td>
+                                    <td class="thick-line text-center">
+                                        <h4>ราคารวม</h4></td>
+                                    <td class="thick-line text-right">
+                                        <h4><?php echo number_format($order['Order']['summary']) ?></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="no-line"></td>
+                                    <td class="no-line"></td>
+                                    <td class="no-line text-center">
+                                        <h4>ค่าขนส่ง</h4></td>
+                                    <td class="no-line text-right">
+                                        <h4>ฟรี</h4></td>
+                                </tr>
+                                <tr>
+                                    <td class="no-line"></td>
+                                    <td class="no-line"></td>
+                                    <td class="no-line text-center">
+                                        <h4>รวมทั้งหมด</h4></td>
+                                    <td class="no-line text-right">
+                                        <h3 style="margin:0px;" class="text-primary"><?php echo number_format($order['Order']['summary']) ?></h3></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
 
-        </div><!-- end col -->
-    </div><!-- end row -->
-</div><!-- end col -->
+
+
+            <div class="clearfix"></div><br>
+
+            <div class="row">
+                <div class="col-xs-12 text-right">
+                    <a href="#" onclick="window.print()" class="btn btn-purple btn-md no-print"><i class="fa fa-print"></i> &nbsp; พิมพ์ </a>  
+                    <?php if($order['Order']['status'] != 'new_order'){ ?>            
+                        <a href="#" target="_blank" class="btn btn-success btn-md no-print"><i class="fa fa-check"></i> &nbsp; ตรวจสอบแล้ว </a>
+                    <?php }else{ ?>
+                        <a href="#" target="_blank" class="btn btn-primary btn-md no-print"><i class="fa fa-check"></i> &nbsp; ยืนยันการตรวจสอบ </a>      
+                    <?php }?>  
+                </div>
+            </div>
+
+
+            <!-- end -->
+
+
+        </div>
+    </div>
+    </div>
+        </section>
+    </div>
