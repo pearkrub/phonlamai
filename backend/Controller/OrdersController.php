@@ -60,6 +60,14 @@ class OrdersController extends AppController
         $data['step'] = 2;
 
         $this->Order->save($data);
+
+        $update['status'] = 'success';
+        $informs = $this->InformPayment->find('all',array('conditions' => array('InformPayment.order_id' => $id)));
+        foreach ($informs as $inform) {
+            $update['id'] = $inform['InformPayment']['id'];
+            $this->InformPayment->save($update);
+        }
+
         echo 1;
     }
 }

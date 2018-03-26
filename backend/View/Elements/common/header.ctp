@@ -27,7 +27,7 @@
                                 <?php foreach ($newInforms as $newInform) {
                                     ?>
                                     <li class="unread available">
-                                        <a href="javascript:;">
+                                        <a href="/orders/view/<?php echo $newInform['Order']['id'] ?>">
                                             <div class="notice-icon">
                                                 <i class="fa fa-credit-card"></i>
                                             </div>

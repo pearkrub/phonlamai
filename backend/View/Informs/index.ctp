@@ -15,7 +15,7 @@
                         <table id="example" class="table table-bordered">
                             <thead>
                             <tr>
-                                <th>#</th>
+<!--                                <th>#</th>-->
                                 <th>เลขที่ใบเสร็จ</th>
                                 <th>เวลาโอน</th>
                                 <th>จำนวนเงิน</th>
@@ -27,7 +27,7 @@
                             <?php
                             foreach ($informs as $key => $inform) { ?>
                                 <tr>
-                                    <td><?php echo ++$key ?></td>
+<!--                                    <td>--><?php //echo ++$key ?><!--</td>-->
                                     <td>
                                         <?php echo $inform['Order']['order_no'] ?>
                                     </td>
@@ -41,8 +41,7 @@
                                         <?php echo $inform['InformPayment']['status'] == 'new'? 'แจ้งใหม่': 'ตรวจสอบแล้ว' ?>
                                     </td>
                                     <td class="text-center">
-                                        <a title="ดูรายละเอียด" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-                                        <a title="ยืนยันการตรวจสอบ" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
+                                        <a href="/orders/view/<?php echo $inform['InformPayment']['order_id'] ?>" title="ดูรายละเอียด" class="btn btn-info btn-sm">ดูรายละเอียด</a>
                                     </td>
                                 </tr>
                             <?php } ?>

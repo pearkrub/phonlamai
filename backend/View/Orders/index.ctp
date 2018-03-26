@@ -72,7 +72,7 @@ function DateTimeThai($strDate)
                         <table id="example" class="table table-bordered">
                             <thead>
                             <tr>
-                                <th>#</th>
+<!--                                <th>#</th>-->
                                 <th>เลขที่ใบสั่งซื้อ</th>
                                 <th>ลูกค้า</th>
                                 <th>ราคา(บาท)</th>
@@ -84,7 +84,7 @@ function DateTimeThai($strDate)
                             <?php
                             foreach ($orders as $key => $order) { ?>
                                 <tr>
-                                    <td><?php echo ++$key ?></td>
+<!--                                    <td>--><?php //echo ++$key ?><!--</td>-->
                                     <td>
                                         <a title="ดูรายละเอียดใบสั่งซื้อ"
                                            href="orders/view/<?php echo $order['Order']['id'] ?>"><?php echo $order['Order']['order_no'] ?></a>
