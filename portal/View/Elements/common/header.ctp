@@ -9,78 +9,28 @@
 <ul class="nav navbar-nav ml-auto">
   <li class="nav-item dropdown d-md-down-none">
     <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      <i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
-      <div class="dropdown-header text-center">
-        <strong>You have 5 notifications</strong>
-      </div>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-follow text-success"></i> New user registered
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-unfollow text-danger"></i> User deleted
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-chart text-info"></i> Sales report is ready
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-basket-loaded text-primary"></i> New client
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-speedometer text-warning"></i> Server overloaded
-      </a>
-    </div>
-  </li>
-  <li class="nav-item dropdown d-md-down-none">
-    <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      <i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
-      <div class="dropdown-header text-center">
-        <strong>You have 5 notifications</strong>
-      </div>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-follow text-success"></i> New user registered
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-unfollow text-danger"></i> User deleted
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-chart text-info"></i> Sales report is ready
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-basket-loaded text-primary"></i> New client
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-speedometer text-warning"></i> Server overloaded
-      </a>
-    </div>
-  </li>
-  <li class="nav-item dropdown d-md-down-none">
-    <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
       <i class="icon-basket"></i><span class="badge badge-pill badge-danger">5</span>
     </a>
-    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
-      <div class="dropdown-header text-center">
-        <strong>You have 5 notifications</strong>
+      <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+          <div class="dropdown-header text-center">
+              <strong>You have 4 messages</strong>
+          </div>
+          <a href="#" class="dropdown-item">
+              <div class="message">
+
+                  <div>
+                      <small class="text-muted">John Doe</small>
+                      <small class="text-muted float-right mt-1">Just now</small>
+                  </div>
+                  <div class="text-truncate font-weight-bold">
+                      <span class="fa fa-exclamation text-danger"></span> Important message</div>
+                  <div class="small text-muted text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</div>
+              </div>
+          </a>
+          <a href="#" class="dropdown-item text-center">
+              <strong>View all messages</strong>
+          </a>
       </div>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-follow text-success"></i> New user registered
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-user-unfollow text-danger"></i> User deleted
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-chart text-info"></i> Sales report is ready
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-basket-loaded text-primary"></i> New client
-      </a>
-      <a href="#" class="dropdown-item">
-        <i class="icon-speedometer text-warning"></i> Server overloaded
-      </a>
-    </div>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link nav-pill avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">

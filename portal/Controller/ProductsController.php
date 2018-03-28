@@ -16,14 +16,6 @@ class ProductsController extends AppController
 
     public $uses = array('Product', 'ProductImage');
 
-    public function beforeFilter()
-    {
-        $user = $this->Session->read('Auth');
-        if (empty($user)) {
-            $this->redirect('/login');
-        }
-    }
-
     public function index()
     {
         $merchant = $this->Session->read('Auth');

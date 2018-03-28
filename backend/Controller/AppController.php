@@ -37,9 +37,10 @@ class AppController extends Controller {
     public function beforeFilter()
     {
         $Auth = $this->Session->read('Auth');
-        if(empty($Auth)) {
-            $this->Session->destroy();
-//            $this->redirect('/login');
+        if(empty($Auth)){
+            if($this->request->params['controller'] != 'login' ){
+                $this->redirect('/login');
+            }
         }
         $newInforms = $this->InformPayment->find('all',array(
             'conditions' => array(
