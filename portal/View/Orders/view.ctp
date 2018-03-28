@@ -70,6 +70,7 @@
                         <th class="center">จำนวน</th>
                         <th class="right">ราคา</th>
                         <th class="right">รวม</th>
+                        <th class="right no-print">สถานะ</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -84,6 +85,13 @@
                                 <td class="center"><?php echo number_format($detail['count']) . ' ' . $detail['Product']['price_per_key'] ?></td>
                                 <td class="right"><?php echo number_format($detail['price']) ?></td>
                                 <td class="right"><?php echo number_format($detail['total_price']) ?></td>
+                                <td class="right no-print">
+                                    <select class="form-control col-md-6 changeStatus" onchange="changeStatus(event,<?php echo $detail['id'] ?>)">
+                                        <option <?php if($detail['status'] == '') echo 'selected'?> value="">รอจัดส่ง</option>
+                                        <option <?php if($detail['status'] == 'shipping') echo 'selected'?> value="shipping">กำลังจัดส่ง</option>
+                                        <option <?php if($detail['status'] == 'delivered') echo 'selected'?> value="delivered">ส่งสินค้าแล้ว</option>
+                                    </select>
+                                </td>
                             </tr>
                             <?php
                             $total = $total + $detail['total_price'];
@@ -165,40 +173,25 @@
     <?php } ?>
 </div>
 <script>
-    function approveOrder(id) {
-        swal({
-            title: 'ยืนยัน',
-            text: 'ยืนยันว่าชำระเงินแล้ว',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'ยืนยัน',
-            cancelButtonText: 'ยกเลิก',
-            closeOnConfirm: false,
-            showLoaderOnConfirm: true
-        }).then(function () {
-            var url = '/orders/approve'
-            $.post(url, {id: id}, function (e) {
-                if (e == 1) {
-                    swal(
-                        'สำเร็จ!',
-                        'ยืนยันว่าตรวจสอบแล้ว',
-                        'success'
-                    )
-                    location.reload()
-                } else {
-                    swal(
-                        'ผิดพลาด!',
-                        'ไม่สามารถดำเนินการได้',
-                        'error'
-                    )
-                }
-            })
-        }).catch(
-            function () {
-
+    function changeStatus(event,id) {
+        console.log(event.target.value)
+        console.log(id)
+        var url = '/orders/changeStatus'
+        $.post(url, {id: id, status: event.target.value}, function (e) {
+            if (e == 1) {
+                swal(
+                    'สำเร็จ!',
+                    'อับเดทสถานะเรียบร้อย',
+                    'success'
+                )
+            } else {
+                swal(
+                    'ผิดพลาด!',
+                    'ไม่สามารถดำเนินการได้',
+                    'error'
+                )
             }
-        )
+        })
+
     }
 </script>

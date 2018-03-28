@@ -47,4 +47,44 @@ class OrdersController extends AppController
 
         $this->set('order', $order);
     }
+
+    public function changeStatus() {
+        $this->autoRender = false;
+        $data = $this->request->data;
+
+        if($data['status'] != '') {
+            $orderDetail = $this->OrderDetail->find('first', array('conditions' => array('OrderDetail.id' => $data['id'])));
+            $this->OrderDetail->save($data);
+            $detailCount = $this->OrderDetail->find('count',array(
+                'conditions' => array(
+                    'OrderDetail.order_id' => $orderDetail['OrderDetail']['order_id']
+                )
+            ));
+            $detailCount = $detailCount - 1;
+            $detail = $this->OrderDetail->find('count',array(
+                'conditions' => array(
+                    'OrderDetail.status' => $data['status'],
+                    'OrderDetail.order_id' => $orderDetail['OrderDetail']['order_id']
+                )
+            ));
+
+            $orderDiff = $detailCount - $detail;
+           if($orderDiff == 0) {
+               if($data['status'] == 'shipping') {
+                   $order['status'] = 'shipping';
+                   $order['step'] = 3;
+                   $order['id'] = $orderDetail['OrderDetail']['order_id'];
+
+               }else{
+                   $order['status'] = 'delivered';
+                   $order['step'] = 4;
+                   $order['id'] = $orderDetail['OrderDetail']['order_id'];
+               }
+
+               $this->Order->save($order);
+           }
+
+           echo 1;
+        }
+    }
 }
