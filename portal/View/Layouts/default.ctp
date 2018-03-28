@@ -106,10 +106,10 @@
     </main>
 
 </div>
-<footer class="app-footer no-print">
-    <span><a href="https://genesisui.com/">Clever</a> © 2017 creativeLabs.</span>
-    <span class="ml-auto">Powered by <a href="https://genesisui.com/">GenesisUI</a></span>
-</footer>
+<!--<footer class="app-footer no-print">-->
+<!--    <span><a href="https://genesisui.com/">Clever</a> © 2017 creativeLabs.</span>-->
+<!--    <span class="ml-auto">Powered by <a href="https://genesisui.com/">GenesisUI</a></span>-->
+<!--</footer>-->
 
 <!-- Bootstrap and necessary plugins -->
 <script src="/vendors/js/jquery.min.js"></script>
