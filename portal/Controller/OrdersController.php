@@ -60,7 +60,7 @@ class OrdersController extends AppController
                     'OrderDetail.order_id' => $orderDetail['OrderDetail']['order_id']
                 )
             ));
-            $detailCount = $detailCount - 1;
+            $detailCount = $detailCount;
             $detail = $this->OrderDetail->find('count',array(
                 'conditions' => array(
                     'OrderDetail.status' => $data['status'],

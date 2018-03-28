@@ -84,6 +84,7 @@ function DateTimeThai($strDate)
                             <th>ราคา</th>
                             <th>จำนวน</th>
                             <th>รวม</th>
+                            <th>สถานะ</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -121,6 +122,11 @@ function DateTimeThai($strDate)
                                 <td>
                                     <span class="text-primary"><?php echo number_format($product['total_price']) ?>
                                         บ.</span>
+                                </td>
+                                <td>
+                                    <?php if($product['status'] == '') echo 'รอจัดส่ง'?>
+                                    <?php if($product['status'] == 'shipping') echo 'กำลังจัดส่ง'?>
+                                    <?php if($product['status'] == 'delivered') echo 'ส่งสินค้าแล้ว'?>
                                 </td>
                             </tr>
                             <?php
