@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="firstname">ชื่แ <span class="text-danger">*</span></label>
+                        <label for="firstname">ชื่อ <span class="text-danger">*</span></label>
                         <input required id="firstname" type="text" placeholder="First Name"
                                value="<?php echo $customer['Customer']['first_name'] ?>" name="first_name"
                                class="form-control input-sm required">

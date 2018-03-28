@@ -39,7 +39,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link nav-pill avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">
-                <img src="/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <img src="/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
 
             </a>
             <div class="dropdown-menu dropdown-menu-right">

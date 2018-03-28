@@ -86,7 +86,7 @@
         var qty = $(this).val()
         var in_stock = $(this).attr('qty')
         if (parseInt(qty) > parseInt(in_stock)) {
-            swal("มีบางอย่างผิดพลาด!", "จำนวนสอนค้าในร้านไม่พอเหลือ " + in_stock + ' หน่วย', "error");
+            swal("มีบางอย่างผิดพลาด!", "จำนวนสินค้าในร้านไม่พอเหลือ " + in_stock + ' หน่วย', "error");
             $(this).val(in_stock)
         }
     })
