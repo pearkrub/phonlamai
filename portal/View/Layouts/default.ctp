@@ -33,7 +33,14 @@
     <link href="/vendors/css/gauge.min.css" rel="stylesheet">
     <link href="/vendors/css/toastr.min.css" rel="stylesheet">
     <link href="/vendors/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+        }
 
+    </style>
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -73,17 +80,17 @@
 
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
-            <!-- Breadcrumb Menu-->
-            <li class="breadcrumb-menu d-md-down-none">
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                    <a class="btn" href="#"><i class="icon-speech"></i></a>
-                    <a class="btn" href="index-2.html"><i class="icon-graph"></i> &nbsp;Dashboard</a>
-                    <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
-                </div>
-            </li>
+<!--            <li class="breadcrumb-item">Home</li>-->
+<!--            <li class="breadcrumb-item"><a href="#">Admin</a></li>-->
+<!--            <li class="breadcrumb-item active">Dashboard</li>-->
+<!--            <!-- Breadcrumb Menu-->
+<!--            <li class="breadcrumb-menu d-md-down-none">-->
+<!--                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+<!--                    <a class="btn" href="#"><i class="icon-speech"></i></a>-->
+<!--                    <a class="btn" href="index-2.html"><i class="icon-graph"></i> &nbsp;Dashboard</a>-->
+<!--                    <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
+<!--                </div>-->
+<!--            </li>-->
         </ol>
 
         <div class="container-fluid">
@@ -99,7 +106,7 @@
     </main>
 
 </div>
-<footer class="app-footer">
+<footer class="app-footer no-print">
     <span><a href="https://genesisui.com/">Clever</a> © 2017 creativeLabs.</span>
     <span class="ml-auto">Powered by <a href="https://genesisui.com/">GenesisUI</a></span>
 </footer>

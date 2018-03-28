@@ -40,5 +40,6 @@ class AppController extends Controller {
                 $this->redirect('/login');
             }
         }
+        $this->set('merchant', $user);
     }
 }

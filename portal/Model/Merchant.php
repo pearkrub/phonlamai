@@ -11,6 +11,12 @@
  *
  * @author ptum
  */
-class Merchant extends AppModel{ 
-    //put your code here
+class Merchant extends AppModel{
+
+    public $name = 'Merchant';
+
+    public $belongsTo = array('Amphure' => array(
+        'className' => 'Amphure',
+        'foreignKey' => 'amphur_id'
+    ), 'District', 'Province');
 }

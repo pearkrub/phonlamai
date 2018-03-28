@@ -24,10 +24,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-note"></i> รายการสั่งซื้อ</a>
+            <a class="nav-link" href="/orders"><i class="icon-note"></i> รายการสั่งซื้อ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-code"></i> จัดการข้อมูลร้านค้า</a>
+            <a class="nav-link nav-dropdown-toggle" href="/merchants"><i class="fa fa-code"></i> จัดการข้อมูลร้านค้า</a>
             
           </li>
         </ul>
