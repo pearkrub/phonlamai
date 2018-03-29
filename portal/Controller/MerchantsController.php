@@ -5,13 +5,13 @@ class MerchantsController extends AppController {
     public $uses = array('Merchant');
 
     public function index() {
-        
-        $merchants = $this->Merchant->find('all', array(
+        $auth = $this->Session->read('Auth');
+        $merchants = $this->Merchant->find('first', array(
             'conditions' => array(
-                'deleted' => 'N'
+                'Merchant.id' => $auth['Merchant']['id']
             )
         ));
-        $this->set('merchants', $merchants);
+        $this->set('profile', $merchants);
     }
 
 }
