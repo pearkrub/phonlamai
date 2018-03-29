@@ -35,7 +35,7 @@
                                             </span>
                                     </td>
                                     <td>
-                                        <?php echo $period['Period']['status']== 'pending'? 'รอโอน' : 'โอนเงินแล้ว' ?>
+                                        <?php echo $period['Period']['status']== 'pending'? 'รอโอน' : '<label class="label label-success">โอนเงินแล้ว</label>' ?>
                                     </td>
                                     <td><a href="periods/view/<?php echo $period['Period']['id'] ?>" class="btn-sm btn btn-info">ดูรายละเอียด</a></td>
                                 </tr>
