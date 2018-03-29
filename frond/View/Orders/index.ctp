@@ -118,7 +118,7 @@ function DateTimeThai($strDate)
                                 <?php }?>
                             </td>
                             <td>
-                                <?php if ($order['Order']['status'] == 'complete') { ?>
+                                <?php if ($order['Order']['status'] == 'delivered') { ?>
                                     <a onclick="receiveOrder(<?php echo $order['Order']['id'] ?>)" class="btn btn-primary btn-sm"><i class="fa fa-check"></i> แจ้งรับสินค้า</a>
                                 <?php } if($order['Order']['status'] == 'received') { ?>
                                     <span class="btn btn-success semi-circle btn-sm"><i class="fa fa-check"></i> รับสินค้าแล้ว</span>
