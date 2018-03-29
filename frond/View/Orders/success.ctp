@@ -51,6 +51,9 @@ function DateThai($strDate)
             <p class="no-print">คุณสามารถติดตามสถานะคำส่ังซื้อได้ที่เมนู รายการสั่งซื้อ</p>
             <a href="/" class="no-print pull-left btn btn-default semi-circle btn-md"><i class="fa fa-shopping-cart"></i> เลือกซื้อสินค้าต่อ
             </a>
+            <a href="/orders/informPayment/<?php echo base64_encode($order['Order']['id']) ?>" class="no-print pull-right btn btn-info semi-circle btn-md"><i
+                        class="fa fa-check"></i> แจ้งชำระเงิน
+            </a>
             <br>
             <hr class="spacer-30 no-print">
             <h5 class="text-center">ใบสั่งซื้อเลขที่: <?php echo $order['Order']['order_no'] ?></h5>

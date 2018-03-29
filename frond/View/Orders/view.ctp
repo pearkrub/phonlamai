@@ -67,8 +67,12 @@ function DateTimeThai($strDate)
             <button class="no-print pull-right btn btn-primary semi-circle btn-md" onclick="window.print()"><i
                         class="fa fa-print"></i> พิมพ์
             </button>
+            <p class="no-print"> <br><br></p>
             <a href="/orders" class="no-print pull-left btn btn-default semi-circle btn-md"><i
                         class="glyphicon glyphicon-arrow-left"></i> กลับไปหน้ารายการสั่งซื้อ
+            </a>
+            <a href="/orders/informPayment/<?php echo base64_encode($order['Order']['id']) ?>" class="no-print pull-right btn btn-info semi-circle btn-md"><i
+                        class="fa fa-check"></i> แจ้งชำระเงิน
             </a>
             <br>
             <hr class="spacer-30 no-print">
