@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-03-26 21:49:20
+Date: 2018-03-29 23:50:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -10091,6 +10091,7 @@ CREATE TABLE `merchants` (
   `status` char(1) DEFAULT 'Y',
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
+  `id_cart` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -10105,18 +10106,22 @@ CREATE TABLE `merchants` (
   `amphur_id` int(11) DEFAULT NULL,
   `district_id` int(11) DEFAULT NULL,
   `zipcode` int(11) DEFAULT NULL,
+  `bank_name` varchar(255) DEFAULT NULL,
+  `bank_type` varchar(255) DEFAULT NULL,
+  `bank_account_name` varchar(255) DEFAULT NULL,
+  `bank_account_number` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of merchants
 -- ----------------------------
-INSERT INTO `merchants` VALUES ('1', 'praibool.piak@gmail.com', '123456', 'Y', 'praibool', 'namwongภภ', '90452345', 'praiboolkrub@gmail.com', null, 'N', '2017-10-13 04:06:12', '2018-03-13 19:08:02', null, null, null, null, null, null, null, null);
-INSERT INTO `merchants` VALUES ('2', 'merchant', '81dc9bdb52d04dc20036dbd8313ed055', 'Y', 'qwwe', 'qwer', '0987465665', 'bikebest@gmail.com', null, 'N', '2017-10-13 09:32:16', '2017-10-13 11:43:46', null, 'ไพรบูลย์การค้า2', 'm002.jpg', null, null, null, null, null);
-INSERT INTO `merchants` VALUES ('3', null, '112233', 'N', 'praibool', 'namwong', '0865527293', 'pakinmankong@gmail.com', null, 'N', '2017-12-23 15:10:09', '2017-12-23 15:10:09', null, '', null, null, null, null, null, null);
-INSERT INTO `merchants` VALUES ('4', null, null, 'N', null, null, null, null, null, 'N', null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `merchants` VALUES ('5', 'praiboolkrub+1@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'Y', 'praibool', 'namwong', '0865527293', 'praiboolkrub+1@gmail.com', null, 'N', '2018-03-03 16:33:03', '2018-03-03 16:33:03', null, 'ไพรบูลย์การค้า', 'm005.jpg', 'ที่อยู่ 1', '2', '52', '238', '10270');
-INSERT INTO `merchants` VALUES ('6', 'praibool.piak@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Y', 'ป้าเค็ฒ', 'ช่างปูน', '45345', 'praibool.piak@gmail.com', null, 'N', '2018-03-07 18:45:55', '2018-03-07 18:45:56', null, 'twert', 'm006.jpg', 'ที่อยู่จ้า', '1', '14', '99', '10400');
+INSERT INTO `merchants` VALUES ('1', 'praibool.piak@gmail.com', '123456', 'Y', 'praibool', 'namwongภภ', null, '90452345', 'praiboolkrub@gmail.com', null, 'N', '2017-10-13 04:06:12', '2018-03-13 19:08:02', null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `merchants` VALUES ('2', 'merchant', '81dc9bdb52d04dc20036dbd8313ed055', 'Y', 'qwwe', 'qwer', '55555555555555444', '0987465665', 'bikebest@gmail.com', null, 'N', '2017-10-13 09:32:16', '2018-03-29 23:49:58', null, 'ไพรบูลย์การค้า2', 'm002.jpg', 'ที่อยู่จ้า', '3', '58', '303', '11000', 'กรุงไทย', 'saving', 'merchant', '5675678856');
+INSERT INTO `merchants` VALUES ('3', null, '112233', 'N', 'praibool', 'namwong', null, '0865527293', 'pakinmankong@gmail.com', null, 'N', '2017-12-23 15:10:09', '2017-12-23 15:10:09', null, '', null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `merchants` VALUES ('4', null, null, 'N', null, null, null, null, null, null, 'N', null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `merchants` VALUES ('5', 'praiboolkrub+1@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'Y', 'praibool', 'namwong', null, '0865527293', 'praiboolkrub+1@gmail.com', null, 'N', '2018-03-03 16:33:03', '2018-03-03 16:33:03', null, 'ไพรบูลย์การค้า', 'm005.jpg', 'ที่อยู่ 1', '2', '52', '238', '10270', null, null, null, null);
+INSERT INTO `merchants` VALUES ('6', 'praibool.piak@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Y', 'ป้าเค็ฒ', 'ช่างปูน', null, '45345', 'praibool.piak@gmail.com', null, 'N', '2018-03-07 18:45:55', '2018-03-07 18:45:56', null, 'twert', 'm006.jpg', 'ที่อยู่จ้า', '1', '14', '99', '10400', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for orders

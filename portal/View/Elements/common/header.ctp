@@ -46,7 +46,7 @@
                 <div class="dropdown-header text-center">
                     <strong>Account</strong>
                 </div>
-                <a class="dropdown-item" href="/profile"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/merchants"><i class="fa fa-user"></i> Profile</a>
                 <a class="dropdown-item" href="/logout"><i class="fa fa-lock"></i> Logout</a>
             </div>
         </li>
