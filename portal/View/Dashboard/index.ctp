@@ -2,7 +2,7 @@
     <div class="col-sm-6 col-lg-3">
         <div class="card">
             <div class="card-body p-0 clearfix">
-                <i class="fa fa-money bg-primary p-4 px-5 font-2xl mr-3 float-left"></i>
+                <i class="fa fa-money bg-primary p-4 px-4 font-2xl mr-3 float-left"></i>
                 <div class="h5 mb-0 pt-3 text-center"><?php echo number_format($mounth) ?> บาท</div>
                 <div class="text-muted text-uppercase font-weight-bold font-xs text-center">ยอดขายเดือนนี้</div>
             </div>
@@ -13,7 +13,7 @@
     <div class="col-sm-6 col-lg-3">
         <div class="card">
             <div class="card-body p-0 clearfix">
-                <i class="fa fa-laptop bg-danger p-4 px-5 font-2xl mr-3 float-left"></i>
+                <i class="fa fa-laptop bg-danger p-4 px-4 font-2xl mr-3 float-left"></i>
                 <div class="h5 mb-0 pt-3 text-center"><?php echo number_format($all) ?> บาท</div>
                 <div class="text-muted text-uppercase font-weight-bold font-xs text-center">ยอดขายทั้งหมด</div>
             </div>
@@ -24,7 +24,7 @@
     <div class="col-sm-6 col-lg-3">
         <div class="card">
             <div class="card-body p-0 clearfix">
-                <i class="fa fa-shopping-cart bg-success p-4 px-5 font-2xl mr-3 float-left"></i>
+                <i class="fa fa-shopping-cart bg-success p-4 px-4 font-2xl mr-3 float-left"></i>
                 <div class="h5 mb-0 pt-3 text-center"><?php echo number_format($all_order) ?> รายการ</div>
                 <div class="text-muted text-uppercase font-weight-bold font-xs text-center">รายการสั่งซื้อ</div>
             </div>
@@ -35,7 +35,7 @@
     <div class="col-sm-6 col-lg-3">
         <div class="card">
             <div class="card-body p-0 clearfix">
-                <i class="fa fa-product-hunt bg-info p-4 px-5 font-2xl mr-3 float-left"></i>
+                <i class="fa fa-product-hunt bg-info p-4 px-4 font-2xl mr-3 float-left"></i>
                 <div class="h5 mb-0 pt-3 text-center"><?php echo number_format($product_count) ?> รายการ</div>
                 <div class="text-muted text-uppercase font-weight-bold font-xs text-center">สินค้าทั้งหมด</div>
             </div>

@@ -17,7 +17,7 @@
                     <div><?php echo $merchant['Merchant']['address'] ?></div>
                     <div>
                         <?php echo $merchant['District']['district_name'] ?>
-                        <?php echo $merchant['Amphure']['amphur_name'] ?>
+                        <?php echo $merchant['Amphure']['amphur_name'] ?><br>
                         <?php echo $merchant['Province']['province_name'] ?>
                         <?php echo $merchant['Merchant']['zipcode'] ?>
                     </div>
@@ -34,7 +34,7 @@
                     <div><?php echo $address['CustomerAddress']['address'] ?></div>
                     <div>
                         <?php echo $address['District']['district_name'] ?>
-                        <?php echo $address['Amphure']['amphur_name'] ?>
+                        <?php echo $address['Amphure']['amphur_name'] ?><br>
                         <?php echo $address['Province']['province_name'] ?>
                         <?php echo $address['CustomerAddress']['zipcode'] ?>
                     </div>
@@ -134,7 +134,7 @@
 
     <?php if (!empty($order['InformPayment'])) { ?>
         <div class="row no-print">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
                         <i class="fa fa-align-justify"></i> ข้อมูลการชำระเงิน

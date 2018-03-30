@@ -25,7 +25,7 @@
                         <figure class="layer">
                             <a href="javascript:void(0);">
 
-                                <img style="width: 260.5px; height: 338.64px;"
+                                <img style="width: 260.5px; height: 260.5px;"
                                      src="<?php echo Configure::read('Portal.Domain') . $product['ProductImage'][0]['path'] ?>"
                                      alt="">
 

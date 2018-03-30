@@ -6,7 +6,7 @@
                 <?php foreach ($product['ProductImage'] as $key => $image) { ?>
                     <div class='item <?php echo $key == 0 ? "active" : "" ?>'>
                         <figure>
-                            <img style="width: 357.5px; height: 403.96px;"
+                            <img style="width: 357.5px; height: 357.5px;"
                                  src="<?php echo Configure::read('Portal.Domain') . $image['path'] ?>" alt="">
                         </figure>
                     </div><!-- end item -->

@@ -63,6 +63,12 @@
                     <span class="title">การแจ้งชำระเงิน</span>
                 </a>
             </li>
+            <li class="">
+                <a href="/periods">
+                    <i class="fa fa-check"></i>
+                    <span class="title">สรุปยอดขาย</span>
+                </a>
+            </li>
 
 
         </ul>
