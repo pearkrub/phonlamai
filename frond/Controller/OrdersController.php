@@ -252,4 +252,15 @@ class OrdersController extends AppController
             $this->Order->save($order);
         }
     }
+    
+    public function receiveItem() {
+        $this->autoRender = false;
+
+        if($this->request->data['id']) {
+            $order['status'] = 'received';
+            $order['transfer'] = 'pending';
+            $order['id'] = $this->request->data['id'];
+            $this->OrderDetail->save($order);
+        }
+    }
 }

@@ -390,3 +390,29 @@ function receiveOrder(id) {
 
         });
 }
+
+function receivedItem(id) {
+    swal({
+            title: "รับสินค้า ?",
+            text: "ยืนยันว่าได้รับสินค้าแล้ว",
+            type: "warning",
+
+            confirmButtonClass: "btn-success",
+            confirmButtonText: "ยืนยัน",
+            showCancelButton: true,
+            cancelButtonText: "ยกเลิก",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+        function () {
+            $.post('/orders/receiveItem', {id: id}, function (e) {
+            //     if (e == 1) {
+                    swal("เรียบร้อย!", "รับสินค้าเรียบร้อย", "success");
+                    location.reload()
+            //     } else {
+            //         swal("มีบางอย่างผิดพลาด!", "ลบสินค้าออกจากตะกร้าล้มเหลว", "error");
+            //     }
+            })
+
+        });
+}

@@ -86,11 +86,15 @@
                                 <td class="right"><?php echo number_format($detail['price']) ?></td>
                                 <td class="right"><?php echo number_format($detail['total_price']) ?></td>
                                 <td class="right no-print">
+                                    <?php if($detail['status'] == 'received'){
+                                        echo 'รับสินค้าแล้ว';
+                                    }else{ ?>  
                                     <select class="form-control col-md-6 changeStatus" onchange="changeStatus(event,<?php echo $detail['id'] ?>)">
                                         <option <?php if($detail['status'] == '') echo 'selected'?> value="">รอจัดส่ง</option>
                                         <option <?php if($detail['status'] == 'shipping') echo 'selected'?> value="shipping">กำลังจัดส่ง</option>
                                         <option <?php if($detail['status'] == 'delivered') echo 'selected'?> value="delivered">ส่งสินค้าแล้ว</option>
                                     </select>
+                                    <?php }?>
                                 </td>
                             </tr>
                             <?php
