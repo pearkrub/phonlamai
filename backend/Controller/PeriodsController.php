@@ -18,13 +18,11 @@ class PeriodsController extends AppController
                 'Period.month_year' => date('m-Y')
             )
         ));
-        $show = 'n';
-        if($period || intval(date('m')) < 25) {
+        if($period || intval(date('d')) < 25) {
             $show = 'n';
         }else{
             $show = 'y';
         }
-
         $this->set('createPeriod', $show);
 
     }
