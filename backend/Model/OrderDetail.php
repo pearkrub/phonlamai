@@ -13,5 +13,5 @@
  */
 class OrderDetail extends AppModel{ 
     //put your code here
-    public $belongsTo = array('Product', 'Merchant');
+    public $belongsTo = array('Product', 'Merchant', 'Customer');
 }

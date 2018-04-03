@@ -106,11 +106,11 @@ function DateTimeThai($strDate)
                                     <span class="badge badge-success"><i class="fa fa-check"></i> ส่งสินค้าแล้ว</span>
                                 <?php } ?>
                                 <?php if ($order['Order']['step'] == 1) { ?>
-                                    <span class="badge badge-primary"><i
+                                    <span class="badge badge-default"><i
                                                 class="fa fa-spinner fa-spin"></i> รอตรวจสอบ</span>
                                 <?php } ?>
                                 <?php if ($order['Order']['step'] == 2) { ?>
-                                    <span class="badge badge-primary"><i
+                                    <span class="badge badge-info"><i
                                                 class="fa fa-refresh"></i> กำลังจัดหาสินค้า</span>
                                 <?php } ?>
                                 <?php if ($order['Order']['step'] == 3) { ?>

@@ -47,6 +47,14 @@ class OrdersController extends AppController
 
             $this->Order->save($data);
         }
+
+        $refundeds = $this->OrderDetail->find('all', array(
+            'conditions' => array(
+                'OrderDetail.order_id' => $id,
+                'OrderDetail.status' => 'refunded'
+            )
+        ));
+        $this->set('refundeds', $refundeds);
         $this->set('order', $order);
     }
 
@@ -66,6 +74,20 @@ class OrdersController extends AppController
         foreach ($informs as $inform) {
             $update['id'] = $inform['InformPayment']['id'];
             $this->InformPayment->save($update);
+        }
+
+        echo 1;
+    }
+
+    public function refundedItem()
+    {
+        $this->autoRender = false;
+        $ids = explode(',', $this->request->data['id']);
+        $update['transfer'] = 'canceled';
+
+        foreach ($ids as $key) {
+            $update['id'] = $key;
+            $this->OrderDetail->save($update);
         }
 
         echo 1;

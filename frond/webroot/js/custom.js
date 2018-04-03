@@ -416,3 +416,29 @@ function receivedItem(id) {
 
         });
 }
+
+function refundItem(id) {
+    swal({
+            title: "แจ้งคืนสินค้า ?",
+            text: "หากแจ้งคืนสินค้า เทศบาลผู้ดูแลการซื้อขายจะติดต่อกลับ เพื่อยืนยันและคืนเงินให้ภายใน 7 วัน",
+            type: "warning",
+
+            confirmButtonClass: "btn-success",
+            confirmButtonText: "ยืนยัน",
+            showCancelButton: true,
+            cancelButtonText: "ยกเลิก",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        },
+        function () {
+            $.post('/orders/refundItem', {id: id}, function (e) {
+                //     if (e == 1) {
+                swal("เรียบร้อย!", "แจ้งสินค้าเรียบร้อย", "success");
+                location.reload()
+                //     } else {
+                //         swal("มีบางอย่างผิดพลาด!", "ลบสินค้าออกจากตะกร้าล้มเหลว", "error");
+                //     }
+            })
+
+        });
+}

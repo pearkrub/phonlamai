@@ -114,11 +114,11 @@ function DateTimeThai($strDate)
                                             <span class="btn btn-success semi-circle btn-sm"><i class="fa fa-check"></i> ส่งสินค้าแล้ว</span>
                                         <?php } ?>
                                         <?php if ($order['Order']['step'] == 1) { ?>
-                                            <span class="btn btn-primary semi-circle btn-sm"><i
+                                            <span class="btn btn-default semi-circle btn-sm"><i
                                                         class="fa fa-spinner fa-spin"></i> รอตรวจสอบ</span>
                                         <?php } ?>
                                         <?php if ($order['Order']['step'] == 2) { ?>
-                                            <span class="btn btn-primary semi-circle btn-sm"><i
+                                            <span class="btn btn-info semi-circle btn-sm"><i
                                                         class="fa fa-refresh"></i> กำลังจัดหาสินค้า</span>
                                         <?php } ?>
                                         <?php if ($order['Order']['step'] == 3) { ?>

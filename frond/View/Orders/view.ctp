@@ -132,8 +132,10 @@ function DateTimeThai($strDate)
                                     <?php if($product['status'] == 'shipping') echo 'กำลังจัดส่ง'?>
                                     <?php if($product['status'] == 'delivered') echo 'ส่งสินค้าแล้ว'?>
                                     <?php if($product['status'] == 'received') echo 'รับสินค้าแล้ว'?>
+                                    <?php if($product['status'] == 'refunded') echo 'คืนสินค้า'?>
                                     <?php if($product['status'] == 'delivered'){ ?>
-                                    <a onclick="receivedItem(<?php echo $product['id'] ?>)" class="btn btn-sm btn-default">ยืนยันรับสินค้า</a>
+                                        <a onclick="receivedItem(<?php echo $product['id'] ?>)" class="btn btn-sm btn-default">ยืนยันรับสินค้า</a>
+                                        <a title="คืนสินค้า" onclick="refundItem(<?php echo $product['id'] ?>)" class="btn btn-sm btn-danger">X</a>
                                     <?php }?>
                                 </td>
                             </tr>

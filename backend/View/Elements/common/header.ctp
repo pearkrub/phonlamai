@@ -95,6 +95,48 @@
                         </li> -->
                     </ul>
                 </li>
+                <li class="notify-toggle-wrapper">
+                    <a href="#" data-toggle="dropdown" class="toggle">
+                        <i class="fa fa-remove"></i>
+                        <span class="badge badge-accent"><?php echo count($refundedItems) ?></span>
+                    </a>
+                    <ul class="dropdown-menu notifications animated fadeIn">
+                        <li class="total">
+                            <span class="small">
+                                    มี <strong><?php echo count($refundedItems) ?></strong> รายการสขอยกเลิกสินค้า
+<!--                                <a href="/orders" class="pull-right">ดูทั้งหมด</a>-->
+                            </span>
+                        </li>
+                        <li class="list">
+
+                            <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                                <?php foreach ($refundedItems as $refundedItem) {
+                                    ?>
+                                    <li class="unread available"> <!-- available: success, warning, info, error -->
+                                        <a href="/orders/view/<?php echo $refundedItem['OrderDetail']['order_id'] ?>">
+                                            <div class="notice-icon">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </div>
+                                            <div>
+                                                <div class="name">
+                                                    <strong>คุณ <?php echo $refundedItem['Customer']['first_name'].' '.$refundedItem['Customer']['last_name'] ?></strong>
+                                                    <div class="time">ยอด <?php echo number_format($refundedItem['OrderDetail']['total_price']) ?> บาท</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <?php
+                                } ?>
+                            </ul>
+                        </li>
+
+                        <!-- <li class="external">
+                            <a href="/orders">
+                                <span>ดูทั้งหมด</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </li>
                 </li>
             </ul>
         </div>

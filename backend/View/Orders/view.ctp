@@ -140,13 +140,79 @@
 
 
                     <!-- end -->
+                    <?php if (!empty($refundeds)) {
+                        $refund_pending = ''; ?>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3>รายการแจ้งคืนสินค้า</h3><br>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <td><h4>สินค้า</h4></td>
+                                            <td class="text-center"><h4>ราคา</h4></td>
+                                            <td class="text-center"><h4>จำนวน</h4></td>
+                                            <td class="text-right"><h4>รวม</h4></td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php foreach ($refundeds as $product) {
+                                            $detail = array();
+                                            $detail = $product['OrderDetail'];
 
+                                            if ($detail['transfer'] == 'pending') {
+                                                if ($refund_pending == '') {
+                                                    $refund_pending .= $detail['id'];
+                                                } else {
+                                                    $refund_pending .= ',' . $detail['id'];
+                                                }
+                                            }
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $detail['product_name'] ?></td>
+                                                <td class="text-center"><?php echo number_format($detail['price']) ?></td>
+                                                <td class="text-center"><?php echo $detail['count'] ?></td>
+                                                <td class="text-right"><?php echo number_format($detail['total_price']) ?></td>
+                                            </tr>
+                                        <?php } ?>
+                                        <tr>
+                                            <td class="thick-line"></td>
+                                            <td class="thick-line"></td>
+                                            <td class="thick-line text-center">
+                                                <h4>ราคารวม</h4></td>
+                                            <td class="thick-line text-right">
+                                                <h4><?php echo number_format($order['Order']['summary']) ?></h4>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <?php if (!empty($refund_pending)) { ?>
+                            <div class="row">
+                                <div class="col-xs-12 text-right">
+                                    <a href="#" onclick="refunded('<?php echo $refund_pending ?>')"
+                                       class="btn btn-default btn-md no-print"><i
+                                                class="fa fa-refresh"></i> &nbsp; คืนเงืน </a>
+                                </div>
+                            </div>
+                        <?php } else { ?>
+                            <div class="row">
+                                <div class="col-xs-12 text-right">
+                                    <a class="btn btn-info btn-md"><i
+                                                class="fa fa-check"></i> &nbsp; คืนเงืนแล้ว </a>
+                                </div>
+                            </div>
+                        <?php }
+                    } ?>
 
                 </div>
             </div>
         </div>
     </section>
 </div>
+
 <?php if (!empty($order['InformPayment'])) { ?>
     <div class="col-lg-12">
         <section class="box ">
@@ -201,7 +267,7 @@
     </div>
 <?php } ?>
 <div class="row">
-    <div class="col-xs-12 text-left">
+    <div class="col-xs-12 text-left" style="padding-left: 30px">
         <?php if ($order['Order']['step'] == 1) { ?>
             <a onclick="approveOrder(<?php echo $order['Order']['id'] ?>)" class="btn btn-primary btn-md no-print"><i
                         class="fa fa-check"></i> &nbsp; ยืนยันการตรวจสอบ </a>
@@ -230,6 +296,43 @@
                     swal(
                         'สำเร็จ!',
                         'ยืนยันว่าตรวจสอบแล้ว',
+                        'success'
+                    )
+                    location.reload()
+                } else {
+                    swal(
+                        'ผิดพลาด!',
+                        'ไม่สามารถดำเนินการได้',
+                        'error'
+                    )
+                }
+            })
+        }).catch(
+            function () {
+
+            }
+        )
+    }
+
+    function refunded(id) {
+        swal({
+            title: 'ยืนยัน',
+            text: 'คืนเงืนลูกค้าแล้ว',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ยืนยัน',
+            cancelButtonText: 'ยกเลิก',
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        }).then(function () {
+            var url = '/orders/refundedItem'
+            $.post(url, {id: id}, function (e) {
+                if (e == 1) {
+                    swal(
+                        'สำเร็จ!',
+                        'คืนเงืนลูกค้าแล้ว',
                         'success'
                     )
                     location.reload()

@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $uses = array('InformPayment', 'Order');
+    public $uses = array('InformPayment', 'Order', 'OrderDetail');
 
     public function beforeFilter()
     {
@@ -54,6 +54,13 @@ class AppController extends Controller {
             ),
             'order' => array('Order.id desc')
         ));
+        $refundedItems = $this->OrderDetail->find('all', array(
+            'conditions' => array(
+                'OrderDetail.transfer' => 'pending',
+                'OrderDetail.status' => 'refunded'
+            )
+        ));
+        $this->set('refundedItems', $refundedItems);
         $this->set('newOrders', $newOrders);
         $this->set('newInforms', $newInforms);
 

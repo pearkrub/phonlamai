@@ -9,12 +9,12 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-12">
             <div class="row">
                 <div class="col-xs-12">
                     <section class="box ">
                         <header class="panel_header">
-                            <h2 class="title pull-left">ลูกค้าใหม่</h2>
+                            <h2 class="title pull-left">ลูกค้า</h2>
                             <div class="actions panel_actions pull-right">
                                 <a class="box_toggle fa fa-chevron-down"></a>
                                 <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
@@ -45,14 +45,11 @@
 
                 </div>
             </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6">
             <div class="row">
                 <div class="col-xs-12">
                     <section class="box ">
                         <header class="panel_header">
-                            <h2 class="title pull-left">เกษตกรใหม่</h2>
+                            <h2 class="title pull-left">เกษตกร</h2>
                             <div class="actions panel_actions pull-right">
                                 <a class="box_toggle fa fa-chevron-down"></a>
                                 <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
@@ -85,7 +82,7 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-12">
             <div class="row">
                 <div class="col-xs-12">
                     <section class="box ">
@@ -126,8 +123,6 @@
 
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
             <div class="row">
                 <div class="col-xs-12">
                     <section class="box ">

@@ -88,7 +88,9 @@
                                 <td class="right no-print">
                                     <?php if($detail['status'] == 'received'){
                                         echo 'รับสินค้าแล้ว';
-                                    }else{ ?>  
+                                    }else if($detail['status'] == 'refunded'){
+                                        echo 'ลูกค้าแจ้งคืนสินค้า';
+                                    }else{ ?>
                                     <select class="form-control col-md-6 changeStatus" onchange="changeStatus(event,<?php echo $detail['id'] ?>)">
                                         <option <?php if($detail['status'] == '') echo 'selected'?> value="">รอจัดส่ง</option>
                                         <option <?php if($detail['status'] == 'shipping') echo 'selected'?> value="shipping">กำลังจัดส่ง</option>

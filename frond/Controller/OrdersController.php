@@ -263,4 +263,16 @@ class OrdersController extends AppController
             $this->OrderDetail->save($order);
         }
     }
+
+    public function refundItem()
+    {
+        $this->autoRender = false;
+
+        if($this->request->data['id']) {
+            $order['status'] = 'refunded';
+            $order['transfer'] = 'pending';
+            $order['id'] = $this->request->data['id'];
+            $this->OrderDetail->save($order);
+        }
+    }
 }
