@@ -103,7 +103,7 @@
                     <ul class="dropdown-menu notifications animated fadeIn">
                         <li class="total">
                             <span class="small">
-                                    มี <strong><?php echo count($refundedItems) ?></strong> รายการสขอยกเลิกสินค้า
+                                    มี <strong><?php echo count($refundedItems) ?></strong> รายการ ขอยกเลิกสินค้า
 <!--                                <a href="/orders" class="pull-right">ดูทั้งหมด</a>-->
                             </span>
                         </li>
